@@ -23,4 +23,6 @@ class MemoryDetailViewController: UIViewController {
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var titleTextField: UITextField!
     @IBOutlet var descriptionTextView: UITextView!
+    var memoryController: MemoryController
+    var memory: Memory?
 }
