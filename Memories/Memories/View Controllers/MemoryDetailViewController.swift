@@ -9,6 +9,10 @@
 import UIKit
 
 class MemoryDetailViewController: UIViewController {
+    
+    var memory: Memory?
+    
+    var memoryController: MemoryController?
 
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var textField: UITextField!

@@ -86,6 +86,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="O8Z-c7-RwI" kind="show" identifier="ShowMemoryDetail" id="dfm-2E-1CU"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -96,7 +99,7 @@
                     <navigationItem key="navigationItem" id="6CI-sH-1uz">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="p0q-hP-2yz">
                             <connections>
-                                <segue destination="O8Z-c7-RwI" kind="show" identifier="ShowMemoryDetail" id="roR-UW-a54"/>
+                                <segue destination="O8Z-c7-RwI" kind="show" identifier="ShowAddMemoryDetail" id="roR-UW-a54"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -190,4 +193,7 @@
             <point key="canvasLocation" x="864.79999999999995" y="133.5832083958021"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="dfm-2E-1CU"/>
+    </inferredMetricsTieBreakers>
 </document>

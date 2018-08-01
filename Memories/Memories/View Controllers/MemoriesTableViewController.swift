@@ -9,44 +9,60 @@
 import UIKit
 
 class MemoriesTableViewController: UITableViewController {
+    
+    var memoryController = MemoryController()
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        tableView.reloadData()
+        
     }
-
+    
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return memoryController.memories.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MemoryCell", for: indexPath)
 
-        // Configure the cell...
+        let memory = memoryController.memories[indexPath.row]
+        cell.textLabel?.text = memory.title
+        cell.imageView?.image = UIImage(data: memory.imageData)
 
         return cell
     }
    
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
         return true
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
+            let memory = memoryController.memories[indexPath.row]
+            memoryController.delete(memory: memory)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
         }
     }
     
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if let addDetailVC = segue.destination as? MemoryDetailViewController {
+            addDetailVC.memoryController = memoryController
+        }
+        
+        if let detailVC = segue.destination as? MemoryDetailViewController {
+            detailVC.memoryController = memoryController
+            
+            guard let index = tableView.indexPathForSelectedRow?.row else { return }
+            let memory = memoryController.memories[index]
+            detailVC.memory = memory
+        }
+        
+        
     }
     
 
