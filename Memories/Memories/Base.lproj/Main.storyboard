@@ -63,7 +63,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <segue destination="MVh-h2-RvC" kind="presentation" id="Lvu-Ni-jBY"/>
+                        <segue destination="MVh-h2-RvC" kind="presentation" identifier="ToMainView" id="Lvu-Ni-jBY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
