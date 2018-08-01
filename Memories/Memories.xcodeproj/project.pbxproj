@@ -13,6 +13,9 @@
 		3DD5D37921123DA500A142C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DD5D37721123DA500A142C7 /* LaunchScreen.storyboard */; };
 		3DD5D38421123DE700A142C7 /* Memory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD5D38321123DE700A142C7 /* Memory.swift */; };
 		3DD5D38821123E4600A142C7 /* MemoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD5D38721123E4600A142C7 /* MemoryController.swift */; };
+		3DD5D38A2112470A00A142C7 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD5D3892112470A00A142C7 /* OnboardingViewController.swift */; };
+		3DD5D38C2112487A00A142C7 /* MemoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD5D38B2112487A00A142C7 /* MemoriesTableViewController.swift */; };
+		3DD5D38E21124B9300A142C7 /* MemoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD5D38D21124B9300A142C7 /* MemoryDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		3DD5D37A21123DA500A142C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3DD5D38321123DE700A142C7 /* Memory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memory.swift; sourceTree = "<group>"; };
 		3DD5D38721123E4600A142C7 /* MemoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryController.swift; sourceTree = "<group>"; };
+		3DD5D3892112470A00A142C7 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		3DD5D38B2112487A00A142C7 /* MemoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoriesTableViewController.swift; sourceTree = "<group>"; };
+		3DD5D38D21124B9300A142C7 /* MemoryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +93,9 @@
 		3DD5D38221123DC700A142C7 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				3DD5D3892112470A00A142C7 /* OnboardingViewController.swift */,
+				3DD5D38B2112487A00A142C7 /* MemoriesTableViewController.swift */,
+				3DD5D38D21124B9300A142C7 /* MemoryDetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -162,9 +171,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DD5D38E21124B9300A142C7 /* MemoryDetailViewController.swift in Sources */,
 				3DD5D38421123DE700A142C7 /* Memory.swift in Sources */,
 				3DD5D36F21123DA400A142C7 /* AppDelegate.swift in Sources */,
+				3DD5D38C2112487A00A142C7 /* MemoriesTableViewController.swift in Sources */,
 				3DD5D38821123E4600A142C7 /* MemoryController.swift in Sources */,
+				3DD5D38A2112470A00A142C7 /* OnboardingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
