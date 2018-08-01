@@ -13,12 +13,22 @@ class OnboardingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        localNotificationHelper.getAuthorizationStatus() { (completion) in
+            if completion == .authorized {
+                self.performSegue(withIdentifier: "ShowMemoriesTableModal", sender: nil)
+            }
+        }
     }
     
     // MARK: - Methods
     
     @IBAction func getStarted(_ sender: Any) {
+        localNotificationHelper.requestAuthorization() { (completion) in
+            if completion {
+                self.localNotificationHelper.scheduleDailyReminderNotification()
+            }
+        }
+        performSegue(withIdentifier: "ShowMemoriesTableModal", sender: nil)
     }
     
     /*
@@ -31,4 +41,7 @@ class OnboardingViewController: UIViewController {
     }
     */
 
+    // MARK: - Properties
+    
+    var localNotificationHelper = LocalNotificationHelper()
 }

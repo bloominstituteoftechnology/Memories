@@ -11,6 +11,7 @@ import UserNotifications
 
 class LocalNotificationHelper {
     
+    // This is boilerplate code used for virtually every local notification
     func getAuthorizationStatus(completion: @escaping (UNAuthorizationStatus) -> Void) {
         UNUserNotificationCenter.current().getNotificationSettings { (settings) in
             DispatchQueue.main.async {

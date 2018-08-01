@@ -39,7 +39,6 @@
                                         <state key="normal" title="Get Started!"/>
                                         <connections>
                                             <action selector="getStarted:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2s2-oF-Xar"/>
-                                            <segue destination="KfJ-Xi-wMV" kind="presentation" id="xU6-r1-v7x"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -54,7 +53,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <segue destination="KfJ-Xi-wMV" kind="presentation" id="yKR-XJ-tmL"/>
+                        <segue destination="KfJ-Xi-wMV" kind="presentation" identifier="ShowMemoriesTableModal" id="yKR-XJ-tmL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -120,23 +119,23 @@
                                 <rect key="frame" x="16" y="80" width="343" height="571"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="K2v-Cx-yBw">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="376.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="395"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E2i-5J-sXv">
-                                        <rect key="frame" x="0.0" y="384.5" width="343" height="31.5"/>
+                                        <rect key="frame" x="0.0" y="403" width="343" height="31.5"/>
                                         <state key="normal" title="Add Photo"/>
                                         <connections>
                                             <action selector="addPhoto:" destination="oax-RZ-nqR" eventType="touchUpInside" id="ZxP-sf-JEC"/>
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6kA-Sv-WwA">
-                                        <rect key="frame" x="0.0" y="424" width="343" height="31.5"/>
+                                        <rect key="frame" x="0.0" y="442.5" width="343" height="31.5"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="THX-vD-32Y">
-                                        <rect key="frame" x="0.0" y="463.5" width="343" height="107.5"/>
+                                        <rect key="frame" x="0.0" y="482" width="343" height="89"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -190,7 +189,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="yKR-XJ-tmL"/>
         <segue reference="v5n-ac-7no"/>
     </inferredMetricsTieBreakers>
 </document>
