@@ -54,7 +54,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <segue destination="bjt-2G-2WM" kind="presentation" id="1Bz-lT-N9E"/>
+                        <segue destination="bjt-2G-2WM" kind="presentation" identifier="ShowMemoriesModal" id="1Bz-lT-N9E"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
