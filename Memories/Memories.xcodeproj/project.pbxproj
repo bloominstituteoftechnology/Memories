@@ -12,6 +12,8 @@
 		13351E2821123FF800B54EC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13351E2621123FF800B54EC7 /* Main.storyboard */; };
 		13351E2A21123FF900B54EC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13351E2921123FF900B54EC7 /* Assets.xcassets */; };
 		13351E2D21123FF900B54EC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13351E2B21123FF900B54EC7 /* LaunchScreen.storyboard */; };
+		13351E352112402A00B54EC7 /* Memory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13351E342112402A00B54EC7 /* Memory.swift */; };
+		13351E37211240DB00B54EC7 /* MemoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13351E36211240DB00B54EC7 /* MemoryController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		13351E2921123FF900B54EC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		13351E2C21123FF900B54EC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		13351E2E21123FF900B54EC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		13351E342112402A00B54EC7 /* Memory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memory.swift; sourceTree = "<group>"; };
+		13351E36211240DB00B54EC7 /* MemoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				13351E2921123FF900B54EC7 /* Assets.xcassets */,
 				13351E2B21123FF900B54EC7 /* LaunchScreen.storyboard */,
 				13351E2E21123FF900B54EC7 /* Info.plist */,
+				13351E342112402A00B54EC7 /* Memory.swift */,
+				13351E36211240DB00B54EC7 /* MemoryController.swift */,
 			);
 			path = Memories;
 			sourceTree = "<group>";
@@ -135,7 +141,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13351E352112402A00B54EC7 /* Memory.swift in Sources */,
 				13351E2521123FF800B54EC7 /* ViewController.swift in Sources */,
+				13351E37211240DB00B54EC7 /* MemoryController.swift in Sources */,
 				13351E2321123FF800B54EC7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
