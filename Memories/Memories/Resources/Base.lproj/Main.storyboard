@@ -154,7 +154,11 @@
                         <viewLayoutGuide key="safeArea" id="0FN-Vj-2xh"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="YP1-NH-PXK">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Ul7-2D-yGs"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Ul7-2D-yGs">
+                            <connections>
+                                <action selector="saveMemory:" destination="oax-RZ-nqR" id="Q7A-9l-0qm"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="bodyTextView" destination="THX-vD-32Y" id="SzL-ok-p3K"/>

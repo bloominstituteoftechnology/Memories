@@ -16,9 +16,13 @@ class MemoryDetailViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    // MARK: - Methods
+    
     @IBAction func addPhoto(_ sender: Any) {
     }
     
+    @IBAction func saveMemory(_ sender: Any) {
+    }
     /*
     // MARK: - Navigation
 
@@ -28,6 +32,8 @@ class MemoryDetailViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    // MARK: - Properties
+    
     @IBOutlet weak var memoryImageView: UIImageView!
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var bodyTextView: UITextView!
