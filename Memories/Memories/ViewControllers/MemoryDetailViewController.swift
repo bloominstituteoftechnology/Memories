@@ -42,10 +42,13 @@ class MemoryDetailViewController: UIViewController, UIImagePickerControllerDeleg
             PHPhotoLibrary.requestAuthorization() { (handler) in
                 if handler == .authorized {
                     self.presentImagePickerController()
+                } else if handler == .denied || handler == .restricted {
+                    //self.cancelImagePickerPresentation()
+                    self.alertUserAboutRestrictedPHAccess()
                 }
             }
         } else if authorizationStatus == .denied || authorizationStatus == .restricted {
-            cancelImagePickerPresentation()
+            self.alertUserAboutRestrictedPHAccess()
         }
     }
     
@@ -64,7 +67,7 @@ class MemoryDetailViewController: UIViewController, UIImagePickerControllerDeleg
         navigationController?.popViewController(animated: true)
     }
     
-    func presentImagePickerController() {
+    private func presentImagePickerController() {
         // Check if the photo library is available on the current device
         // If yes, then instantiate and present an imagePicker
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
@@ -76,7 +79,15 @@ class MemoryDetailViewController: UIViewController, UIImagePickerControllerDeleg
         }
     }
     
-    func cancelImagePickerPresentation() {
+    private func alertUserAboutRestrictedPHAccess() {
+        let alert = UIAlertController(title: "Can\'t access photo library", message: "Please go to your settings and allow the Memories app to access your photo library.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+            NSLog("The \"OK\" alert occured.")
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    private func cancelImagePickerPresentation() {
         let imagePicker = UIImagePickerController()
         // imagePicker.delegate = self
         imagePickerControllerDidCancel(imagePicker)
