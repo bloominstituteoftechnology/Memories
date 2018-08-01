@@ -17,7 +17,7 @@ class OnboardingViewController: UIViewController {
             self.localNotificationHelper.scheduleDailyReminderNotification()
         }
         
-        performSegue(withIdentifier: "ShowMemoryModal", sender: nil)
+        performSegue(withIdentifier: "ShowMemoriesModal", sender: nil)
     }
     
     override func viewDidLoad() {
@@ -25,7 +25,7 @@ class OnboardingViewController: UIViewController {
         
         localNotificationHelper.getAuthorizationStatus() { (success) in
             if success == .authorized {
-                self.performSegue(withIdentifier: "ShowMemoryModal", sender: nil)
+                self.performSegue(withIdentifier: "ShowMemoriesModal", sender: nil)
             }
         }
     }
