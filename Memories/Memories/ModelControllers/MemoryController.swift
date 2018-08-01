@@ -38,7 +38,7 @@ class MemoryController {
     
     // MARK: - Persistence
     
-    private func loadFromPersistentStore() {
+    func loadFromPersistentStore() {
         let decoder = PropertyListDecoder()
         guard let url = persistentFileURL else { return }
         
