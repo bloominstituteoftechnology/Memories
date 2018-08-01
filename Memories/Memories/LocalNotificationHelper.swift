@@ -41,5 +41,19 @@ class LocalNotificationHelper {
         dateComponents.hour = 20
         
         let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
+        
+        let uuidString = UUID().uuidString
+        
+        let request = UNNotificationRequest(identifier: uuidString, content: content, trigger: trigger)
+        
+        // Schedule the request with the system
+        let notificationCenter = UNUserNotificationCenter.current()
+        notificationCenter.add(request) { (error) in
+            if let error  = error {
+                NSLog("There was an error scheduling a notification: \(error)")
+                return
+            }
+            
+        }
     }
 }
