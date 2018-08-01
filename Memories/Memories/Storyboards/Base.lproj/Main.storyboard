@@ -40,7 +40,7 @@
                                 <state key="normal" title="Get Started!"/>
                                 <connections>
                                     <action selector="getStarted:" destination="DbT-O1-UXz" eventType="touchUpInside" id="9VN-8P-zUB"/>
-                                    <segue destination="HX1-bk-XXI" kind="presentation" id="feu-SA-XHk"/>
+                                    <segue destination="HX1-bk-XXI" kind="presentation" identifier="JoinMemories" id="feu-SA-XHk"/>
                                 </connections>
                             </button>
                         </subviews>
