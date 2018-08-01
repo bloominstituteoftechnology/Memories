@@ -44,6 +44,8 @@ class MemoryDetailViewController: UIViewController, UIImagePickerControllerDeleg
                     self.presentImagePickerController()
                 }
             }
+        } else if authorizationStatus == .denied || authorizationStatus == .restricted {
+            cancelImagePickerPresentation()
         }
     }
     
@@ -72,6 +74,16 @@ class MemoryDetailViewController: UIViewController, UIImagePickerControllerDeleg
         } else {
             return
         }
+    }
+    
+    func cancelImagePickerPresentation() {
+        let imagePicker = UIImagePickerController()
+        // imagePicker.delegate = self
+        imagePickerControllerDidCancel(imagePicker)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true)
     }
     
     // Gives us ability to get access to the photo and to dismiss image picker
