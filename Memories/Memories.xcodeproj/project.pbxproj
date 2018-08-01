@@ -16,6 +16,7 @@
 		39F4F5C021125387009EDF39 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F4F5BF21125387009EDF39 /* OnboardingViewController.swift */; };
 		39F4F5C221125614009EDF39 /* MemoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F4F5C121125614009EDF39 /* MemoriesTableViewController.swift */; };
 		39F4F5C421125921009EDF39 /* MemoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F4F5C321125921009EDF39 /* MemoryDetailViewController.swift */; };
+		39F4F5C621125A5C009EDF39 /* LocalNotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F4F5C521125A5C009EDF39 /* LocalNotificationHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		39F4F5BF21125387009EDF39 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		39F4F5C121125614009EDF39 /* MemoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoriesTableViewController.swift; sourceTree = "<group>"; };
 		39F4F5C321125921009EDF39 /* MemoryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryDetailViewController.swift; sourceTree = "<group>"; };
+		39F4F5C521125A5C009EDF39 /* LocalNotificationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				39F4F5A521123F2C009EDF39 /* AppDelegate.swift */,
+				39F4F5C521125A5C009EDF39 /* LocalNotificationHelper.swift */,
 				39F4F5B921123F93009EDF39 /* Model */,
 				39F4F5BE21123FC7009EDF39 /* Model Controller */,
 				39F4F5BA21123F99009EDF39 /* View Controllers */,
@@ -182,6 +185,7 @@
 				39F4F5C421125921009EDF39 /* MemoryDetailViewController.swift in Sources */,
 				39F4F5B821123F8F009EDF39 /* Memory.swift in Sources */,
 				39F4F5BD21123FBD009EDF39 /* MemoryController.swift in Sources */,
+				39F4F5C621125A5C009EDF39 /* LocalNotificationHelper.swift in Sources */,
 				39F4F5C221125614009EDF39 /* MemoriesTableViewController.swift in Sources */,
 				39F4F5A621123F2C009EDF39 /* AppDelegate.swift in Sources */,
 				39F4F5C021125387009EDF39 /* OnboardingViewController.swift in Sources */,
