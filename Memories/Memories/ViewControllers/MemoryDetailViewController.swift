@@ -19,6 +19,7 @@ class MemoryDetailViewController: UIViewController, UIImagePickerControllerDeleg
     // MARK: - Methods
     
     func updateViews() {
+        // If there is an existing memory then populate all outlets
         guard let memory = memory else {
             self.title = "Add Memory"
             return
@@ -52,6 +53,7 @@ class MemoryDetailViewController: UIViewController, UIImagePickerControllerDeleg
             let body = bodyTextView.text,
             let imageData = memoryImageView?.image?.pngData() else { return }
         
+        // If there is an existing memory then update, else create a new memory
         if let memory = memory {
             memoryController.update(memory: memory, title: title, bodyText: body, imageData: imageData)
         } else {
@@ -61,6 +63,8 @@ class MemoryDetailViewController: UIViewController, UIImagePickerControllerDeleg
     }
     
     func presentImagePickerController() {
+        // Check if the photo library is available on the current device
+        // If yes, then instantiate and present an imagePicker
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
             let imagePicker = UIImagePickerController()
             imagePicker.delegate = self

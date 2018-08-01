@@ -115,40 +115,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillProportionally" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="5Nw-Uq-PUh">
-                                <rect key="frame" x="16" y="80" width="343" height="571"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="K2v-Cx-yBw">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="395"/>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E2i-5J-sXv">
-                                        <rect key="frame" x="0.0" y="403" width="343" height="31.5"/>
-                                        <state key="normal" title="Add Photo"/>
-                                        <connections>
-                                            <action selector="addPhoto:" destination="oax-RZ-nqR" eventType="touchUpInside" id="ZxP-sf-JEC"/>
-                                        </connections>
-                                    </button>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6kA-Sv-WwA">
-                                        <rect key="frame" x="0.0" y="442.5" width="343" height="31.5"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="THX-vD-32Y">
-                                        <rect key="frame" x="0.0" y="482" width="343" height="89"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                </subviews>
-                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K2v-Cx-yBw">
+                                <rect key="frame" x="16" y="80" width="343" height="333.5"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E2i-5J-sXv">
+                                <rect key="frame" x="16" y="421.5" width="343" height="30"/>
+                                <state key="normal" title="Add Photo"/>
+                                <connections>
+                                    <action selector="addPhoto:" destination="oax-RZ-nqR" eventType="touchUpInside" id="ZxP-sf-JEC"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="THX-vD-32Y">
+                                <rect key="frame" x="16" y="497.5" width="343" height="153.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6kA-Sv-WwA">
+                                <rect key="frame" x="16" y="459.5" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.69944138601036276" green="0.69944138601036276" blue="0.69944138601036276" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="5Nw-Uq-PUh" firstAttribute="leading" secondItem="0FN-Vj-2xh" secondAttribute="leading" constant="16" id="Agd-GQ-Kaz"/>
-                            <constraint firstItem="0FN-Vj-2xh" firstAttribute="trailing" secondItem="5Nw-Uq-PUh" secondAttribute="trailing" constant="16" id="gXH-RU-4ye"/>
-                            <constraint firstItem="0FN-Vj-2xh" firstAttribute="bottom" secondItem="5Nw-Uq-PUh" secondAttribute="bottom" constant="16" id="vP6-5E-hur"/>
-                            <constraint firstItem="5Nw-Uq-PUh" firstAttribute="top" secondItem="0FN-Vj-2xh" secondAttribute="top" constant="16" id="x3a-W2-Qb7"/>
+                            <constraint firstItem="6kA-Sv-WwA" firstAttribute="top" secondItem="E2i-5J-sXv" secondAttribute="bottom" constant="8" id="2go-FF-qYM"/>
+                            <constraint firstItem="0FN-Vj-2xh" firstAttribute="trailing" secondItem="E2i-5J-sXv" secondAttribute="trailing" constant="16" id="5hm-Ms-KVg"/>
+                            <constraint firstItem="K2v-Cx-yBw" firstAttribute="top" secondItem="0FN-Vj-2xh" secondAttribute="top" constant="16" id="Cd2-vy-6Ff"/>
+                            <constraint firstItem="K2v-Cx-yBw" firstAttribute="height" secondItem="J9C-Tu-C1N" secondAttribute="height" multiplier="1:2" id="FK5-HW-bb4"/>
+                            <constraint firstItem="E2i-5J-sXv" firstAttribute="leading" secondItem="0FN-Vj-2xh" secondAttribute="leading" constant="16" id="XBd-Jl-2Z3"/>
+                            <constraint firstItem="K2v-Cx-yBw" firstAttribute="leading" secondItem="0FN-Vj-2xh" secondAttribute="leading" constant="16" id="XEo-Dh-Hnx"/>
+                            <constraint firstItem="0FN-Vj-2xh" firstAttribute="trailing" secondItem="6kA-Sv-WwA" secondAttribute="trailing" constant="16" id="adV-JI-dMy"/>
+                            <constraint firstItem="0FN-Vj-2xh" firstAttribute="trailing" secondItem="THX-vD-32Y" secondAttribute="trailing" constant="16" id="iOX-z9-sQK"/>
+                            <constraint firstItem="6kA-Sv-WwA" firstAttribute="leading" secondItem="0FN-Vj-2xh" secondAttribute="leading" constant="16" id="jqx-0Z-xv0"/>
+                            <constraint firstItem="E2i-5J-sXv" firstAttribute="top" secondItem="K2v-Cx-yBw" secondAttribute="bottom" constant="8" id="kvf-V5-2pm"/>
+                            <constraint firstItem="THX-vD-32Y" firstAttribute="top" secondItem="6kA-Sv-WwA" secondAttribute="bottom" constant="8" id="l2r-4O-bpL"/>
+                            <constraint firstItem="0FN-Vj-2xh" firstAttribute="bottom" secondItem="THX-vD-32Y" secondAttribute="bottom" constant="16" id="pHF-Mu-bcD"/>
+                            <constraint firstItem="THX-vD-32Y" firstAttribute="leading" secondItem="0FN-Vj-2xh" secondAttribute="leading" constant="16" id="x54-xR-OIB"/>
+                            <constraint firstItem="0FN-Vj-2xh" firstAttribute="trailing" secondItem="K2v-Cx-yBw" secondAttribute="trailing" constant="16" id="zqL-w4-emd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0FN-Vj-2xh"/>
                     </view>
@@ -167,7 +172,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iSC-47-ML0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2566" y="34"/>
+            <point key="canvasLocation" x="2565.5999999999999" y="33.733133433283363"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9wN-0U-MiI">
