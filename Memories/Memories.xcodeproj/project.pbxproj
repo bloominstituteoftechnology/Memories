@@ -8,24 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		DE844C4E2112362500AEB080 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE844C4D2112362500AEB080 /* AppDelegate.swift */; };
-		DE844C502112362500AEB080 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE844C4F2112362500AEB080 /* ViewController.swift */; };
 		DE844C532112362500AEB080 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE844C512112362500AEB080 /* Main.storyboard */; };
 		DE844C552112362A00AEB080 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE844C542112362A00AEB080 /* Assets.xcassets */; };
 		DE844C582112362A00AEB080 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE844C562112362A00AEB080 /* LaunchScreen.storyboard */; };
 		DE844C602112369C00AEB080 /* Memory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE844C5F2112369C00AEB080 /* Memory.swift */; };
 		DE844C622112374E00AEB080 /* MemoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE844C612112374E00AEB080 /* MemoryController.swift */; };
+		DE844C642112507800AEB080 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE844C632112507800AEB080 /* OnboardingViewController.swift */; };
+		DE844C662112525200AEB080 /* MemoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE844C652112525200AEB080 /* MemoryDetailViewController.swift */; };
+		DE844C682112526700AEB080 /* MemoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE844C672112526700AEB080 /* MemoriesTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DE844C4A2112362500AEB080 /* Memories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memories.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE844C4D2112362500AEB080 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DE844C4F2112362500AEB080 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DE844C522112362500AEB080 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DE844C542112362A00AEB080 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE844C572112362A00AEB080 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DE844C592112362A00AEB080 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE844C5F2112369C00AEB080 /* Memory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memory.swift; sourceTree = "<group>"; };
 		DE844C612112374E00AEB080 /* MemoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryController.swift; sourceTree = "<group>"; };
+		DE844C632112507800AEB080 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		DE844C652112525200AEB080 /* MemoryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryDetailViewController.swift; sourceTree = "<group>"; };
+		DE844C672112526700AEB080 /* MemoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoriesTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +65,9 @@
 				DE844C4D2112362500AEB080 /* AppDelegate.swift */,
 				DE844C5F2112369C00AEB080 /* Memory.swift */,
 				DE844C612112374E00AEB080 /* MemoryController.swift */,
-				DE844C4F2112362500AEB080 /* ViewController.swift */,
+				DE844C632112507800AEB080 /* OnboardingViewController.swift */,
+				DE844C672112526700AEB080 /* MemoriesTableViewController.swift */,
+				DE844C652112525200AEB080 /* MemoryDetailViewController.swift */,
 				DE844C512112362500AEB080 /* Main.storyboard */,
 				DE844C542112362A00AEB080 /* Assets.xcassets */,
 				DE844C562112362A00AEB080 /* LaunchScreen.storyboard */,
@@ -141,10 +147,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE844C682112526700AEB080 /* MemoriesTableViewController.swift in Sources */,
+				DE844C662112525200AEB080 /* MemoryDetailViewController.swift in Sources */,
 				DE844C602112369C00AEB080 /* Memory.swift in Sources */,
-				DE844C502112362500AEB080 /* ViewController.swift in Sources */,
 				DE844C622112374E00AEB080 /* MemoryController.swift in Sources */,
 				DE844C4E2112362500AEB080 /* AppDelegate.swift in Sources */,
+				DE844C642112507800AEB080 /* OnboardingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
