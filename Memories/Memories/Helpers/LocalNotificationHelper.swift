@@ -35,7 +35,9 @@ class LocalNotificationHelper {
         content.sound = UNNotificationSound.default
 
         var date = DateComponents()
-        date.hour = 8
+        date.hour = 21
+        date.minute = 29
+        print("Date set: \(date)")
         let trigger = UNCalendarNotificationTrigger(dateMatching: date, repeats: true)
 
         let request = UNNotificationRequest(identifier: "MemoryReminder", content: content, trigger: trigger)
