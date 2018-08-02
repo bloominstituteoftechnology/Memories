@@ -12,25 +12,27 @@ class MemoryController {
     func createMemory(title: String, bodyText: String, imageData: Data) {
         let memory = Memory(title: title, bodyText: bodyText, imageData: imageData)
         memories.append(memory)
+        saveToPersistentStore()
     }
 
-    func updateMemory(memory: Memory) {
+    func updateMemory(memory: Memory, title: String, bodyText: String, imageData: Data) {
         if let index = memories.index(of: memory) {
             var scratch = memories[index]
-            scratch.bodyText = memory.bodyText
-            scratch.imageData = memory.imageData
-            scratch.title = memory.title
+            scratch.bodyText = bodyText
+            scratch.imageData = imageData
+            scratch.title = title
 
             memories.remove(at: index)
             memories.insert(scratch, at: index)
-
-            saveToPersistentStore()
         }
+        
+        saveToPersistentStore()
     }
 
     func deleteMemory(memory: Memory) {
         guard let index = memories.index(of: memory) else { return }
         memories.remove(at: index)
+        saveToPersistentStore()
     }
 
     func saveToPersistentStore() {

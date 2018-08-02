@@ -15,6 +15,10 @@ class MemoriesTableViewController: UITableViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        tableView.dataSource = self
+        tableView.delegate = self
+        super.viewDidLoad()
+        memoryController.loadFromPersistentStore()
         tableView.reloadData()
     }
 
@@ -32,9 +36,17 @@ class MemoriesTableViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "AddMemory" || segue.identifier == "EditMemory" {
+        if segue.identifier == "AddMemory" {
             if let vc = segue.destination as? MemoryDetailViewController {
                 vc.memoryController = memoryController
+            }
+        } else if segue.identifier == "EditMemory" {
+            if let vc = segue.destination as? MemoryDetailViewController {
+                vc.memoryController = memoryController
+                
+                if let indexPath = self.tableView.indexPathForSelectedRow {
+                    vc.memory = memoryController.memories[indexPath.row]
+                }
             }
         }
     }

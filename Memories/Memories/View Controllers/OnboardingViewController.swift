@@ -23,7 +23,6 @@ class OnboardingViewController: UIViewController {
             self.localNotificationHelper.scheduleDailyReminderNotification()
             self.performSegue(withIdentifier: "JoinMemories", sender: nil)
         }
-        
     }
     
     let localNotificationHelper = LocalNotificationHelper()

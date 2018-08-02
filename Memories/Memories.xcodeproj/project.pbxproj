@@ -65,7 +65,6 @@
 			isa = PBXGroup;
 			children = (
 				13351E452112682900B54EC7 /* Helpers */,
-				13351E3C2112486300B54EC7 /* Protocols */,
 				13351E3B2112485A00B54EC7 /* View Controllers */,
 				13351E3A2112484800B54EC7 /* Storyboards */,
 				13351E392112483D00B54EC7 /* Model Controllers */,
@@ -110,13 +109,6 @@
 				13351E432112637200B54EC7 /* MemoryDetailViewController.swift */,
 			);
 			path = "View Controllers";
-			sourceTree = "<group>";
-		};
-		13351E3C2112486300B54EC7 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Protocols;
 			sourceTree = "<group>";
 		};
 		13351E452112682900B54EC7 /* Helpers */ = {
