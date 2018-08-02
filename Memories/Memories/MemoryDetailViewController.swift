@@ -126,7 +126,8 @@ class MemoryDetailViewController: UIViewController, UIImagePickerControllerDeleg
         {
             guard let title = titleTextField.text,
                 let bodyText = descriptionTextView.text,
-                let imageData = dataOfImage else {return}
+                let chosenImage = memoryImageView.image,
+                let imageData = UIImagePNGRepresentation(chosenImage) else {return}
             
             memoryController.updateMemory(memory: memory!, title: title, bodyText: bodyText, imageData: imageData)
         }

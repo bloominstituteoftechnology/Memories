@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class MemoryController
 {
@@ -80,6 +81,8 @@ class MemoryController
         memories.remove(at: index)
         print(memory)
         saveToPersistentStore()
+        
+        
     }
     
     
