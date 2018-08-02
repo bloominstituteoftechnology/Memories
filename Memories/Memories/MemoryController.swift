@@ -81,7 +81,7 @@ class MemoryController
         memories.remove(at: index)
         print(memory)
         saveToPersistentStore()
-        
+    
         
     }
     

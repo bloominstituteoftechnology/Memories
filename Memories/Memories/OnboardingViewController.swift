@@ -9,7 +9,7 @@
 import UIKit
 import UserNotifications
 
-class OnboardingViewController: UIViewController, UNUserNotificationCenterDelegate
+class OnboardingViewController: UIViewController
 {
     let localNotificationHelper = LocalNotificationHelper()
     
@@ -17,19 +17,13 @@ class OnboardingViewController: UIViewController, UNUserNotificationCenterDelega
     {
         super.viewDidLoad()
         
-        let center = UNUserNotificationCenter.current()
-        center.delegate = self
-        
         localNotificationHelper.getAuthorizationStatus { (status) in
             if status == .authorized
             {
                 NSLog("notifications authorized")
                 self.performSegue(withIdentifier: "ToMainView", sender: nil)
             }
-            else
-            {
-                NSLog("notifications not authorized")
-            }
+            
         }
     }
     
@@ -41,13 +35,5 @@ class OnboardingViewController: UIViewController, UNUserNotificationCenterDelega
         performSegue(withIdentifier: "ToMainView", sender: nil)
     }
 
-    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void)
-    {
-        print("The notification arrived!")
-        
-        completionHandler([.alert,.sound])
-    }
-    
-    
 
 }

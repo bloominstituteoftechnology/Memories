@@ -49,7 +49,7 @@ class MemoriesTableViewController: UITableViewController
     {
         if editingStyle == .delete
         {
-            guard let indexPath = tableView.indexPathForSelectedRow else {return}
+            
             let memory = memoryController.memories[indexPath.row]
             memoryController.deleteMemory(memory: memory)
             tableView.deleteRows(at: [indexPath], with: .fade)

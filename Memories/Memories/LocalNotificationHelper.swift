@@ -38,12 +38,10 @@ class LocalNotificationHelper
         content.title = "Daily Reminder"
         content.body = "It's time to create a memory!"
         content.sound = UNNotificationSound.default()
-        
-//        let date = Date(timeIntervalSinceNow: 60)
-//        let triggerDaily = Calendar.current.dateComponents([.hour, .minute], from: date)
-//        let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDaily, repeats: true)
-        
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: true)
+        var date = DateComponents()
+        date.hour = 20
+        date.minute = 00
+        let trigger = UNCalendarNotificationTrigger(dateMatching: date, repeats: true)
         let request = UNNotificationRequest(identifier: "MemoryNotification", content: content, trigger: trigger)
         let notificationCenter = UNUserNotificationCenter.current()
         notificationCenter.add(request) { (error) in
