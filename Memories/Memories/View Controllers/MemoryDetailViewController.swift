@@ -7,10 +7,15 @@
 //
 
 import UIKit
+import Photos
 
-class MemoryDetailViewController: UIViewController {
+class MemoryDetailViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    var memory: Memory?
+    var memory: Memory? {
+        didSet {
+            updateViews()
+        }
+    }
     
     var memoryController: MemoryController?
 
@@ -19,20 +24,76 @@ class MemoryDetailViewController: UIViewController {
     @IBOutlet var textView: UITextView!
     
     @IBAction func addPhoto(_ sender: Any) {
+        let authorizationStatus = PHPhotoLibrary.authorizationStatus()
+        
+        if authorizationStatus == .authorized {
+            presentImagePickerController()
+        } else if authorizationStatus == .notDetermined {
+            PHPhotoLibrary.requestAuthorization { (authorizationStatus) in
+                if authorizationStatus == .authorized {
+                    self.presentImagePickerController()
+                }
+            }
+        }
+        
     }
     
     @IBAction func save(_ sender: Any) {
+        // Make sure all properties exist
+        guard let title = textField.text, let bodyText = textView.text, let imageData = UIImagePNGRepresentation(imageView.image!)  else { return }
+        
+        if let memory = memory {
+            memoryController?.update(memory: memory, title: title, bodyText: bodyText, imageData: imageData)
+        } else {
+            memoryController?.createMemory(withTitle: title, bodyText: bodyText, imageData: imageData)
+        }
+        
+        navigationController?.popViewController(animated: true)
     }
     
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        updateViews()
     }
-    */
+    
+    func updateViews() {
+        // Take memory and unwrap it
+        if memory == nil {
+            navigationItem.title = "Add Memory"
+        } else {
+            guard let memory = memory else { return }
+            navigationItem.title = "Edit Memory"
+            textField?.text = memory.title
+            textView?.text = memory.bodyText
+            imageView?.image = UIImage(data: memory.imageData)
+        }
+    }
 
+    // MARK: - UIImagePickerControllerDelegate
+    
+    func presentImagePickerController() {
+        let imagePicker = UIImagePickerController()
+        imagePicker.sourceType = .photoLibrary
+        imagePicker.delegate = self
+        
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        picker.dismiss(animated: true, completion: nil)
+        
+        // Get image user picked
+        guard let image = info[UIImagePickerControllerOriginalImage] as? UIImage else { return }
+        imageView.image = image
+    }
 }
+
+
+
+
+
+
+
+
+
