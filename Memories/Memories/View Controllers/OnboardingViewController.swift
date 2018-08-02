@@ -23,9 +23,14 @@ class OnboardingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.isHidden = true
+        
         localNotificationHelper.getAuthorizationStatus() { (success) in
+            
             if success == .authorized {
-                self.performSegue(withIdentifier: "ShowMemoriesModal", sender: nil)
+                self.performSegue(withIdentifier: "ShowMemoriesInstant", sender: nil)
+            } else {
+                self.view.isHidden = false
             }
         }
     }
