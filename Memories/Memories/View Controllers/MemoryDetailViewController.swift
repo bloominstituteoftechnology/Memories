@@ -26,15 +26,37 @@ class MemoryDetailViewController: UIViewController, UIImagePickerControllerDeleg
     @IBAction func addPhoto(_ sender: Any) {
         let authorizationStatus = PHPhotoLibrary.authorizationStatus()
         
-        if authorizationStatus == .authorized {
+        switch authorizationStatus {
+        case .authorized:
             presentImagePickerController()
-        } else if authorizationStatus == .notDetermined {
+        case .notDetermined:
             PHPhotoLibrary.requestAuthorization { (authorizationStatus) in
                 if authorizationStatus == .authorized {
                     self.presentImagePickerController()
                 }
             }
+        case .denied:
+            let alert = UIAlertController(title: "Denied", message: "Memories does not have access to your photo library. Please go to Settings and grant Memories access.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        case .restricted:
+            let alert = UIAlertController(title: "Restricted", message: "Memories was restricted from accessing your photo library.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            
         }
+        
+        
+        
+//        if authorizationStatus == .authorized {
+//            presentImagePickerController()
+//        } else if authorizationStatus == .notDetermined {
+//            PHPhotoLibrary.requestAuthorization { (authorizationStatus) in
+//                if authorizationStatus == .authorized {
+//                    self.presentImagePickerController()
+//                }
+//            }
+//        }
         
     }
     
