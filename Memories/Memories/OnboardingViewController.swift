@@ -7,22 +7,28 @@
 //
 
 import UIKit
+import UserNotifications
 
-class OnboardingViewController: UIViewController
+class OnboardingViewController: UIViewController, UNUserNotificationCenterDelegate
 {
     let localNotificationHelper = LocalNotificationHelper()
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
+        let center = UNUserNotificationCenter.current()
+        center.delegate = self
+        
         localNotificationHelper.getAuthorizationStatus { (status) in
             if status == .authorized
             {
+                NSLog("notifications authorized")
                 self.performSegue(withIdentifier: "ToMainView", sender: nil)
             }
             else
             {
-                NSLog("permission not authorized")
+                NSLog("notifications not authorized")
             }
         }
     }
@@ -35,13 +41,13 @@ class OnboardingViewController: UIViewController
         performSegue(withIdentifier: "ToMainView", sender: nil)
     }
 
-    
-    // MARK: - Navigation
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void)
     {
+        print("The notification arrived!")
         
+        completionHandler([.alert,.sound])
     }
+    
     
 
 }

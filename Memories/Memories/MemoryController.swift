@@ -10,7 +10,7 @@ import Foundation
 
 class MemoryController
 {
-    var memories: [Memory] = []
+    private(set) var memories: [Memory] = []
     
     private var persistentFileURL: URL?
     {
@@ -27,6 +27,7 @@ class MemoryController
             let encoder = PropertyListEncoder()
             let data = try encoder.encode(memories)
             try data.write(to: url)
+            print("save to persistent store: \(url)")
         } catch {
             NSLog("Error saving memories data: \(error)")
         }
@@ -41,6 +42,7 @@ class MemoryController
             let data = try Data(contentsOf: url)
             let decoder = PropertyListDecoder()
             memories = try decoder.decode([Memory].self, from: data)
+            print("loaded from peristent store: \(memories)")
         } catch {
             NSLog("Error loading memories data: \(error)")
         }
@@ -50,6 +52,7 @@ class MemoryController
     {
         let memory = Memory(title: title, bodyText: bodyText, imageData: imageData)
         memories.append(memory)
+        print(memory)
         saveToPersistentStore()
     }
     
@@ -64,8 +67,10 @@ class MemoryController
             
             memories.remove(at: index)
             memories.insert(tempMemory, at: index)
+            print(tempMemory)
+            saveToPersistentStore()
         }
-        saveToPersistentStore()
+        
         
     }
     
@@ -73,6 +78,7 @@ class MemoryController
     {
         guard let index = memories.index(of: memory) else {return}
         memories.remove(at: index)
+        print(memory)
         saveToPersistentStore()
     }
     
