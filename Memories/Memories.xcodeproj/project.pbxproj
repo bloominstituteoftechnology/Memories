@@ -16,6 +16,7 @@
 		9408911C211B82CB001F68C3 /* Memory Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9408911B211B82CB001F68C3 /* Memory Controller.swift */; };
 		9408911E211B96E4001F68C3 /* MemoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9408911D211B96E4001F68C3 /* MemoriesTableViewController.swift */; };
 		94089121211B9774001F68C3 /* MemoriesDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94089120211B9774001F68C3 /* MemoriesDetailViewController.swift */; };
+		94089125211B9B10001F68C3 /* LocalNotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94089124211B9B10001F68C3 /* LocalNotificationHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		9408911B211B82CB001F68C3 /* Memory Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Memory Controller.swift"; sourceTree = "<group>"; };
 		9408911D211B96E4001F68C3 /* MemoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoriesTableViewController.swift; sourceTree = "<group>"; };
 		94089120211B9774001F68C3 /* MemoriesDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoriesDetailViewController.swift; sourceTree = "<group>"; };
+		94089124211B9B10001F68C3 /* LocalNotificationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 		94089104211B7E90001F68C3 /* Memories */ = {
 			isa = PBXGroup;
 			children = (
+				94089123211B9AE2001F68C3 /* Notification */,
 				9408911F211B972E001F68C3 /* View Controller */,
 				9408911A211B82AD001F68C3 /* Model Controller */,
 				94089117211B8171001F68C3 /* model */,
@@ -98,6 +101,14 @@
 				94089120211B9774001F68C3 /* MemoriesDetailViewController.swift */,
 			);
 			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		94089123211B9AE2001F68C3 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				94089124211B9B10001F68C3 /* LocalNotificationHelper.swift */,
+			);
+			path = Notification;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,6 +185,7 @@
 				94089119211B81F6001F68C3 /* Memory.swift in Sources */,
 				94089108211B7E92001F68C3 /* OnboardingViewController.swift in Sources */,
 				94089121211B9774001F68C3 /* MemoriesDetailViewController.swift in Sources */,
+				94089125211B9B10001F68C3 /* LocalNotificationHelper.swift in Sources */,
 				9408911E211B96E4001F68C3 /* MemoriesTableViewController.swift in Sources */,
 				94089106211B7E91001F68C3 /* AppDelegate.swift in Sources */,
 				9408911C211B82CB001F68C3 /* Memory Controller.swift in Sources */,
