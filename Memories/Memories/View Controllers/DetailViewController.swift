@@ -43,4 +43,6 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var textView: UITextView!
     
+    var memoryController: MemoryController
+    var memory: Memory?
 }

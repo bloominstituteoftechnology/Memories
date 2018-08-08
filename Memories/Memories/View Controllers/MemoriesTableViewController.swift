@@ -13,58 +13,52 @@ class MemoriesTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        tableView.reloadData()
     }
 
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return memoryController.memories.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MemoryCell", for: indexPath)
 
-        // Configure the cell...
-
+        let memory = memoryController.memories[indexPath.row]
+        cell.textLabel?.text = memory.title
+        
         return cell
     }
 
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            // Delete the row from the data source
+            let memory = memoryController.memories[indexPath.row]
+            memoryController.delete(memory: memory)
             tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
-    }
-    
-    func updateViews() {
-        if let memory = memory {
-            
-        } else {
-            navigationController?.title = "Add Memory"
-        }
-        
     }
 
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    
-    var memoryController: MemoryController?
-    var memory: Memory? {
-        didSet {
-            updateViews()
+        if segue.identifier == "" {
+            guard let detailVC = segue.destination as? DetailViewController else { return }
+            detailVC.memoryController = memoryController
+        } else if segue.identifier == "" {
+            guard let detailVC = segue.destination as? DetailViewController,
+                let indexPath = tableView.indexPathForSelectedRow else { return }
+            detailVC.memoryController = memoryController
+            detailVC.memory = memoryController.memories[indexPath.row]
         }
     }
+    
+    var memoryController: MemoryController
+    var memory: Memory?
 
 }
