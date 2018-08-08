@@ -16,18 +16,17 @@ class OnboardingViewController: UIViewController {
 
         localNotificationHelper.getAuthorizationStatus { (status) in
             guard status == .authorized else { return }
-            //segue
-            
+            self.performSegue(withIdentifier: "MemoriesSegue", sender: nil)
         }
     }
     
     @IBAction func startButton(_ sender: Any) {
         localNotificationHelper.requestAuthorization { (success) in
             if success {
-            //run the segue
-                //run the function for notification
-            }else {
-                //dont do anything, we hate this user
+                self.localNotificationHelper.scheduleDailyReminderNotification()
+                self.performSegue(withIdentifier: "MemoriesSegue", sender: nil)
+            } else {
+                return
             }
         }
     }
