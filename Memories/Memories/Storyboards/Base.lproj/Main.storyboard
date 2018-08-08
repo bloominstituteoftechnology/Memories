@@ -61,7 +61,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <segue destination="RWY-V7-63Z" kind="presentation" id="cvt-hN-6qa"/>
+                        <segue destination="RWY-V7-63Z" kind="presentation" identifier="MemoriesSegue" id="cvt-hN-6qa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
