@@ -8,19 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		FFF6E0B9211B780E00A5957E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF6E0B8211B780E00A5957E /* AppDelegate.swift */; };
-		FFF6E0BB211B780E00A5957E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF6E0BA211B780E00A5957E /* ViewController.swift */; };
 		FFF6E0BE211B780E00A5957E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFF6E0BC211B780E00A5957E /* Main.storyboard */; };
 		FFF6E0C0211B780F00A5957E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFF6E0BF211B780F00A5957E /* Assets.xcassets */; };
 		FFF6E0C3211B780F00A5957E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFF6E0C1211B780F00A5957E /* LaunchScreen.storyboard */; };
 		FFF6E0D0211B795600A5957E /* Memory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF6E0CF211B795600A5957E /* Memory.swift */; };
 		FFF6E0D2211B796500A5957E /* MemoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF6E0D1211B796500A5957E /* MemoryController.swift */; };
 		FFF6E0D4211B79D400A5957E /* PersistenceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF6E0D3211B79D400A5957E /* PersistenceExtension.swift */; };
+		FFF6E0D6211B817300A5957E /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF6E0D5211B817300A5957E /* OnboardingViewController.swift */; };
+		FFF6E0D8211B831700A5957E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF6E0D7211B831700A5957E /* DetailViewController.swift */; };
+		FFF6E0DA211B832A00A5957E /* MemoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF6E0D9211B832A00A5957E /* MemoriesTableViewController.swift */; };
+		FFF6E0DD211B8C3B00A5957E /* LocalNotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF6E0DC211B8C3B00A5957E /* LocalNotificationHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FFF6E0B5211B780E00A5957E /* Memories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memories.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFF6E0B8211B780E00A5957E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FFF6E0BA211B780E00A5957E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FFF6E0BD211B780E00A5957E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FFF6E0BF211B780F00A5957E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FFF6E0C2211B780F00A5957E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -28,6 +30,10 @@
 		FFF6E0CF211B795600A5957E /* Memory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memory.swift; sourceTree = "<group>"; };
 		FFF6E0D1211B796500A5957E /* MemoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryController.swift; sourceTree = "<group>"; };
 		FFF6E0D3211B79D400A5957E /* PersistenceExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceExtension.swift; sourceTree = "<group>"; };
+		FFF6E0D5211B817300A5957E /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		FFF6E0D7211B831700A5957E /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		FFF6E0D9211B832A00A5957E /* MemoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoriesTableViewController.swift; sourceTree = "<group>"; };
+		FFF6E0DC211B8C3B00A5957E /* LocalNotificationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,8 +68,8 @@
 			children = (
 				FFF6E0CE211B792100A5957E /* Model */,
 				FFF6E0CD211B791800A5957E /* Model Controllers */,
+				FFF6E0DB211B8C1400A5957E /* Notifications */,
 				FFF6E0CC211B790E00A5957E /* View Controllers */,
-				FFF6E0CB211B790100A5957E /* Custom Cells */,
 				FFF6E0CA211B78F600A5957E /* Storyboards */,
 				FFF6E0B8211B780E00A5957E /* AppDelegate.swift */,
 				FFF6E0BF211B780F00A5957E /* Assets.xcassets */,
@@ -81,17 +87,12 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
-		FFF6E0CB211B790100A5957E /* Custom Cells */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Custom Cells";
-			sourceTree = "<group>";
-		};
 		FFF6E0CC211B790E00A5957E /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				FFF6E0BA211B780E00A5957E /* ViewController.swift */,
+				FFF6E0D5211B817300A5957E /* OnboardingViewController.swift */,
+				FFF6E0D7211B831700A5957E /* DetailViewController.swift */,
+				FFF6E0D9211B832A00A5957E /* MemoriesTableViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -111,6 +112,14 @@
 				FFF6E0CF211B795600A5957E /* Memory.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		FFF6E0DB211B8C1400A5957E /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				FFF6E0DC211B8C3B00A5957E /* LocalNotificationHelper.swift */,
+			);
+			path = Notifications;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,9 +194,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFF6E0D0211B795600A5957E /* Memory.swift in Sources */,
-				FFF6E0BB211B780E00A5957E /* ViewController.swift in Sources */,
 				FFF6E0D2211B796500A5957E /* MemoryController.swift in Sources */,
+				FFF6E0DD211B8C3B00A5957E /* LocalNotificationHelper.swift in Sources */,
+				FFF6E0D6211B817300A5957E /* OnboardingViewController.swift in Sources */,
+				FFF6E0D8211B831700A5957E /* DetailViewController.swift in Sources */,
 				FFF6E0B9211B780E00A5957E /* AppDelegate.swift in Sources */,
+				FFF6E0DA211B832A00A5957E /* MemoriesTableViewController.swift in Sources */,
 				FFF6E0D4211B79D400A5957E /* PersistenceExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
