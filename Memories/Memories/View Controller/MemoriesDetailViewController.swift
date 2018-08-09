@@ -9,7 +9,9 @@
 import UIKit
 
 class MemoriesDetailViewController: UIViewController {
-
+    var memory: Memory?
+    var memoryController: MemoryController
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
