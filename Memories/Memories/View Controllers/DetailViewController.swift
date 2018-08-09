@@ -14,17 +14,17 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        updateViews()
     }
 
     func updateViews() {
         if let memory = memory {
-            navigationController?.title = "Edit Memory"
+            title = "Edit Memory"
             imageView.image = UIImage(data: memory.imageData)
             textField.text = memory.title
             textView.text = memory.bodyText
         } else {
-            navigationController?.title = "Add Memory"
+            title = "Add Memory"
         }
     }
     
@@ -52,6 +52,8 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
         } else {
             memoryController?.create(title: title, bodyText: bodyText, imageData: data)
         }
+        
+        navigationController?.popViewController(animated: true)
     }
     
     func presentImagePickerController() {

@@ -12,6 +12,7 @@ class MemoriesTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        memoryController.loadFromPersistence()
 
     }
     
@@ -24,13 +25,13 @@ class MemoriesTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return memoryController?.memories.count ?? 0
+        return memoryController.memories.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MemoryCell", for: indexPath)
 
-        guard let memory = memoryController?.memories[indexPath.row] else { return cell }
+        let memory = memoryController.memories[indexPath.row]
         cell.textLabel?.text = memory.title
         
         cell.imageView?.image = UIImage(data: memory.imageData)
@@ -40,8 +41,8 @@ class MemoriesTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            guard let memory = memoryController?.memories[indexPath.row] else { return }
-            memoryController?.delete(memory: memory)
+            let memory = memoryController.memories[indexPath.row]
+            memoryController.delete(memory: memory)
             tableView.deleteRows(at: [indexPath], with: .fade)
         }    
     }
@@ -56,11 +57,11 @@ class MemoriesTableViewController: UITableViewController {
             guard let detailVC = segue.destination as? DetailViewController,
                 let indexPath = tableView.indexPathForSelectedRow else { return }
             detailVC.memoryController = memoryController
-            detailVC.memory = memoryController?.memories[indexPath.row]
+            detailVC.memory = memoryController.memories[indexPath.row]
         }
     }
     
-    var memoryController: MemoryController?
+    var memoryController: MemoryController = MemoryController()
     var memory: Memory?
     
 }

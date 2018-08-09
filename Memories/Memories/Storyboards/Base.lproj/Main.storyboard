@@ -19,27 +19,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Welcome to Memories!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KCr-Wn-Auv">
-                                <rect key="frame" x="16" y="104" width="343" height="35"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="HNU-iB-Gww"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Memories!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KCr-Wn-Auv">
+                                <rect key="frame" x="16" y="104" width="343" height="36"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k4h-6V-X5S">
-                                <rect key="frame" x="16" y="147" width="343" height="161"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k4h-6V-X5S">
+                                <rect key="frame" x="16" y="148" width="343" height="142.5"/>
                                 <string key="text">We're going to help you document every day of your life. In order to do this, we need you to allow the application to send you notifications so you can be reminded to create a memory every day! We'll also ask for your permission to access your photo library to attach photos to your memories.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eJ6-ak-kci">
-                                <rect key="frame" x="144" y="316" width="86" height="54"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="54" id="Sim-aV-6uZ"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eJ6-ak-kci">
+                                <rect key="frame" x="145" y="298.5" width="85" height="30"/>
                                 <state key="normal" title="Get Started!"/>
                                 <connections>
                                     <action selector="startButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XH5-Ol-VfO"/>
@@ -48,15 +42,16 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eJ6-ak-kci" secondAttribute="bottom" constant="297" id="4Lt-m0-WZf"/>
-                            <constraint firstItem="KCr-Wn-Auv" firstAttribute="trailing" secondItem="k4h-6V-X5S" secondAttribute="trailing" id="4ls-Eh-nI5"/>
-                            <constraint firstItem="KCr-Wn-Auv" firstAttribute="leading" secondItem="k4h-6V-X5S" secondAttribute="leading" id="Z5j-6A-27k"/>
-                            <constraint firstItem="k4h-6V-X5S" firstAttribute="centerX" secondItem="eJ6-ak-kci" secondAttribute="centerX" id="bSf-04-1Pt"/>
-                            <constraint firstItem="eJ6-ak-kci" firstAttribute="top" secondItem="k4h-6V-X5S" secondAttribute="bottom" constant="8" symbolic="YES" id="jIb-SF-Dgn"/>
-                            <constraint firstItem="KCr-Wn-Auv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="84" id="jRo-dm-r1t"/>
-                            <constraint firstItem="k4h-6V-X5S" firstAttribute="top" secondItem="KCr-Wn-Auv" secondAttribute="bottom" constant="8" symbolic="YES" id="ko7-EN-h2E"/>
-                            <constraint firstItem="eJ6-ak-kci" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="144" id="n3h-Dv-hXc"/>
-                            <constraint firstItem="KCr-Wn-Auv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="yPV-8Y-Aaa"/>
+                            <constraint firstItem="eJ6-ak-kci" firstAttribute="top" secondItem="k4h-6V-X5S" secondAttribute="bottom" constant="8" id="22u-Sy-t0D"/>
+                            <constraint firstItem="eJ6-ak-kci" firstAttribute="top" secondItem="k4h-6V-X5S" secondAttribute="bottom" constant="8" id="8Tw-Wc-tWw"/>
+                            <constraint firstItem="k4h-6V-X5S" firstAttribute="top" secondItem="KCr-Wn-Auv" secondAttribute="bottom" constant="8" id="CN0-sY-PiA"/>
+                            <constraint firstItem="KCr-Wn-Auv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="84" id="Feb-1P-8Dk"/>
+                            <constraint firstItem="KCr-Wn-Auv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="RC7-e2-pc8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KCr-Wn-Auv" secondAttribute="trailing" constant="16" id="iOB-sO-xhr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eJ6-ak-kci" secondAttribute="trailing" constant="145" id="kU1-rg-4ZU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="k4h-6V-X5S" secondAttribute="trailing" constant="16" id="rQS-OW-XAi"/>
+                            <constraint firstItem="eJ6-ak-kci" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="145" id="udC-Bm-Bnp"/>
+                            <constraint firstItem="k4h-6V-X5S" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="v46-Aw-ELC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -68,7 +63,7 @@
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="115.59220389805098"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Memories-->
         <scene sceneID="Z5g-bi-Wcj">
             <objects>
                 <tableViewController id="UW9-pO-EL5" customClass="MemoriesTableViewController" customModule="Memories" customModuleProvider="target" sceneMemberID="viewController">
@@ -103,7 +98,7 @@
                             <outlet property="delegate" destination="UW9-pO-EL5" id="gcA-y1-7Uw"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="nAq-It-YrX">
+                    <navigationItem key="navigationItem" title="Memories" id="nAq-It-YrX">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="fEj-8I-033">
                             <connections>
                                 <segue destination="ZjH-x7-s74" kind="show" identifier="AddMemorySegue" id="bVx-r3-q60"/>
@@ -205,6 +200,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="bVx-r3-q60"/>
+        <segue reference="CWz-37-3mL"/>
     </inferredMetricsTieBreakers>
 </document>
