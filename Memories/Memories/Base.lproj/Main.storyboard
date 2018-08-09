@@ -169,7 +169,11 @@
                         <viewLayoutGuide key="safeArea" id="5n6-1B-msi"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add Memory" id="wey-TE-k0A">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="NnX-Cg-h1o"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="NnX-Cg-h1o">
+                            <connections>
+                                <action selector="SaveMemory:" destination="ABn-uh-Yar" id="RcM-jZ-ypc"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="imageView" destination="eH5-iz-ywR" id="Itu-7T-eWC"/>
