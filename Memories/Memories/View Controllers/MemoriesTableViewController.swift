@@ -24,22 +24,24 @@ class MemoriesTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return memoryController.memories.count
+        return memoryController?.memories.count ?? 0
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MemoryCell", for: indexPath)
 
-        let memory = memoryController.memories[indexPath.row]
+        guard let memory = memoryController?.memories[indexPath.row] else { return cell }
         cell.textLabel?.text = memory.title
+        
+        cell.imageView?.image = UIImage(data: memory.imageData)
         
         return cell
     }
 
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            let memory = memoryController.memories[indexPath.row]
-            memoryController.delete(memory: memory)
+            guard let memory = memoryController?.memories[indexPath.row] else { return }
+            memoryController?.delete(memory: memory)
             tableView.deleteRows(at: [indexPath], with: .fade)
         }    
     }
@@ -47,18 +49,18 @@ class MemoriesTableViewController: UITableViewController {
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "" {
+        if segue.identifier == "AddMemorySegue" {
             guard let detailVC = segue.destination as? DetailViewController else { return }
             detailVC.memoryController = memoryController
-        } else if segue.identifier == "" {
+        } else if segue.identifier == "TapCellSegue" {
             guard let detailVC = segue.destination as? DetailViewController,
                 let indexPath = tableView.indexPathForSelectedRow else { return }
             detailVC.memoryController = memoryController
-            detailVC.memory = memoryController.memories[indexPath.row]
+            detailVC.memory = memoryController?.memories[indexPath.row]
         }
     }
     
-    var memoryController: MemoryController
+    var memoryController: MemoryController?
     var memory: Memory?
-
+    
 }
