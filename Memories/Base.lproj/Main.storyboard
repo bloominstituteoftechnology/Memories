@@ -1,16 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YDq-Re-O8T">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="88d-kv-geS">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Onboarding View Controller-->
+        <scene sceneID="dMC-GD-Wx1">
+            <objects>
+                <viewController id="88d-kv-geS" customClass="OnboardingViewController" customModule="Memories" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="arv-ak-nNk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Memories" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rzl-Yk-H6z">
+                                <rect key="frame" x="16" y="183" width="343" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="6rU-MN-TZf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="js5-RA-GH7">
+                                <rect key="frame" x="6" y="212" width="363" height="152"/>
+                                <string key="text">We're going to help you document every day of your life. In order to do this, we need you to allow the application to send you notifications so you can be reminded to create a memory every day! We'll also ask for your permission to access your photo library to attach photos to your memories."</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4uy-Aj-0Xv">
+                                <rect key="frame" x="145" y="372" width="84" height="30"/>
+                                <state key="normal" title="Get Started!"/>
+                                <connections>
+                                    <action selector="getStarted:" destination="88d-kv-geS" eventType="touchUpInside" id="PSy-TD-nDl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Rzl-Yk-H6z" firstAttribute="top" secondItem="wsq-wI-pfl" secondAttribute="top" constant="163" id="7zq-YT-Sd7"/>
+                            <constraint firstItem="wsq-wI-pfl" firstAttribute="bottom" secondItem="js5-RA-GH7" secondAttribute="bottom" constant="303" id="Alv-jO-hTE"/>
+                            <constraint firstItem="4uy-Aj-0Xv" firstAttribute="centerX" secondItem="js5-RA-GH7" secondAttribute="centerX" id="EtF-XU-agM"/>
+                            <constraint firstItem="Rzl-Yk-H6z" firstAttribute="centerX" secondItem="js5-RA-GH7" secondAttribute="centerX" id="Grl-q1-80m"/>
+                            <constraint firstItem="4uy-Aj-0Xv" firstAttribute="top" secondItem="js5-RA-GH7" secondAttribute="bottom" constant="8" symbolic="YES" id="Oz6-Fh-K06"/>
+                            <constraint firstItem="js5-RA-GH7" firstAttribute="top" secondItem="Rzl-Yk-H6z" secondAttribute="bottom" constant="8" symbolic="YES" id="f3S-vo-Pc1"/>
+                            <constraint firstItem="Rzl-Yk-H6z" firstAttribute="trailing" secondItem="arv-ak-nNk" secondAttribute="trailingMargin" id="hpN-Qp-C2P"/>
+                            <constraint firstItem="Rzl-Yk-H6z" firstAttribute="leading" secondItem="arv-ak-nNk" secondAttribute="leadingMargin" id="iYd-GN-e0N"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wsq-wI-pfl"/>
+                    </view>
+                    <connections>
+                        <segue destination="YDq-Re-O8T" kind="presentation" identifier="ManualSegue" id="ePJ-FJ-TxE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JpC-1K-bgf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-28" y="-748"/>
+        </scene>
         <!--Memories Table View Controller-->
         <scene sceneID="JxO-Kb-fKo">
             <objects>
