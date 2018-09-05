@@ -9,11 +9,24 @@
 import UIKit
 
 class OnboardingViewController: UIViewController {
+    
+    let localNotificationHelper = LocalNotificationHelper()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        localNotificationHelper.getAuthorizationStatus { (status) in
+            switch status{
+            case .authorized:
+                self.performSegue(withIdentifier: "ManualSegue", sender: nil)
+            
+            default:
+                return
+            }
+                
+            
+            
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,7 +36,17 @@ class OnboardingViewController: UIViewController {
     
     @IBAction func getStarted(_ sender: Any) {
         
+        localNotificationHelper.requestAuthorization { (flag) in
+            
+            if flag == true{
+                self.localNotificationHelper.scheduleDailyReminderNotification()
+            }
+            else {
+                return
+            }
+        }
         
+        performSegue(withIdentifier: "ManualSegue", sender: nil)
     }
     
     /*
