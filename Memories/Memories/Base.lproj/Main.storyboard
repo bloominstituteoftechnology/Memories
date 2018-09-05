@@ -122,7 +122,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="xnC-eA-qh6">
-                                <rect key="frame" x="16" y="64" width="343" height="603"/>
+                                <rect key="frame" x="16" y="69" width="343" height="598"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="F1o-cS-vMg">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="266"/>
@@ -131,7 +131,7 @@
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pdJ-d8-22L">
-                                        <rect key="frame" x="135.5" y="272" width="72" height="41"/>
+                                        <rect key="frame" x="135.5" y="272" width="72" height="36"/>
                                         <state key="normal" title="Add Photo"/>
                                         <connections>
                                             <action selector="addPhoto:" destination="yA4-cC-2qH" eventType="touchUpInside" id="CkF-vw-qEm"/>
@@ -139,30 +139,34 @@
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ICN-3v-5DO">
-                                        <rect key="frame" x="5" y="319" width="333" height="30"/>
+                                        <rect key="frame" x="5" y="314" width="333" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="h8e-3k-EJb">
-                                        <rect key="frame" x="19" y="355" width="305" height="248"/>
+                                        <rect key="frame" x="19" y="350" width="305" height="248"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="h8e-3k-EJb" secondAttribute="bottom" id="1tN-Zw-n55"/>
                                     <constraint firstAttribute="trailing" secondItem="ICN-3v-5DO" secondAttribute="trailing" constant="5" id="4Ij-es-Hn3"/>
+                                    <constraint firstItem="h8e-3k-EJb" firstAttribute="top" secondItem="ICN-3v-5DO" secondAttribute="bottom" constant="6" id="6Qg-F6-6Mn"/>
                                     <constraint firstItem="ICN-3v-5DO" firstAttribute="leading" secondItem="xnC-eA-qh6" secondAttribute="leading" constant="5" id="8i5-JM-HcL"/>
+                                    <constraint firstAttribute="trailing" secondItem="h8e-3k-EJb" secondAttribute="trailing" constant="19" id="CKo-Le-txp"/>
+                                    <constraint firstItem="h8e-3k-EJb" firstAttribute="leading" secondItem="xnC-eA-qh6" secondAttribute="leading" constant="19" id="Gl0-td-E5T"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="xnC-eA-qh6" firstAttribute="trailing" secondItem="Hw6-5I-BTF" secondAttribute="trailingMargin" id="G2h-pR-DrV"/>
-                            <constraint firstItem="xnC-eA-qh6" firstAttribute="top" secondItem="T8K-Vv-KTl" secondAttribute="top" id="YbB-AS-sWb"/>
                             <constraint firstItem="T8K-Vv-KTl" firstAttribute="bottom" secondItem="xnC-eA-qh6" secondAttribute="bottom" id="Zal-3q-8Ds"/>
                             <constraint firstItem="xnC-eA-qh6" firstAttribute="leading" secondItem="Hw6-5I-BTF" secondAttribute="leadingMargin" id="tLQ-hR-QMq"/>
+                            <constraint firstItem="xnC-eA-qh6" firstAttribute="top" secondItem="T8K-Vv-KTl" secondAttribute="top" constant="5" id="yiD-vZ-8kf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="T8K-Vv-KTl"/>
                     </view>
