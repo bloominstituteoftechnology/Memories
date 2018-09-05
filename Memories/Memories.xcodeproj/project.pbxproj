@@ -16,6 +16,7 @@
 		3456AABA21406AF100629E73 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3456AAB921406AF100629E73 /* OnboardingViewController.swift */; };
 		3456AABC21406C1100629E73 /* MemoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3456AABB21406C1100629E73 /* MemoriesTableViewController.swift */; };
 		3456AABE21406D0800629E73 /* MemoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3456AABD21406D0800629E73 /* MemoryDetailViewController.swift */; };
+		3456AAC021406E0F00629E73 /* LocalNotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3456AABF21406E0F00629E73 /* LocalNotificationHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		3456AAB921406AF100629E73 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		3456AABB21406C1100629E73 /* MemoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoriesTableViewController.swift; sourceTree = "<group>"; };
 		3456AABD21406D0800629E73 /* MemoryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryDetailViewController.swift; sourceTree = "<group>"; };
+		3456AABF21406E0F00629E73 /* LocalNotificationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				3456AAB72140638200629E73 /* MemoryController.swift */,
 				3456AAA7214062D800629E73 /* Main.storyboard */,
 				3456AABD21406D0800629E73 /* MemoryDetailViewController.swift */,
+				3456AABF21406E0F00629E73 /* LocalNotificationHelper.swift */,
 				3456AAAA214062D900629E73 /* Assets.xcassets */,
 				3456AAAC214062D900629E73 /* LaunchScreen.storyboard */,
 				3456AAAF214062D900629E73 /* Info.plist */,
@@ -150,6 +153,7 @@
 				3456AABE21406D0800629E73 /* MemoryDetailViewController.swift in Sources */,
 				3456AAB62140632A00629E73 /* Memory.swift in Sources */,
 				3456AAB82140638200629E73 /* MemoryController.swift in Sources */,
+				3456AAC021406E0F00629E73 /* LocalNotificationHelper.swift in Sources */,
 				3456AABC21406C1100629E73 /* MemoriesTableViewController.swift in Sources */,
 				3456AAA4214062D800629E73 /* AppDelegate.swift in Sources */,
 				3456AABA21406AF100629E73 /* OnboardingViewController.swift in Sources */,
