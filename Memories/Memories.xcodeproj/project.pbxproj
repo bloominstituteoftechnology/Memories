@@ -14,6 +14,10 @@
 		A149AD2B21406D7800016395 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A149AD2921406D7800016395 /* LaunchScreen.storyboard */; };
 		A149AD3321406DB400016395 /* Memory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A149AD3221406DB400016395 /* Memory.swift */; };
 		A149AD3521406EFD00016395 /* MemoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A149AD3421406EFD00016395 /* MemoryController.swift */; };
+		A149AD37214073A600016395 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A149AD36214073A600016395 /* OnboardingViewController.swift */; };
+		A149AD392140772300016395 /* MemoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A149AD382140772300016395 /* MemoriesTableViewController.swift */; };
+		A149AD3B21407B0600016395 /* MemoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A149AD3A21407B0600016395 /* MemoryDetailViewController.swift */; };
+		A19E4C0B2140839800E23F09 /* LocalNotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19E4C0A2140839800E23F09 /* LocalNotificationHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		A149AD2C21406D7800016395 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A149AD3221406DB400016395 /* Memory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memory.swift; sourceTree = "<group>"; };
 		A149AD3421406EFD00016395 /* MemoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryController.swift; sourceTree = "<group>"; };
+		A149AD36214073A600016395 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		A149AD382140772300016395 /* MemoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoriesTableViewController.swift; sourceTree = "<group>"; };
+		A149AD3A21407B0600016395 /* MemoryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryDetailViewController.swift; sourceTree = "<group>"; };
+		A19E4C0A2140839800E23F09 /* LocalNotificationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +71,10 @@
 				A149AD3221406DB400016395 /* Memory.swift */,
 				A149AD2221406D7700016395 /* ViewController.swift */,
 				A149AD2421406D7700016395 /* Main.storyboard */,
+				A19E4C0A2140839800E23F09 /* LocalNotificationHelper.swift */,
+				A149AD3A21407B0600016395 /* MemoryDetailViewController.swift */,
+				A149AD382140772300016395 /* MemoriesTableViewController.swift */,
+				A149AD36214073A600016395 /* OnboardingViewController.swift */,
 				A149AD2721406D7800016395 /* Assets.xcassets */,
 				A149AD2921406D7800016395 /* LaunchScreen.storyboard */,
 				A149AD2C21406D7800016395 /* Info.plist */,
@@ -141,8 +153,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A149AD392140772300016395 /* MemoriesTableViewController.swift in Sources */,
 				A149AD3321406DB400016395 /* Memory.swift in Sources */,
+				A19E4C0B2140839800E23F09 /* LocalNotificationHelper.swift in Sources */,
+				A149AD3B21407B0600016395 /* MemoryDetailViewController.swift in Sources */,
 				A149AD2321406D7700016395 /* ViewController.swift in Sources */,
+				A149AD37214073A600016395 /* OnboardingViewController.swift in Sources */,
 				A149AD3521406EFD00016395 /* MemoryController.swift in Sources */,
 				A149AD2121406D7700016395 /* AppDelegate.swift in Sources */,
 			);
