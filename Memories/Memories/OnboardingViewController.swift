@@ -12,19 +12,19 @@ class OnboardingViewController: UIViewController {
     
     let localNotificationHelper = LocalNotificationHelper()
 
+    @IBOutlet weak var explanationLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         localNotificationHelper.getAuthorizationStatus { (status) in
             if status == .authorized {
                 self.performSegue(withIdentifier: "OnboardingSegue", sender: nil)
+            } else {
+                self.explanationLabel.text = "It looks like you have previously denied access to notifications. Memories won't work if it doesn't have this access, so you'll be stuck at this screen unless you allow notifications in Settings. Click the button below to go there!"
             }
         }
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     @IBAction func getStarted(_ sender: Any) {
@@ -32,18 +32,13 @@ class OnboardingViewController: UIViewController {
             if success {
                 self.localNotificationHelper.scheduleDailyReminderNotification()
                 self.performSegue(withIdentifier: "OnboardingSegue", sender: nil)
+            } else {
+                let url = URL(string: "app-settings:")
+                if let url = url {
+                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                }
             }
         }
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

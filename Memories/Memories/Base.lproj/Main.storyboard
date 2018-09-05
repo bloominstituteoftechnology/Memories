@@ -55,11 +55,13 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="explanationLabel" destination="ciX-2v-vyt" id="7LM-MS-6qn"/>
                         <segue destination="lhw-Yt-Ifx" kind="presentation" identifier="OnboardingSegue" id="7ED-2e-pxJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="68" y="34"/>
         </scene>
         <!--Memories-->
         <scene sceneID="L5M-7F-E3y">
@@ -141,7 +143,6 @@
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="249" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="W2O-S8-Rtb">
                                         <rect key="frame" x="0.0" y="347.5" width="351" height="179.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
@@ -165,6 +166,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addImageButton" destination="JIV-he-02q" id="WoR-fL-pm7"/>
                         <outlet property="bodyTextView" destination="W2O-S8-Rtb" id="KCZ-ER-87O"/>
                         <outlet property="memoryImageView" destination="4HS-sD-ecq" id="LG9-Fw-JrO"/>
                         <outlet property="titleTextField" destination="t8p-Q5-1XV" id="2tt-Cp-tJ5"/>
