@@ -10,22 +10,18 @@ import UIKit
 
 class MemoriesTableViewController: UITableViewController {
 
+    // MARK: - Properties
     let memoryController = MemoryController()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-    }
-    
+    // MARK: - Lifecycle Methods
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         tableView.reloadData()
     }
 
-    // MARK: - Table view data source
+    // MARK: - Table View Data Source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return memoryController.memories.count
     }
 
@@ -39,24 +35,24 @@ class MemoriesTableViewController: UITableViewController {
         return cell
     }
 
-    // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            // Delete the row from the data source
             let memory = memoryController.memories[indexPath.row]
+            
             memoryController.delete(memory)
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
 
     // MARK: - Navigation
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "AddMemorySegue" {
+            // If the segue is for adding a memory, make sure we can cast the destination and then set the memory controller
             guard let destinationVC = segue.destination as? MemoryDetailViewController else { return }
             
             destinationVC.memoryController = memoryController
         } else if segue.identifier == "ShowMemorySegue" {
+            // If the segue is for showing a memory, make sure we can cast the destination and get a memory, then set the memory and memory controller
             guard let destinationVC = segue.destination as? MemoryDetailViewController,
                 let indexPath = tableView.indexPathForSelectedRow else { return }
             let memory = memoryController.memories[indexPath.row]

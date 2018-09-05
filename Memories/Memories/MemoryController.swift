@@ -9,10 +9,16 @@
 import Foundation
 
 class MemoryController {
+    // MARK: - Properties
     private(set) var memories: [Memory] = []
     
+    // MARK: - Initializers
+    init() {
+        loadFromPersistentStore()
+    }
+    
     // MARK: - CRUD Methods
-    //Create Method
+    //Create new memory
     func createMemory(withTitle title: String, bodyText: String, imageData: Data) {
         let memory = Memory(title: title, bodyText: bodyText, imageData: imageData)
         
@@ -20,7 +26,7 @@ class MemoryController {
         saveToPersistentStore()
     }
     
-    //Update Method
+    //Update existing memory
     func update(_ memory: Memory, title: String, bodyText: String, imageData: Data) {
         guard let index = memories.index(of: memory) else { return }
         
@@ -30,7 +36,7 @@ class MemoryController {
         saveToPersistentStore()
     }
     
-    //Delete Method
+    //Delete memory
     func delete(_ memory: Memory) {
         guard let index = memories.index(of: memory) else { return }
         

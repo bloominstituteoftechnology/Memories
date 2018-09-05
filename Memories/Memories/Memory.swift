@@ -9,6 +9,8 @@
 import Foundation
 
 struct Memory: Codable, Equatable {
+    
+    // MARK: - Properties
     var title: String
     var bodyText: String
     var imageData: Data

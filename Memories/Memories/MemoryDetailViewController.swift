@@ -29,26 +29,35 @@ class MemoryDetailViewController: UIViewController, UIImagePickerControllerDeleg
     
     // MARK: - UI Methods
     @IBAction func addPhoto(_ sender: Any) {
+        // Get the authorization status
         let authorizationStatus = PHPhotoLibrary.authorizationStatus()
         
         if authorizationStatus == .authorized {
+            // If the status is authorized, present the image picker controller
             presentImagePickerController()
         } else if authorizationStatus == .notDetermined {
+            // If the status is not determined, request authorization
             PHPhotoLibrary.requestAuthorization { (status) in
-                if status == .authorized { self.presentImagePickerController() }
+                if status == .authorized {
+                    // If it comes back as successful, present the image picker controller
+                    self.presentImagePickerController()
+                }
             }
         }
     }
     
     @IBAction func saveMemory(_ sender: Any) {
+        // Make sure we have all the data we need.
         guard let title = titleTextField.text, !title.isEmpty,
             let bodyText = bodyTextView.text,
             let image = memoryImageView.image,
             let imageData = UIImagePNGRepresentation(image) else { return }
         
         if let memory = memory {
+            // If there is already a memory, update it.
             memoryController?.update(memory, title: title, bodyText: bodyText, imageData: imageData)
         } else {
+            // Otherwise, make a new one.
             memoryController?.createMemory(withTitle: title, bodyText: bodyText, imageData: imageData)
         }
         
@@ -65,17 +74,8 @@ class MemoryDetailViewController: UIViewController, UIImagePickerControllerDeleg
         memoryImageView.image = image
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
-    // MARK: - Private Utility Functions
+    // MARK: - Private Utility Method
+    // Method to update the views
     private func updateViews() {
         addImageButton.setTitle("Add Photo", for: .normal)
         guard let memory = memory else {
@@ -90,6 +90,7 @@ class MemoryDetailViewController: UIViewController, UIImagePickerControllerDeleg
         addImageButton.setTitle("Change Photo", for: .normal)
     }
     
+    // Method to present the image picker controller
     private func presentImagePickerController() {
         guard UIImagePickerController.isSourceTypeAvailable(.photoLibrary) else { return }
         
@@ -99,5 +100,8 @@ class MemoryDetailViewController: UIViewController, UIImagePickerControllerDeleg
         
         present(imagePicker, animated: true, completion: nil)
     }
+    
+    // TODO: - Method to present an alert if we don't have permission to access photos.
+    
 
 }
