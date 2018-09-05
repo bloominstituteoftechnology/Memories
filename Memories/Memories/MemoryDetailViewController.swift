@@ -41,8 +41,12 @@ class MemoryDetailViewController: UIViewController, UIImagePickerControllerDeleg
                 if status == .authorized {
                     // If it comes back as successful, present the image picker controller
                     self.presentImagePickerController()
+                } else {
+                    self.presentAlertController()
                 }
             }
+        } else {
+            presentAlertController()
         }
     }
     
@@ -101,7 +105,22 @@ class MemoryDetailViewController: UIViewController, UIImagePickerControllerDeleg
         present(imagePicker, animated: true, completion: nil)
     }
     
-    // TODO: - Method to present an alert if we don't have permission to access photos.
-    
-
+    // Method to present an alert if we don't have permission to access photos.
+    private func presentAlertController() {
+        //Instantiate an alert controller
+        let alert = UIAlertController(title: "Permission Denied", message: "At some point you denied permission for Memories to use your photos. You must change that to continue.", preferredStyle: .alert)
+        
+        //Make and add a dismiss action
+        let dismissAction = UIAlertAction(title: "Dismiss", style: .cancel, handler: nil)
+        alert.addAction(dismissAction)
+        
+        //Make and add a settings action
+        let settingsAction = UIAlertAction(title: "Settings", style: .default) { (_) in
+            let url = URL(string: "app-settings:")
+            if let url = url { UIApplication.shared.open(url, options: [:], completionHandler: nil) }
+        }
+        alert.addAction(settingsAction)
+        
+        present(alert, animated: true, completion: nil)
+    }
 }
