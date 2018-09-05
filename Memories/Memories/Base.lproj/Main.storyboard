@@ -59,7 +59,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <segue destination="Hjd-aO-BgM" kind="presentation" id="EHH-tn-89Y"/>
+                        <segue destination="Hjd-aO-BgM" kind="presentation" identifier="Memories" id="EHH-tn-89Y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -91,6 +91,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="yA4-cC-2qH" kind="show" identifier="ViewMemory" id="keM-7u-SzH"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -199,4 +202,7 @@
             <point key="canvasLocation" x="904.79999999999995" y="33.733133433283363"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="keM-7u-SzH"/>
+    </inferredMetricsTieBreakers>
 </document>
