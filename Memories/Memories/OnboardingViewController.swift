@@ -21,13 +21,7 @@ class OnboardingViewController: UIViewController {
         super.viewDidLoad()
         
         //If authorization for notifications has been granted, bypass the onboarding screen. Otherwise, update the explanation label.
-        localNotificationHelper.getAuthorizationStatus { (status) in
-            if status == .authorized {
-                self.performSegue(withIdentifier: "OnboardingSegue", sender: nil)
-            } else if status == .denied {
-                self.explanationLabel.text = self.secondExplanation
-            }
-        }
+        startUp()
     }
     
     // MARK: - UI Methods
@@ -53,6 +47,16 @@ class OnboardingViewController: UIViewController {
                 if let url = url {
                     UIApplication.shared.open(url, options: [:], completionHandler: nil)
                 }
+            }
+        }
+    }
+    
+    func startUp() {
+        localNotificationHelper.getAuthorizationStatus { (status) in
+            if status == .authorized {
+                self.performSegue(withIdentifier: "OnboardingSegue", sender: nil)
+            } else if status == .denied {
+                self.explanationLabel.text = self.secondExplanation
             }
         }
     }
