@@ -55,7 +55,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <segue destination="lhw-Yt-Ifx" kind="presentation" id="7ED-2e-pxJ"/>
+                        <segue destination="lhw-Yt-Ifx" kind="presentation" identifier="OnboardingSegue" id="7ED-2e-pxJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
