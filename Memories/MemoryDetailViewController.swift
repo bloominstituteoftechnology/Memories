@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Photos
 import UserNotifications
 
 class MemoryDetailViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
@@ -37,13 +38,34 @@ class MemoryDetailViewController: UIViewController, UIImagePickerControllerDeleg
     
     @IBAction func addPhoto(_ sender: Any) {
         
-        let imagePicker = UIImagePickerController()
-        
-        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
-            imagePicker.sourceType = .photoLibrary
-            imagePicker.delegate = self
-            present(imagePicker, animated: true, completion: nil)
+        let authStatus = PHPhotoLibrary.authorizationStatus()
+
+        if authStatus == .authorized{
+            let imagePicker = UIImagePickerController()
+            
+            if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+                imagePicker.sourceType = .photoLibrary
+                imagePicker.delegate = self
+                present(imagePicker, animated: true, completion: nil)
+            }
+        } else {
+            PHPhotoLibrary.requestAuthorization { (status) in
+                if status == .authorized {
+                    let imagePicker = UIImagePickerController()
+                    
+                    if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+                        imagePicker.sourceType = .photoLibrary
+                        imagePicker.delegate = self
+                        self.present(imagePicker, animated: true, completion: nil)
+                    }
+                }
+            }
         }
+        // TODO
+        
+        
+        
+        
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
