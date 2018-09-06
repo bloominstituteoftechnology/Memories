@@ -15,7 +15,6 @@ class MemoryDetailViewController: UIViewController, UINavigationControllerDelega
         super.viewDidLoad()
         
         updateViews()
-        // Do any additional setup after loading the view.
     }
     
     func updateViews() {
@@ -83,9 +82,30 @@ class MemoryDetailViewController: UIViewController, UINavigationControllerDelega
             PHPhotoLibrary.requestAuthorization { (authorizationStatus) in
                 if authorizationStatus == .authorized {
                     self.presentImagePickerController()
+                } else if authorizationStatus == .denied {
+                    self.setDeniedAlert()
+                    
                 }
             }
         }
+    }
+    
+    private func setDeniedAlert(){
+        let deniedAlert = UIAlertController(title: "Oh no! You denied notifications.", message: "To allow for notifications, please go your settings and manually change notification settings to 'Allow'", preferredStyle: .alert)
+        
+        let dismissAction = UIAlertAction(title: "Dismiss", style: .default , handler: nil)
+        
+        deniedAlert.addAction(dismissAction)
+        
+        let goToSettings = UIAlertAction(title: "Go to settings", style: .cancel) { (_) in
+            if let url = URL(string: "app-settings:") {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            }
+        }
+        
+        deniedAlert.addAction(goToSettings)
+        
+        self.present(deniedAlert, animated:  true, completion: nil)
     }
     
     var memory: Memory?

@@ -81,9 +81,12 @@
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sMs-yT-XKG">
                                             <rect key="frame" x="16" y="0.0" width="343" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
+                                            <variation key="heightClass=regular-widthClass=regular">
+                                                <nil key="highlightedColor"/>
+                                            </variation>
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
@@ -127,20 +130,30 @@
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X2g-ht-Tsn">
-                                        <rect key="frame" x="143.5" y="277.5" width="72" height="30"/>
-                                        <state key="normal" title="Add Photo"/>
+                                        <rect key="frame" x="136" y="277.5" width="87" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                        <size key="titleShadowOffset" width="1" height="1"/>
+                                        <state key="normal" title="Add Photo">
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="addPhoto:" destination="Rdt-fe-6AN" eventType="touchUpInside" id="VPS-aa-75D"/>
                                         </connections>
                                     </button>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s1a-rz-pUi">
-                                        <rect key="frame" x="0.0" y="315.5" width="359" height="30"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter memory title:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s1a-rz-pUi">
+                                        <rect key="frame" x="0.0" y="319.5" width="359" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add memory details:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="feZ-y2-zPL">
+                                        <rect key="frame" x="0.0" y="357.5" width="359" height="14.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="249" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3JZ-V4-MLX">
-                                        <rect key="frame" x="0.0" y="353.5" width="359" height="209.5"/>
+                                        <rect key="frame" x="0.0" y="380" width="359" height="183"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -150,6 +163,7 @@
                                     <constraint firstAttribute="trailing" secondItem="3JZ-V4-MLX" secondAttribute="trailing" id="SCL-eC-eKX"/>
                                     <constraint firstAttribute="trailing" secondItem="Sop-fh-SjE" secondAttribute="trailing" id="TOp-ov-0hN"/>
                                     <constraint firstItem="3JZ-V4-MLX" firstAttribute="leading" secondItem="KsR-lv-QIi" secondAttribute="leading" id="UYA-pj-4zR"/>
+                                    <constraint firstItem="feZ-y2-zPL" firstAttribute="leading" secondItem="KsR-lv-QIi" secondAttribute="leading" id="bUw-cJ-oQb"/>
                                     <constraint firstItem="s1a-rz-pUi" firstAttribute="leading" secondItem="KsR-lv-QIi" secondAttribute="leading" id="gIi-bb-m2C"/>
                                     <constraint firstAttribute="trailing" secondItem="s1a-rz-pUi" secondAttribute="trailing" id="s08-fw-ga9"/>
                                     <constraint firstItem="Sop-fh-SjE" firstAttribute="leading" secondItem="KsR-lv-QIi" secondAttribute="leading" id="upi-3A-qoZ"/>
