@@ -8,20 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		964D55902142567E00E003ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964D558F2142567E00E003ED /* AppDelegate.swift */; };
-		964D55922142567E00E003ED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964D55912142567E00E003ED /* ViewController.swift */; };
 		964D55952142567E00E003ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 964D55932142567E00E003ED /* Main.storyboard */; };
 		964D55972142567E00E003ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 964D55962142567E00E003ED /* Assets.xcassets */; };
 		964D559A2142567E00E003ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 964D55982142567E00E003ED /* LaunchScreen.storyboard */; };
+		964D55A221425F2700E003ED /* Memory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964D55A121425F2700E003ED /* Memory.swift */; };
+		964D55A421425F5F00E003ED /* MemoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964D55A321425F5F00E003ED /* MemoryController.swift */; };
+		964D55A72142686500E003ED /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964D55A62142686500E003ED /* OnboardingViewController.swift */; };
+		964D55A921426B8A00E003ED /* MemoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964D55A821426B8A00E003ED /* MemoryDetailViewController.swift */; };
+		964D55AD21426C8500E003ED /* LocalNotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964D55AC21426C8500E003ED /* LocalNotificationHelper.swift */; };
+		964D55B02142711100E003ED /* MemoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964D55AF2142711100E003ED /* MemoriesTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		964D558C2142567E00E003ED /* Memories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memories.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		964D558F2142567E00E003ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		964D55912142567E00E003ED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		964D55942142567E00E003ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		964D55962142567E00E003ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		964D55992142567E00E003ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		964D559B2142567E00E003ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		964D55A121425F2700E003ED /* Memory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memory.swift; sourceTree = "<group>"; };
+		964D55A321425F5F00E003ED /* MemoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryController.swift; sourceTree = "<group>"; };
+		964D55A62142686500E003ED /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		964D55A821426B8A00E003ED /* MemoryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryDetailViewController.swift; sourceTree = "<group>"; };
+		964D55AC21426C8500E003ED /* LocalNotificationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationHelper.swift; sourceTree = "<group>"; };
+		964D55AF2142711100E003ED /* MemoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoriesTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +65,50 @@
 			isa = PBXGroup;
 			children = (
 				964D558F2142567E00E003ED /* AppDelegate.swift */,
-				964D55912142567E00E003ED /* ViewController.swift */,
 				964D55932142567E00E003ED /* Main.storyboard */,
+				964D55AA21426C5C00E003ED /* View Controllers */,
+				964D55A52142614900E003ED /* Model + Model Controller */,
+				964D55AE21426F5A00E003ED /* Helpers */,
+				964D55AB21426C6E00E003ED /* Resources */,
+			);
+			path = Memories;
+			sourceTree = "<group>";
+		};
+		964D55A52142614900E003ED /* Model + Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				964D55A121425F2700E003ED /* Memory.swift */,
+				964D55A321425F5F00E003ED /* MemoryController.swift */,
+			);
+			path = "Model + Model Controller";
+			sourceTree = "<group>";
+		};
+		964D55AA21426C5C00E003ED /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				964D55A62142686500E003ED /* OnboardingViewController.swift */,
+				964D55A821426B8A00E003ED /* MemoryDetailViewController.swift */,
+				964D55AF2142711100E003ED /* MemoriesTableViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		964D55AB21426C6E00E003ED /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				964D55962142567E00E003ED /* Assets.xcassets */,
 				964D55982142567E00E003ED /* LaunchScreen.storyboard */,
 				964D559B2142567E00E003ED /* Info.plist */,
 			);
-			path = Memories;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		964D55AE21426F5A00E003ED /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				964D55AC21426C8500E003ED /* LocalNotificationHelper.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +182,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				964D55922142567E00E003ED /* ViewController.swift in Sources */,
+				964D55A921426B8A00E003ED /* MemoryDetailViewController.swift in Sources */,
+				964D55A221425F2700E003ED /* Memory.swift in Sources */,
+				964D55AD21426C8500E003ED /* LocalNotificationHelper.swift in Sources */,
+				964D55A72142686500E003ED /* OnboardingViewController.swift in Sources */,
+				964D55A421425F5F00E003ED /* MemoryController.swift in Sources */,
+				964D55B02142711100E003ED /* MemoriesTableViewController.swift in Sources */,
 				964D55902142567E00E003ED /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,7 +334,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7LHTMK9AWG;
-				INFOPLIST_FILE = Memories/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Memories/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,7 +352,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7LHTMK9AWG;
-				INFOPLIST_FILE = Memories/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Memories/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
