@@ -1,0 +1,51 @@
+//
+//  MemoriesTableViewController.swift
+//  Memories
+//
+//  Created by Jason Modisett on 9/7/18.
+//  Copyright © 2018 Jason Modisett. All rights reserved.
+//
+
+import UIKit
+
+class MemoriesTableViewController: UITableViewController {
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
+
+    // MARK: - Table view data source
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return memoryController.memories.count
+    }
+
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+
+        let memory = memoryController.memories[indexPath.row]
+        let memoryImage = UIImage(data: memory.imageData)
+        
+        cell.textLabel?.text = memory.title
+        cell.imageView?.image = memoryImage
+
+        return cell
+    }
+
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            // Delete the row from the data source
+            let memory = memoryController.memories[indexPath.row]
+            memoryController.delete(memory: memory)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
+
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+    }
+    
+    let memoryController = MemoryController()
+
+}
