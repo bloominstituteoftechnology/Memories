@@ -14,6 +14,8 @@
 		F1585EC02149ACEB005EDF82 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1585EBF2149ACEB005EDF82 /* OnboardingViewController.swift */; };
 		F1585EC22149B1F8005EDF82 /* MemoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1585EC12149B1F8005EDF82 /* MemoriesTableViewController.swift */; };
 		F1585EC42149B44A005EDF82 /* MemoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1585EC32149B44A005EDF82 /* MemoryDetailViewController.swift */; };
+		F1585EC62149B5DC005EDF82 /* Memory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1585EC52149B5DC005EDF82 /* Memory.swift */; };
+		F1585EC82149B64F005EDF82 /* MemoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1585EC72149B64F005EDF82 /* MemoryController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		F1585EBF2149ACEB005EDF82 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		F1585EC12149B1F8005EDF82 /* MemoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoriesTableViewController.swift; sourceTree = "<group>"; };
 		F1585EC32149B44A005EDF82 /* MemoryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryDetailViewController.swift; sourceTree = "<group>"; };
+		F1585EC52149B5DC005EDF82 /* Memory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memory.swift; sourceTree = "<group>"; };
+		F1585EC72149B64F005EDF82 /* MemoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,8 @@
 		F1585EBD2149A8A3005EDF82 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F1585EC52149B5DC005EDF82 /* Memory.swift */,
+				F1585EC72149B64F005EDF82 /* MemoryController.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -183,7 +189,9 @@
 			files = (
 				F1585EC42149B44A005EDF82 /* MemoryDetailViewController.swift in Sources */,
 				F1585EC22149B1F8005EDF82 /* MemoriesTableViewController.swift in Sources */,
+				F1585EC82149B64F005EDF82 /* MemoryController.swift in Sources */,
 				F1585EC02149ACEB005EDF82 /* OnboardingViewController.swift in Sources */,
+				F1585EC62149B5DC005EDF82 /* Memory.swift in Sources */,
 				F1585EA92149A860005EDF82 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
