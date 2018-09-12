@@ -9,25 +9,32 @@
 import UIKit
 
 class OnboardingViewController: UIViewController {
+    
+    let localNotificationHelper = LocalNotificationHelper()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        localNotificationHelper.getAuthorizationStatus { (status) in
+            switch status {
+            case .authorized:
+                self.performSegue(withIdentifier: "GetStarted", sender: nil)
+            case .denied:
+                break
+            default:
+                break
+            }
+        }
     }
 
     
     @IBAction func getStartedButton(_ sender: Any) {
+        localNotificationHelper.requestAuthorization { (true) in
+            self.localNotificationHelper.scheduleDailyReminderNotification()
+        }
+        performSegue(withIdentifier: "GetStarted", sender: nil)
+        
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
 }

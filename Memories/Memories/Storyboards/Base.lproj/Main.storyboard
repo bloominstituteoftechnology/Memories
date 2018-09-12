@@ -57,7 +57,7 @@
                         <viewLayoutGuide key="safeArea" id="tFA-6F-Zeh"/>
                     </view>
                     <connections>
-                        <segue destination="HIA-Hb-Ujl" kind="presentation" id="o1c-9A-mIX"/>
+                        <segue destination="HIA-Hb-Ujl" kind="presentation" identifier="GetStarted" id="o1c-9A-mIX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NQI-cx-wVz" userLabel="First Responder" sceneMemberID="firstResponder"/>
