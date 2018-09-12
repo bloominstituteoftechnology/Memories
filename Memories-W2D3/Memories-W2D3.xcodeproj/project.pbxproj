@@ -16,6 +16,7 @@
 		8202DC052149BC920055F1E7 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8202DC042149BC920055F1E7 /* OnboardingViewController.swift */; };
 		8202DC082149BED90055F1E7 /* MemoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8202DC072149BED90055F1E7 /* MemoriesTableViewController.swift */; };
 		8202DC0A2149C04E0055F1E7 /* MemoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8202DC092149C04E0055F1E7 /* MemoryDetailViewController.swift */; };
+		8202DC0C2149C8020055F1E7 /* LocalNotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8202DC0B2149C8020055F1E7 /* LocalNotificationHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		8202DC042149BC920055F1E7 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		8202DC072149BED90055F1E7 /* MemoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoriesTableViewController.swift; sourceTree = "<group>"; };
 		8202DC092149C04E0055F1E7 /* MemoryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryDetailViewController.swift; sourceTree = "<group>"; };
+		8202DC0B2149C8020055F1E7 /* LocalNotificationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 		8202DBE92149B1BE0055F1E7 /* Memories-W2D3 */ = {
 			isa = PBXGroup;
 			children = (
+				8202DC0B2149C8020055F1E7 /* LocalNotificationHelper.swift */,
 				8202DBFF2149B28B0055F1E7 /* Model */,
 				8202DC022149B3170055F1E7 /* Model Controller */,
 				8202DC032149BA300055F1E7 /* View */,
@@ -190,6 +193,7 @@
 				8202DC0A2149C04E0055F1E7 /* MemoryDetailViewController.swift in Sources */,
 				8202DBFE2149B2840055F1E7 /* Memory.swift in Sources */,
 				8202DC012149B3130055F1E7 /* MemoryController.swift in Sources */,
+				8202DC0C2149C8020055F1E7 /* LocalNotificationHelper.swift in Sources */,
 				8202DC082149BED90055F1E7 /* MemoriesTableViewController.swift in Sources */,
 				8202DBEB2149B1BE0055F1E7 /* AppDelegate.swift in Sources */,
 				8202DC052149BC920055F1E7 /* OnboardingViewController.swift in Sources */,
