@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		F1585EA92149A860005EDF82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1585EA82149A860005EDF82 /* AppDelegate.swift */; };
-		F1585EAB2149A860005EDF82 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1585EAA2149A860005EDF82 /* ViewController.swift */; };
 		F1585EAE2149A860005EDF82 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1585EAC2149A860005EDF82 /* Main.storyboard */; };
 		F1585EB02149A861005EDF82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1585EAF2149A861005EDF82 /* Assets.xcassets */; };
 		F1585EB32149A861005EDF82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1585EB12149A861005EDF82 /* LaunchScreen.storyboard */; };
+		F1585EC02149ACEB005EDF82 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1585EBF2149ACEB005EDF82 /* OnboardingViewController.swift */; };
+		F1585EC22149B1F8005EDF82 /* MemoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1585EC12149B1F8005EDF82 /* MemoriesTableViewController.swift */; };
+		F1585EC42149B44A005EDF82 /* MemoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1585EC32149B44A005EDF82 /* MemoryDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F1585EA52149A860005EDF82 /* Memories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memories.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1585EA82149A860005EDF82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F1585EAA2149A860005EDF82 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F1585EAD2149A860005EDF82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F1585EAF2149A861005EDF82 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F1585EB22149A861005EDF82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F1585EB42149A861005EDF82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1585EBF2149ACEB005EDF82 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		F1585EC12149B1F8005EDF82 /* MemoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoriesTableViewController.swift; sourceTree = "<group>"; };
+		F1585EC32149B44A005EDF82 /* MemoryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +89,9 @@
 		F1585EBC2149A896005EDF82 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				F1585EAA2149A860005EDF82 /* ViewController.swift */,
+				F1585EBF2149ACEB005EDF82 /* OnboardingViewController.swift */,
+				F1585EC12149B1F8005EDF82 /* MemoriesTableViewController.swift */,
+				F1585EC32149B44A005EDF82 /* MemoryDetailViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -175,7 +181,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1585EAB2149A860005EDF82 /* ViewController.swift in Sources */,
+				F1585EC42149B44A005EDF82 /* MemoryDetailViewController.swift in Sources */,
+				F1585EC22149B1F8005EDF82 /* MemoriesTableViewController.swift in Sources */,
+				F1585EC02149ACEB005EDF82 /* OnboardingViewController.swift in Sources */,
 				F1585EA92149A860005EDF82 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
