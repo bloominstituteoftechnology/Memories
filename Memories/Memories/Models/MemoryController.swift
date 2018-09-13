@@ -10,7 +10,11 @@ import Foundation
 
 class MemoryController {
     
-    var memories: [Memory] = []
+    init() {
+        loadFromPersistentStore()
+    }
+    
+    private(set) var memories: [Memory] = []
     
     private var persistentFileURL: URL? {
         let fm = FileManager.default
@@ -50,7 +54,7 @@ class MemoryController {
     
     
     // Create
-    func createMemories(withName title: String, bodyText: String, imageData: Data) {
+    func createMemory(withName title: String, bodyText: String, imageData: Data) {
         let memory = Memory(title: title, bodyText: bodyText, imageData: imageData)
         memories.append(memory)
         saveToPersistentStore()
@@ -67,7 +71,7 @@ class MemoryController {
     }
     
     
-    // Delte
+    // Delete
     func deleteMemory(memory: Memory) {
         guard let index = memories.index(of: memory) else { return }
         memories.remove(at: index)
