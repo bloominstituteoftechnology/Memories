@@ -64,9 +64,9 @@ class MemoryController {
     // Update
     func updateMemory(with memory: Memory, title: String, bodyText: String, imageData: Data) {
         guard let index = memories.index(of: memory) else { return }
-        memories[index].title = title
-        memories[index].bodyText = bodyText
-        memories[index].imageData = imageData
+        let newMemory = Memory(title: title, bodyText: bodyText, imageData: imageData)
+        memories.remove(at: index)
+        memories.insert(newMemory, at: index)
         saveToPersistentStore()
     }
     

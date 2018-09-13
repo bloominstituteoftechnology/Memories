@@ -12,6 +12,7 @@ import Photos
 class MemoryDetailViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     var memory: Memory?
+    
     var memoryController: MemoryController?
 
     @IBOutlet weak var imageView: UIImageView!
@@ -27,10 +28,10 @@ class MemoryDetailViewController: UIViewController, UIImagePickerControllerDeleg
     
     func updateViews() {
         guard let memory = memory else {
-            self.navigationItem.title = "Add Memory"
+            title = "Add Memory"
             return
         }
-        self.navigationItem.title = "Edit Memory"
+        title = "Edit Memory"
         titleTextField.text = memory.title
         descriptionTextView.text = memory.bodyText
         imageView.image = UIImage(data: memory.imageData)
@@ -39,11 +40,14 @@ class MemoryDetailViewController: UIViewController, UIImagePickerControllerDeleg
 
     @IBAction func addPhotoButton(_ sender: Any) {
         let authorizaionStatus = PHPhotoLibrary.authorizationStatus()
+        
+        // Is there a better way to do this?
         switch authorizaionStatus {
         case .authorized:
             presentImagePickerController()
         case .notDetermined:
             PHPhotoLibrary.requestAuthorization { (status) in
+                
                 switch status {
                 case .authorized:
                     self.presentImagePickerController()
