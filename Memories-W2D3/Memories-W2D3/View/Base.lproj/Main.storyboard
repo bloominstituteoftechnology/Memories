@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BLJ-2Y-i6A">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Onboarding View Controller-->
+        <scene sceneID="Y27-vN-ebI">
+            <objects>
+                <viewController id="BLJ-2Y-i6A" customClass="OnboardingViewController" customModule="Memories_W2D3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wg9-9f-tOr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="x7z-VQ-D7M">
+                                <rect key="frame" x="16" y="214.5" width="343" height="238.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Memories!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XNo-YA-E1R">
+                                        <rect key="frame" x="79.5" y="0.0" width="184" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQV-fn-y2P">
+                                        <rect key="frame" x="1.5" y="31.5" width="340.5" height="163"/>
+                                        <string key="text">We're going to help you document every day of your life. In order to do this, we need you to allow the application to send you notifications so you can be reminded to create a memory every day! We'll also ask for your permission to access your photo library to attach photos to your memories.</string>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="879-V1-tDQ">
+                                        <rect key="frame" x="123.5" y="202.5" width="96" height="36"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                                        <state key="normal" title="Get Started!"/>
+                                        <connections>
+                                            <action selector="getStartedButtonTapped:" destination="BLJ-2Y-i6A" eventType="touchUpInside" id="7q5-Pc-XiS"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="x7z-VQ-D7M" secondAttribute="trailing" constant="16" id="CJv-5m-N0G"/>
+                            <constraint firstItem="x7z-VQ-D7M" firstAttribute="centerX" secondItem="wg9-9f-tOr" secondAttribute="centerX" id="WBd-hy-g8o"/>
+                            <constraint firstItem="x7z-VQ-D7M" firstAttribute="centerY" secondItem="wg9-9f-tOr" secondAttribute="centerY" id="gDJ-gA-1i7"/>
+                            <constraint firstItem="x7z-VQ-D7M" firstAttribute="leading" secondItem="wg9-9f-tOr" secondAttribute="leading" constant="16" id="qnY-B1-Qcr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tEP-cv-1eP"/>
+                    </view>
+                    <connections>
+                        <segue destination="KNv-rx-0cf" kind="presentation" identifier="OnboardingSegue" id="oRd-FB-gHr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E70-Hb-jEy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-502" y="84"/>
+        </scene>
+        <!--Add Photo-->
+        <scene sceneID="Hw6-rO-t7L">
+            <objects>
+                <viewController id="gm0-Od-tNL" customClass="MemoryDetailViewController" customModule="Memories_W2D3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MPi-kb-lsc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="8jw-l2-Fw5">
+                                <rect key="frame" x="16" y="132" width="343" height="519"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GRz-yD-kPQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="217.5"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qQd-DB-Bto">
+                                        <rect key="frame" x="0.0" y="225.5" width="343" height="30"/>
+                                        <state key="normal" title="Add Photo"/>
+                                        <connections>
+                                            <action selector="addPhotoButtonTapped:" destination="gm0-Od-tNL" eventType="touchUpInside" id="Mn7-CY-rmZ"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DiD-LX-hdc">
+                                        <rect key="frame" x="0.0" y="263.5" width="343" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RUh-zk-9qP">
+                                        <rect key="frame" x="0.0" y="301.5" width="343" height="217.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="GRz-yD-kPQ" firstAttribute="height" secondItem="RUh-zk-9qP" secondAttribute="height" id="Nei-pR-PeQ"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="aqr-kO-5ip" firstAttribute="trailing" secondItem="8jw-l2-Fw5" secondAttribute="trailing" constant="16" id="5A9-Yt-VfU"/>
+                            <constraint firstItem="8jw-l2-Fw5" firstAttribute="leading" secondItem="aqr-kO-5ip" secondAttribute="leading" constant="16" id="J9t-NR-QCS"/>
+                            <constraint firstItem="aqr-kO-5ip" firstAttribute="bottom" secondItem="8jw-l2-Fw5" secondAttribute="bottom" constant="16" id="kWk-rJ-lyr"/>
+                            <constraint firstItem="8jw-l2-Fw5" firstAttribute="top" secondItem="aqr-kO-5ip" secondAttribute="top" constant="16" id="sJ7-ua-Ju0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aqr-kO-5ip"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Photo" id="Lz8-Cr-gRr">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="2uI-Gi-MX9">
+                            <connections>
+                                <action selector="saveBarButtonTapped:" destination="gm0-Od-tNL" id="dNS-mo-ZIc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="addPhotoButton" destination="qQd-DB-Bto" id="oDH-0t-Mc8"/>
+                        <outlet property="memoryImageView" destination="GRz-yD-kPQ" id="Mnk-NF-mYI"/>
+                        <outlet property="memoryTextField" destination="DiD-LX-hdc" id="bco-gF-wfu"/>
+                        <outlet property="memoryTextView" destination="RUh-zk-9qP" id="xOs-Fo-LcB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gVb-3G-lCE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1782" y="83"/>
+        </scene>
+        <!--Memories-->
+        <scene sceneID="6LS-WR-yqa">
+            <objects>
+                <tableViewController id="l8y-LI-vO5" customClass="MemoriesTableViewController" customModule="Memories_W2D3" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="6qR-68-ccq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MemoryTableCell" textLabel="NR2-Ty-8Iu" style="IBUITableViewCellStyleDefault" id="gsd-FZ-Tk6">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gsd-FZ-Tk6" id="jVY-AT-PO9">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NR2-Ty-8Iu">
+                                            <rect key="frame" x="16" y="0.0" width="343" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="gm0-Od-tNL" kind="show" identifier="MemoryTableCellSegue" id="4Kj-ZT-SVe"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="l8y-LI-vO5" id="zrq-W7-Ade"/>
+                            <outlet property="delegate" destination="l8y-LI-vO5" id="WwW-1b-85E"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Memories" id="5dd-Pb-6lY">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="k7Y-el-tuw">
+                            <connections>
+                                <segue destination="gm0-Od-tNL" kind="show" identifier="AddBarButtonSegue" id="mC5-aW-c04"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7MD-us-9N9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1046" y="83"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="BPs-jJ-T1J">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KNv-rx-0cf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="Fih-Zp-Zwq">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="l8y-LI-vO5" kind="relationship" relationship="rootViewController" id="Z0e-5g-Wl5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ujE-7M-kRh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="282" y="85"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="mC5-aW-c04"/>
+    </inferredMetricsTieBreakers>
+</document>
