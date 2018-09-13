@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Photos
 
 class MemoryDetailViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -17,7 +18,7 @@ class MemoryDetailViewController: UIViewController, UIImagePickerControllerDeleg
     @IBOutlet weak var memoryTextView: UITextView!
     
     var memory: Memory?
-    let memoryController = MemoryController()
+    var memoryController: MemoryController?
     
     // MARK: - Functions
     
@@ -29,27 +30,50 @@ class MemoryDetailViewController: UIViewController, UIImagePickerControllerDeleg
     // MARK: - Button actions
     
     @IBAction func addPhotoButtonTapped(_ sender: Any) {
+        let authorizationStatus = PHPhotoLibrary.authorizationStatus()
         
+        if authorizationStatus == .authorized {
+            self.presentImagePickerController()
+            
+        } else if authorizationStatus == .notDetermined {
+            PHPhotoLibrary.requestAuthorization { (status) in
+                guard status == .authorized else {
+                    NSLog("Please go to the settings and allow Memories access to your Photo Library")
+                    return
+                }
+            }
+        }
     }
     
     @IBAction func saveBarButtonTapped(_ sender: Any) {
+        
+        // IF the user clicked Save Bar Button
+        // Then get values of texField, texView and imageData, check if title isn't empty
+        // And IF there is a memory previously created then update it's value
+        // ELSE if there isn't any memory yet then create a new one with that values
+        
         guard let title = memoryTextField.text,
               let body = memoryTextView.text,
               let image = memoryImageView.image,
-              let data = UIImagePNGRepresentation(image) else { return }
+              let data = UIImagePNGRepresentation(image),
+              title != "" else { return }
         
         if let memory = memory {
-            memoryController.updateMemory(memory: memory, title: title, bodyText: body, imageData: data)
+            memoryController?.updateMemory(memory: memory, title: title, bodyText: body, imageData: data)
         } else {
-            memoryController.createMemory(title: title, bodyText: body, imageData: data)
+            memoryController?.createMemory(title: title, bodyText: body, imageData: data)
         }
+        
+        navigationController?.popViewController(animated: true)
     }
     
     // MARK: - Update views
     
     private func updateViews() {
         
-        // If there is a memory then execute IF statement otherwise execute ELSE statement
+        // If the user clicked the cell and come to this view.
+        // And IF there is a memory then make view's title "Edit Memory". Change textField, textView and imageView values to the memories related values
+        // ELSE If there isn't any memory then change the title "Add memory" and let the user create a new one
         
         if let memory = memory {
             self.title = "Edit Memory"
