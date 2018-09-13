@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		94089106211B7E91001F68C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94089105211B7E91001F68C3 /* AppDelegate.swift */; };
-		94089108211B7E92001F68C3 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94089107211B7E92001F68C3 /* OnboardingViewController.swift */; };
 		9408910B211B7E93001F68C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94089109211B7E93001F68C3 /* Main.storyboard */; };
 		9408910D211B7EB5001F68C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9408910C211B7EB5001F68C3 /* Assets.xcassets */; };
 		94089110211B7EB5001F68C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9408910E211B7EB5001F68C3 /* LaunchScreen.storyboard */; };
@@ -16,12 +15,14 @@
 		9408911C211B82CB001F68C3 /* Memory Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9408911B211B82CB001F68C3 /* Memory Controller.swift */; };
 		94089125211B9B10001F68C3 /* LocalNotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94089124211B9B10001F68C3 /* LocalNotificationHelper.swift */; };
 		EBA39A0A2149E66600A54F2A /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA39A092149E66600A54F2A /* Persistence.swift */; };
+		EBA39A0C2149F26700A54F2A /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA39A0B2149F26700A54F2A /* OnboardingViewController.swift */; };
+		EBA39A0E2149F33500A54F2A /* MemoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA39A0D2149F33500A54F2A /* MemoriesTableViewController.swift */; };
+		EBA39A102149F3BB00A54F2A /* MemoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA39A0F2149F3BB00A54F2A /* MemoryDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		94089102211B7E90001F68C3 /* Memories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memories.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94089105211B7E91001F68C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		94089107211B7E92001F68C3 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		9408910A211B7E93001F68C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9408910C211B7EB5001F68C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9408910F211B7EB5001F68C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -30,6 +31,9 @@
 		9408911B211B82CB001F68C3 /* Memory Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Memory Controller.swift"; sourceTree = "<group>"; };
 		94089124211B9B10001F68C3 /* LocalNotificationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationHelper.swift; sourceTree = "<group>"; };
 		EBA39A092149E66600A54F2A /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		EBA39A0B2149F26700A54F2A /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		EBA39A0D2149F33500A54F2A /* MemoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoriesTableViewController.swift; sourceTree = "<group>"; };
+		EBA39A0F2149F3BB00A54F2A /* MemoryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +99,9 @@
 		9408911F211B972E001F68C3 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
-				94089107211B7E92001F68C3 /* OnboardingViewController.swift */,
+				EBA39A0B2149F26700A54F2A /* OnboardingViewController.swift */,
+				EBA39A0D2149F33500A54F2A /* MemoriesTableViewController.swift */,
+				EBA39A0F2149F3BB00A54F2A /* MemoryDetailViewController.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -180,10 +186,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				94089119211B81F6001F68C3 /* Memory.swift in Sources */,
-				94089108211B7E92001F68C3 /* OnboardingViewController.swift in Sources */,
+				EBA39A0C2149F26700A54F2A /* OnboardingViewController.swift in Sources */,
 				94089125211B9B10001F68C3 /* LocalNotificationHelper.swift in Sources */,
 				EBA39A0A2149E66600A54F2A /* Persistence.swift in Sources */,
+				EBA39A102149F3BB00A54F2A /* MemoryDetailViewController.swift in Sources */,
 				94089106211B7E91001F68C3 /* AppDelegate.swift in Sources */,
+				EBA39A0E2149F33500A54F2A /* MemoriesTableViewController.swift in Sources */,
 				9408911C211B82CB001F68C3 /* Memory Controller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

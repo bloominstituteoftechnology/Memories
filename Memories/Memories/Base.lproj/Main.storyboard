@@ -45,7 +45,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="getStartedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6SZ-mq-GtU"/>
+                                    <action selector="getStarted:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dsM-ix-Oeh"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -73,7 +73,7 @@
         <!--Memory-->
         <scene sceneID="JZO-9c-ger">
             <objects>
-                <tableViewController id="HJB-4P-vYI" sceneMemberID="viewController">
+                <tableViewController id="HJB-4P-vYI" customClass="MemoriesTableViewController" customModule="Memories" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="UAD-wy-LOc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -120,7 +120,7 @@
         <!--Add Memory-->
         <scene sceneID="1cx-le-lLM">
             <objects>
-                <viewController id="ABn-uh-Yar" customClass="MemoriesDetailViewController" customModule="Memories" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ABn-uh-Yar" customClass="MemoryDetailViewController" customModule="Memories" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VPV-SR-dXI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -129,6 +129,7 @@
                                 <rect key="frame" x="151" y="370" width="72" height="30"/>
                                 <state key="normal" title="Add Photo"/>
                                 <connections>
+                                    <action selector="addPhoto:" destination="ABn-uh-Yar" eventType="touchUpInside" id="dY8-FM-jE7"/>
                                     <action selector="addPhotoButton:" destination="ABn-uh-Yar" eventType="touchUpInside" id="g48-8O-dgt"/>
                                 </connections>
                             </button>
@@ -171,13 +172,14 @@
                     <navigationItem key="navigationItem" title="Add Memory" id="wey-TE-k0A">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="NnX-Cg-h1o">
                             <connections>
-                                <action selector="SaveMemory:" destination="ABn-uh-Yar" id="RcM-jZ-ypc"/>
+                                <action selector="save:" destination="ABn-uh-Yar" id="yTM-82-U4b"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="imageView" destination="eH5-iz-ywR" id="Itu-7T-eWC"/>
-                        <outlet property="textView" destination="gxm-Gq-yz3" id="9wi-ey-3AW"/>
+                        <outlet property="imageView" destination="eH5-iz-ywR" id="PYs-y1-g4f"/>
+                        <outlet property="textField" destination="8u3-6a-A59" id="oxz-pq-lTP"/>
+                        <outlet property="textView" destination="gxm-Gq-yz3" id="UNz-gM-hq4"/>
                         <outlet property="titleTextFIeld" destination="8u3-6a-A59" id="kxx-wy-Ks5"/>
                     </connections>
                 </viewController>
