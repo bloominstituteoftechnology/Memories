@@ -38,9 +38,9 @@ class LocalNotificationHelper {
                 let identifier = "DailyNotification"
                 
                 let content = UNMutableNotificationContent()
-                content.title = "Content title"
-                content.subtitle = "Just a subtitle"
-                content.body = "Body body body"
+                content.title = "The localized title, containing the reason for the alert"
+                content.subtitle = "The localized subtitle, containing a secondary description of the reason for the alert"
+                content.body = "The localized message to display in the notification alert"
                 
                 var date = DateComponents()
                 date.hour = 20
