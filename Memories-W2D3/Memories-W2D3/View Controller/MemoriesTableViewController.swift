@@ -12,7 +12,7 @@ class MemoriesTableViewController: UITableViewController {
     
     // MARK: - Properties
     
-    //var memory: Memory? // Why we need this property? We haven't used it previously
+    var memory: Memory? // Why we need this property? We haven't used it previously
     var memoryController: MemoryController? // Why optional? We always created a let inside TableViewController
     
     // MARK: - Functions

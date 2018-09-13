@@ -23,9 +23,16 @@ class OnboardingViewController: UIViewController {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
     @IBAction func getStartedButtonTapped(_ sender: Any) {
         theLocalNotificationHelper.requestAuthorization { (success) in
             self.theLocalNotificationHelper.scheduleDailyReminderNotification()
+            if success {
+                self.performSegue(withIdentifier: "OnboardingSegue", sender: nil)
+            }
         }
     }
     
