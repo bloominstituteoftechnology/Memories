@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Memories!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="itz-ju-X5v">
-                                <rect key="frame" x="91" y="119" width="192" height="63"/>
+                                <rect key="frame" x="91" y="119" width="193" height="63"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="63" id="94B-fs-O9E"/>
                                 </constraints>
@@ -36,7 +35,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wah-er-HDd">
-                                <rect key="frame" x="145" y="422" width="84" height="30"/>
+                                <rect key="frame" x="145.5" y="422" width="84" height="30"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="fCd-UK-lsi"/>
@@ -96,7 +95,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="ABn-uh-Yar" kind="show" identifier="showMemory" id="deM-sM-9rl"/>
+                                    <segue destination="ABn-uh-Yar" kind="show" identifier="showMemory" id="pOG-lH-txz"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -108,7 +107,7 @@
                     <navigationItem key="navigationItem" title="Memory" id="tuR-g6-Wdu">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="bID-VD-QFx">
                             <connections>
-                                <segue destination="ABn-uh-Yar" kind="show" identifier="addMemory" id="k26-6h-tpj"/>
+                                <segue destination="ABn-uh-Yar" kind="show" identifier="addMemory" id="17F-fz-P0y"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -117,7 +116,7 @@
             </objects>
             <point key="canvasLocation" x="1880.8" y="121.88905547226388"/>
         </scene>
-        <!--Add Memory-->
+        <!--Memory Detail View Controller-->
         <scene sceneID="1cx-le-lLM">
             <objects>
                 <viewController id="ABn-uh-Yar" customClass="MemoryDetailViewController" customModule="Memories" customModuleProvider="target" sceneMemberID="viewController">
@@ -126,11 +125,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cTf-bS-9io">
-                                <rect key="frame" x="151" y="370" width="72" height="30"/>
+                                <rect key="frame" x="151.5" y="370" width="72" height="30"/>
                                 <state key="normal" title="Add Photo"/>
                                 <connections>
                                     <action selector="addPhoto:" destination="ABn-uh-Yar" eventType="touchUpInside" id="dY8-FM-jE7"/>
-                                    <action selector="addPhotoButton:" destination="ABn-uh-Yar" eventType="touchUpInside" id="g48-8O-dgt"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8u3-6a-A59">
@@ -169,7 +167,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5n6-1B-msi"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Add Memory" id="wey-TE-k0A">
+                    <navigationItem key="navigationItem" id="wey-TE-k0A">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="NnX-Cg-h1o">
                             <connections>
                                 <action selector="save:" destination="ABn-uh-Yar" id="yTM-82-U4b"/>
@@ -180,7 +178,6 @@
                         <outlet property="imageView" destination="eH5-iz-ywR" id="PYs-y1-g4f"/>
                         <outlet property="textField" destination="8u3-6a-A59" id="oxz-pq-lTP"/>
                         <outlet property="textView" destination="gxm-Gq-yz3" id="UNz-gM-hq4"/>
-                        <outlet property="titleTextFIeld" destination="8u3-6a-A59" id="kxx-wy-Ks5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qZa-P1-o8I" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -207,6 +204,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="k26-6h-tpj"/>
+        <segue reference="pOG-lH-txz"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -12,19 +12,17 @@ import Photos
 class MemoryDetailViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        updateView()
     }
     
     func updateView(){
-      
+        guard isViewLoaded else {return}
         if let memory = memory{
-        textField.text = memory.title
-        textView.text = memory.bodyText
-        imageView.image = UIImage(data:memory.imageData)
+            textField.text = memory.title
+            textView.text = memory.bodyText
+            imageView.image = UIImage(data:memory.imageData)
         }else{
-            self.title = "Add Memory"
+            navigationController?.title = "Add Memory"
         }
     
     }
@@ -51,6 +49,7 @@ class MemoryDetailViewController: UIViewController, UIImagePickerControllerDeleg
         }else{
             memoryController?.createMemory(title: title, bodyText: bodyText, imageData: imageData)
         }
+        navigationController?.popViewController(animated: true)
     }
     
     func presentImagePickerController(){
@@ -67,7 +66,11 @@ class MemoryDetailViewController: UIViewController, UIImagePickerControllerDeleg
         imageView.image = image
     }
     
-    var memory: Memory?
+    var memory: Memory?{
+        didSet{
+            updateView()
+        }
+    }
     var memoryController: MemoryController?
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var textView: UITextView!
