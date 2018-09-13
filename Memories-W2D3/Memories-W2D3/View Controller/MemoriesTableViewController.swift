@@ -59,7 +59,12 @@ class MemoriesTableViewController: UITableViewController {
     // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "MemoryTableCellSegue" {
+            guard let destinationVC = segue.destination as? MemoryDetailViewController else { return }
+            destinationVC.memory = memory
+        } else if segue.identifier == "AddBarButtonSegue" {
+            guard let destinationVC = segue.destination as? MemoryDetailViewController else { return }
+            destinationVC.memory = memory
+        }
     }
 }
