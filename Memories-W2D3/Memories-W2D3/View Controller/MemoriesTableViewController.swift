@@ -16,6 +16,10 @@ class MemoriesTableViewController: UITableViewController {
     var memoryController: MemoryController? // Why optional? We always created a let inside TableViewController
     
     // MARK: - Functions
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -43,7 +47,7 @@ class MemoriesTableViewController: UITableViewController {
     }
 
 
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             guard let index = tableView.indexPathForSelectedRow,
                   let theMemory = memoryController?.memories[index.row] else { return }
