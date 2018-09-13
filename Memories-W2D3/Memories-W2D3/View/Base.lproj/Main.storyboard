@@ -39,6 +39,9 @@
                                         <rect key="frame" x="123.5" y="202.5" width="96" height="36"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
                                         <state key="normal" title="Get Started!"/>
+                                        <connections>
+                                            <action selector="getStartedButtonTapped:" destination="BLJ-2Y-i6A" eventType="touchUpInside" id="7q5-Pc-XiS"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -68,32 +71,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="8jw-l2-Fw5">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="8jw-l2-Fw5">
                                 <rect key="frame" x="16" y="132" width="343" height="519"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GRz-yD-kPQ">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="239.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="217.5"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qQd-DB-Bto">
-                                        <rect key="frame" x="0.0" y="247.5" width="343" height="34.5"/>
+                                        <rect key="frame" x="0.0" y="225.5" width="343" height="30"/>
                                         <state key="normal" title="Add Photo"/>
                                         <connections>
                                             <action selector="addPhotoButtonTapped:" destination="gm0-Od-tNL" eventType="touchUpInside" id="Mn7-CY-rmZ"/>
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DiD-LX-hdc">
-                                        <rect key="frame" x="0.0" y="290" width="343" height="34"/>
+                                        <rect key="frame" x="0.0" y="263.5" width="343" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RUh-zk-9qP">
-                                        <rect key="frame" x="0.0" y="332" width="343" height="187"/>
+                                        <rect key="frame" x="0.0" y="301.5" width="343" height="217.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="GRz-yD-kPQ" firstAttribute="height" secondItem="RUh-zk-9qP" secondAttribute="height" id="Nei-pR-PeQ"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -122,7 +128,7 @@
             </objects>
             <point key="canvasLocation" x="1782" y="83"/>
         </scene>
-        <!--Memories Table View Controller-->
+        <!--Memories-->
         <scene sceneID="6LS-WR-yqa">
             <objects>
                 <tableViewController id="l8y-LI-vO5" customClass="MemoriesTableViewController" customModule="Memories_W2D3" customModuleProvider="target" sceneMemberID="viewController">
@@ -157,7 +163,7 @@
                             <outlet property="delegate" destination="l8y-LI-vO5" id="WwW-1b-85E"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="5dd-Pb-6lY">
+                    <navigationItem key="navigationItem" title="Memories" id="5dd-Pb-6lY">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="k7Y-el-tuw">
                             <connections>
                                 <segue destination="gm0-Od-tNL" kind="show" identifier="AddBarButtonSegue" id="mC5-aW-c04"/>

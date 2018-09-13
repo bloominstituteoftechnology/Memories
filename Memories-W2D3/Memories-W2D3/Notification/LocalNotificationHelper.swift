@@ -33,22 +33,27 @@ class LocalNotificationHelper {
     }
     
     func scheduleDailyReminderNotification() {
-        let identifier = "DailyNotification"
-
-        let content = UNMutableNotificationContent()
-        content.title = "Notification title"
-        content.subtitle = "Just a subtitle"
-        content.body = "Body body body"
-        
-        var date = DateComponents()
-        date.hour = 20
-        
-        let trigger = UNCalendarNotificationTrigger(dateMatching: date, repeats: true)
-        
-        let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
-        UNUserNotificationCenter.current().add(request) { (error) in
-            if let error = error {
-                NSLog("Daily notification error: \(error)")
+        getAuthorizationStatus { (status) in
+            if status == .authorized {
+                let identifier = "DailyNotification"
+                
+                let content = UNMutableNotificationContent()
+                content.title = "Content title"
+                content.subtitle = "Just a subtitle"
+                content.body = "Body body body"
+                
+                var date = DateComponents()
+                date.hour = 20
+                
+                let trigger = UNCalendarNotificationTrigger(dateMatching: date, repeats: true)
+                
+                let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
+                
+                UNUserNotificationCenter.current().add(request) { (error) in
+                    if let error = error {
+                        NSLog("Daily notification error: \(error)")
+                    }
+                }
             }
         }
     }

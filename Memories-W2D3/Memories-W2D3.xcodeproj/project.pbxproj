@@ -64,7 +64,7 @@
 		8202DBE92149B1BE0055F1E7 /* Memories-W2D3 */ = {
 			isa = PBXGroup;
 			children = (
-				8202DC0B2149C8020055F1E7 /* LocalNotificationHelper.swift */,
+				8202DC0D2149DEC00055F1E7 /* Notification */,
 				8202DBFF2149B28B0055F1E7 /* Model */,
 				8202DC022149B3170055F1E7 /* Model Controller */,
 				8202DC032149BA300055F1E7 /* View */,
@@ -117,6 +117,14 @@
 				8202DC092149C04E0055F1E7 /* MemoryDetailViewController.swift */,
 			);
 			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		8202DC0D2149DEC00055F1E7 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				8202DC0B2149C8020055F1E7 /* LocalNotificationHelper.swift */,
+			);
+			path = Notification;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
