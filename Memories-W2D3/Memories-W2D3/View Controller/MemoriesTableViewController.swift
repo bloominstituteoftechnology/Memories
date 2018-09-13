@@ -12,8 +12,8 @@ class MemoriesTableViewController: UITableViewController {
     
     // MARK: - Properties
     
-    var memory: Memory? // Why we need this property? We haven't used it previously
-    var memoryController: MemoryController? // Why optional? We always created a let inside TableViewController
+    //var memory: Memory? // Why we need this property? We haven't used it previously
+    var memoryController = MemoryController() // Why optional? We always created a let inside TableViewController
     
     // MARK: - Functions
     
@@ -29,7 +29,7 @@ class MemoriesTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return memoryController?.memories.count ?? 0
+        return memoryController.memories.count
     }
 
     
@@ -38,7 +38,7 @@ class MemoriesTableViewController: UITableViewController {
         // Find memory instance of the cell and pass it's title and image to the cell
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "MemoryTableCell", for: indexPath)
-        guard let memory = memoryController?.memories[indexPath.row] else { return cell}
+        let memory = memoryController.memories[indexPath.row]
         
         cell.textLabel?.text = memory.title
         cell.imageView?.image = UIImage(data: memory.imageData)
@@ -46,13 +46,12 @@ class MemoriesTableViewController: UITableViewController {
         return cell
     }
 
-
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            guard let index = tableView.indexPathForSelectedRow,
-                  let theMemory = memoryController?.memories[index.row] else { return }
+            guard let index = tableView.indexPathForSelectedRow else { return }
+            let theMemory = memoryController.memories[index.row]
             
-            memoryController?.deleteMemory(memory: theMemory)
+            memoryController.deleteMemory(memory: theMemory)
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
@@ -75,7 +74,7 @@ class MemoriesTableViewController: UITableViewController {
             
             destinationVC.memoryController = memoryController
             
-            let theMemory = memoryController?.memories[index.row]
+            let theMemory = memoryController.memories[index.row]
             
             destinationVC.memory = theMemory
         }

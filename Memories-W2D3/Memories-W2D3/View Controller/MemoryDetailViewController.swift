@@ -16,6 +16,7 @@ class MemoryDetailViewController: UIViewController, UIImagePickerControllerDeleg
     @IBOutlet weak var memoryImageView: UIImageView!
     @IBOutlet weak var memoryTextField: UITextField!
     @IBOutlet weak var memoryTextView: UITextView!
+    @IBOutlet weak var addPhotoButton: UIButton!
     
     var memory: Memory?
     var memoryController: MemoryController?
@@ -26,6 +27,11 @@ class MemoryDetailViewController: UIViewController, UIImagePickerControllerDeleg
         super.viewDidLoad()
         updateViews()
     }
+    
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        updateViews()
+//    }
     
     // MARK: - Button actions
     
@@ -55,7 +61,7 @@ class MemoryDetailViewController: UIViewController, UIImagePickerControllerDeleg
         guard let title = memoryTextField.text,
               let body = memoryTextView.text,
               let image = memoryImageView.image,
-              let data = image.pngData(),
+              let data = UIImageJPEGRepresentation(image, 1.0),
               title != "" else { return }
         
         if let memory = memory {
@@ -80,8 +86,10 @@ class MemoryDetailViewController: UIViewController, UIImagePickerControllerDeleg
             memoryTextField.text = memory.title
             memoryTextView.text = memory.bodyText
             memoryImageView.image = UIImage(data: memory.imageData)
+            addPhotoButton.setTitle("Change Photo", for: .normal)
         } else {
             self.title = "Add Memory"
+            addPhotoButton.setTitle("Add Photo", for: .normal)
         }
     }
     
@@ -97,24 +105,13 @@ class MemoryDetailViewController: UIViewController, UIImagePickerControllerDeleg
         }
     }
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-// Local variable inserted by Swift 4.2 migrator.
-let info = convertFromUIImagePickerControllerInfoKeyDictionary(info)
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
 
         picker.dismiss(animated: true, completion: nil)
         
-        guard let image = info[convertFromUIImagePickerControllerInfoKey(UIImagePickerController.InfoKey.originalImage)] as? UIImage else { return }
+        guard let image = info[UIImagePickerControllerOriginalImage] as? UIImage else { return }
         memoryImageView.image = image
     }
     
-}
-
-// Helper function inserted by Swift 4.2 migrator.
-fileprivate func convertFromUIImagePickerControllerInfoKeyDictionary(_ input: [UIImagePickerController.InfoKey: Any]) -> [String: Any] {
-	return Dictionary(uniqueKeysWithValues: input.map {key, value in (key.rawValue, value)})
-}
-
-// Helper function inserted by Swift 4.2 migrator.
-fileprivate func convertFromUIImagePickerControllerInfoKey(_ input: UIImagePickerController.InfoKey) -> String {
-	return input.rawValue
 }

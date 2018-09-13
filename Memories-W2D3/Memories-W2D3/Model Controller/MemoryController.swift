@@ -12,7 +12,7 @@ class MemoryController {
     
     // MARK: - Properties
     
-    private(set) var memories = [Memory]()
+    var memories = [Memory]()
     
     //MARK: - Computed properties
     

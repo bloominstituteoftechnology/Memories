@@ -42,7 +42,6 @@ class OnboardingViewController: UIViewController {
         if segue.identifier == "OnboardingSegue" {
             guard let destinationVC = segue.destination as? UINavigationController else { return }
             destinationVC.show(destinationVC, sender: nil)
-
         }
     }
 }
