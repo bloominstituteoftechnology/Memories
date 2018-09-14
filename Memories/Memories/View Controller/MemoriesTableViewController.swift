@@ -25,6 +25,7 @@ class MemoriesTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TableCell", for: indexPath)
         let memory = memoryController.memories[indexPath.row]
         cell.imageView?.image = UIImage(data: memory.imageData)
+        cell.textLabel?.text = memory.title
         return cell
     }
 

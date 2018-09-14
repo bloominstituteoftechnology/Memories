@@ -35,7 +35,7 @@ class LocalNotificationHelper: NSObject, UNUserNotificationCenterDelegate {
         content.body = "Yo, Create a Memory!"
         
         var date = DateComponents()
-        date.hour = 8
+        date.hour = 20
         date.minute = 0
         let trigger = UNCalendarNotificationTrigger(dateMatching: date, repeats: true)
         let request = UNNotificationRequest(identifier: "memory making", content: content, trigger: trigger)
@@ -45,7 +45,7 @@ class LocalNotificationHelper: NSObject, UNUserNotificationCenterDelegate {
         
         center.add(request) { (error) in
             if let error = error {
-                print("There was a problem trying to schedule notifiaction: \(error)")
+                NSLog("There was a problem trying to schedule notifiaction: \(error)")
                 return
             }
         }
