@@ -19,7 +19,7 @@ class OnBoardingViewController: UIViewController {
         localNotificationHelper.getAuthorizationStatus { (status) in
             switch status {
             case .authorized:
-                self.performSegue(withIdentifier: "OnBoard", sender: nil)
+                self.performSegue(withIdentifier: "Onboard", sender: nil)
             default:
                 return
             }

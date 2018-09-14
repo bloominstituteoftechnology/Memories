@@ -18,6 +18,11 @@ class MemoriesTableViewController: UITableViewController {
 
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewDidLoad()
+        tableView.reloadData()
+    }
+    
     
     // MARK: - Table view data source
 
