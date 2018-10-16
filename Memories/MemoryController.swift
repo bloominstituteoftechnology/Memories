@@ -26,7 +26,6 @@ class MemoryController {
         do {
             guard let memoriesFileURL = persistentFileURL,
                 FileManager.default.fileExists(atPath: memoriesFileURL.path) else { return }
-            
             let memoriesData = try Data(contentsOf: memoriesFileURL)
             let plistDecoder = PropertyListDecoder()
             self.memories = try plistDecoder.decode([Memory].self, from: memoriesData)
@@ -38,6 +37,15 @@ class MemoryController {
     func createMemory(with title: String, bodyText: String, imageData: Data) {
         let memory = Memory(title: title, bodyText: bodyText, imageData: imageData)
         memories.append(memory)
+        
+        saveToPersistentStore()
+    }
+    
+    func updateMemory(memory: Memory, title: String, bodyText: String, imageData: Data) {
+        guard let index = memories.index(of: memory) else { return }
+        let tempMemory = Memory(title: title, bodyText: bodyText, imageData: imageData)
+        memories.remove(at: index)
+        memories.insert(tempMemory, at: index)
         
         saveToPersistentStore()
     }
