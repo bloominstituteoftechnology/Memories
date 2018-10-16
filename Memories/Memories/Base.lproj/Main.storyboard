@@ -37,7 +37,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2D8-ig-Hah">
-                                <rect key="frame" x="52" y="240" width="295" height="221"/>
+                                <rect key="frame" x="52" y="240" width="275" height="221"/>
                                 <string key="text">We're going to help you document every day of your life. In order to do this, we need you to allow the application to send you notifications so you can be reminded to create a memory every day! We'll also ask for your permission to access your photo library to attach photos to your memories.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -53,7 +53,7 @@
                             <constraint firstItem="Nqf-I8-jGm" firstAttribute="leading" secondItem="4uz-t9-HOU" secondAttribute="leading" id="M2K-5o-Ta6"/>
                             <constraint firstItem="WV1-hC-q7N" firstAttribute="bottom" secondItem="4uz-t9-HOU" secondAttribute="bottom" constant="102" id="R4v-9K-cg4"/>
                             <constraint firstItem="2D8-ig-Hah" firstAttribute="top" secondItem="Nqf-I8-jGm" secondAttribute="bottom" constant="54" id="Y7M-ho-mTd"/>
-                            <constraint firstItem="Nqf-I8-jGm" firstAttribute="centerX" secondItem="2D8-ig-Hah" secondAttribute="centerX" id="e0V-pT-q3H"/>
+                            <constraint firstItem="Nqf-I8-jGm" firstAttribute="centerX" secondItem="2D8-ig-Hah" secondAttribute="centerX" constant="10" id="e0V-pT-q3H"/>
                             <constraint firstItem="Nqf-I8-jGm" firstAttribute="leading" secondItem="WV1-hC-q7N" secondAttribute="leading" constant="106" id="vc6-uN-w2M"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WV1-hC-q7N"/>

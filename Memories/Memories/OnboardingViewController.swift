@@ -12,26 +12,30 @@ class OnboardingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        localNotificationHelper.getAuthorizationStatus(completion: {
-            if .authorized {
-                self.performSegue(withIdentifier:"addMemory", sender: nil)
+        localNotificationHelper.getAuthorizationStatus(completion: { (status) in
+            if status == .authorized {
+                self.performSegue(withIdentifier:"addMemory", sender: self)
+            } else {
+                NSLog("User did not authorize access to the photo library");
+                
+                
             }
         })
         
-    // Do any additional setup after loading the view.
-}
-
-
-let localNotificationHelper = LocalNotificationHelper()
-
-
-@IBAction func getStarted(_ sender: Any) {
-    localNotificationHelper.requestAuthorization(completion: {
-        if $0 {
-            self.localNotificationHelper.scheduleDailyReminderNotification()
-        }
-    })
-    performSegue(withIdentifier:"addMemory", sender: nil)
-}
-
+        // Do any additional setup after loading the view.
+    }
+    
+    
+    let localNotificationHelper = LocalNotificationHelper()
+    
+    
+    @IBAction func getStarted(_ sender: Any) {
+        localNotificationHelper.requestAuthorization(completion: {
+            if $0 {
+                self.localNotificationHelper.scheduleDailyReminderNotification()
+            }
+        })
+        performSegue(withIdentifier:"addMemory", sender: nil)
+    }
+    
 }

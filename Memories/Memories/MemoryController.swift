@@ -39,7 +39,7 @@ class MemoryController {
     
     func loadFromPersistentStore() {
         
-        let fm = FileManager.default
+       
         
         do {
             guard let url = readingListURL else {return}
