@@ -49,4 +49,11 @@ class MemoryController {
         
         saveToPersistentStore()
     }
+    
+    func deleteMemory(memory: Memory) {
+        guard let index = memories.index(of: memory) else { return }
+        memories.remove(at: index)
+        
+        saveToPersistentStore()
+    }
 }
