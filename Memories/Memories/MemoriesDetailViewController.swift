@@ -19,6 +19,11 @@ class MemoryDetailViewController: UIViewController, UIImagePickerControllerDeleg
         imageView.image = memoryImage
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        updateViews()
+    }
+    
     private func presentImagePickerController() {
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
             let imagePicker = UIImagePickerController()

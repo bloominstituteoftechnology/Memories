@@ -38,9 +38,16 @@ class MemoriesTableViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let destingation = segue.destination as? MemoryDetailViewController else { return }
-        destingation.memoryController = memoryController
+        guard let destination = segue.destination as? MemoryDetailViewController else { return }
+        destination.memoryController = memoryController
         guard let indexPath = tableView.indexPathForSelectedRow else { return }
-        destingation.memory = memoryController.memories[indexPath.row]
+        destination.memory = memoryController.memories[indexPath.row]
     }
+//    if let cell = sender as? UITableViewCell {
+//        guard let indexPath = tableView.indexPath(for: cell) else { return }
+//        destingation.memoryController = memoryController
+//        destingation.memory = memoryController.memories[indexPath.row]
+//    } else {
+//    destingation.memory = nil
+//    }
 }

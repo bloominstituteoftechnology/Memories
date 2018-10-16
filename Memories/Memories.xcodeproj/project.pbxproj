@@ -65,15 +65,15 @@
 			isa = PBXGroup;
 			children = (
 				7BA1D62821767487003DD64B /* AppDelegate.swift */,
-				7BA1D62C21767487003DD64B /* Main.storyboard */,
-				7BDD73F821768B3F00D10D0D /* MemoriesTableViewController.swift */,
 				7BA1D63E21767C39003DD64B /* OnBoardingViewController.swift */,
+				7BDD73F821768B3F00D10D0D /* MemoriesTableViewController.swift */,
+				7BDD73F421767E2600D10D0D /* LocalNotificationHelper.swift */,
 				7BA1D63A217674A8003DD64B /* Memory.swift */,
-				7BA1D62F21767489003DD64B /* Assets.xcassets */,
-				7BA1D63121767489003DD64B /* LaunchScreen.storyboard */,
 				7BA1D63C21767526003DD64B /* MemoryController.swift */,
 				7BDD73F6217684FC00D10D0D /* MemoriesDetailViewController.swift */,
-				7BDD73F421767E2600D10D0D /* LocalNotificationHelper.swift */,
+				7BA1D62F21767489003DD64B /* Assets.xcassets */,
+				7BA1D62C21767487003DD64B /* Main.storyboard */,
+				7BA1D63121767489003DD64B /* LaunchScreen.storyboard */,
 				7BA1D63421767489003DD64B /* Info.plist */,
 			);
 			path = Memories;
