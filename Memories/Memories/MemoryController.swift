@@ -47,7 +47,6 @@ class MemoryController {
         saveToPersistentStore()
     }
     
-    
     // updates memory
     func updateMemory(m: Memory, title: String, bodyText: String, imageData: Data) {
         guard let index = memories.index(of: m) else {return}
@@ -58,7 +57,6 @@ class MemoryController {
         
         saveToPersistentStore()
     }
-    
     
     // deletes memory
     func deleteMemory(m: Memory) {

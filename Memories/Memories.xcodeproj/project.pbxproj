@@ -13,6 +13,8 @@
 		399CE95D21766F1C004FDDE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 399CE95B21766F1C004FDDE6 /* LaunchScreen.storyboard */; };
 		399CE96521767FD5004FDDE6 /* MemoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399CE96421767FD5004FDDE6 /* MemoryController.swift */; };
 		399CE967217680F3004FDDE6 /* Memory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399CE966217680F3004FDDE6 /* Memory.swift */; };
+		399CE96921769DA2004FDDE6 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399CE96821769DA2004FDDE6 /* OnboardingViewController.swift */; };
+		399CE96B2176A44D004FDDE6 /* MemoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399CE96A2176A44D004FDDE6 /* MemoriesTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		399CE95E21766F1C004FDDE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		399CE96421767FD5004FDDE6 /* MemoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryController.swift; sourceTree = "<group>"; };
 		399CE966217680F3004FDDE6 /* Memory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memory.swift; sourceTree = "<group>"; };
+		399CE96821769DA2004FDDE6 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		399CE96A2176A44D004FDDE6 /* MemoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoriesTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +60,12 @@
 		399CE95121766F1A004FDDE6 /* Memories */ = {
 			isa = PBXGroup;
 			children = (
+				399CE96A2176A44D004FDDE6 /* MemoriesTableViewController.swift */,
 				399CE95221766F1A004FDDE6 /* AppDelegate.swift */,
 				399CE96421767FD5004FDDE6 /* MemoryController.swift */,
 				399CE966217680F3004FDDE6 /* Memory.swift */,
 				399CE95621766F1A004FDDE6 /* Main.storyboard */,
+				399CE96821769DA2004FDDE6 /* OnboardingViewController.swift */,
 				399CE95921766F1C004FDDE6 /* Assets.xcassets */,
 				399CE95B21766F1C004FDDE6 /* LaunchScreen.storyboard */,
 				399CE95E21766F1C004FDDE6 /* Info.plist */,
@@ -140,7 +146,9 @@
 			files = (
 				399CE967217680F3004FDDE6 /* Memory.swift in Sources */,
 				399CE95321766F1A004FDDE6 /* AppDelegate.swift in Sources */,
+				399CE96B2176A44D004FDDE6 /* MemoriesTableViewController.swift in Sources */,
 				399CE96521767FD5004FDDE6 /* MemoryController.swift in Sources */,
+				399CE96921769DA2004FDDE6 /* OnboardingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
