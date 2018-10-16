@@ -8,20 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		11B5C96721766DA8005DFD21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B5C96621766DA8005DFD21 /* AppDelegate.swift */; };
-		11B5C96921766DA8005DFD21 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B5C96821766DA8005DFD21 /* ViewController.swift */; };
 		11B5C96C21766DA8005DFD21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11B5C96A21766DA8005DFD21 /* Main.storyboard */; };
 		11B5C96E21766DA9005DFD21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11B5C96D21766DA9005DFD21 /* Assets.xcassets */; };
 		11B5C97121766DA9005DFD21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11B5C96F21766DA9005DFD21 /* LaunchScreen.storyboard */; };
+		11B5C97921766DD4005DFD21 /* Memory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B5C97821766DD4005DFD21 /* Memory.swift */; };
+		11B5C97B21766E14005DFD21 /* MemoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B5C97A21766E14005DFD21 /* MemoryController.swift */; };
+		11B5C97D21767730005DFD21 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B5C97C21767730005DFD21 /* OnboardingViewController.swift */; };
+		11B5C97F21767A56005DFD21 /* MemoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B5C97E21767A56005DFD21 /* MemoriesTableViewController.swift */; };
+		11B5C98121767AA9005DFD21 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B5C98021767AA8005DFD21 /* DetailViewController.swift */; };
+		11B5C98321767CAE005DFD21 /* LocalNotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B5C98221767CAE005DFD21 /* LocalNotificationHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		11B5C96321766DA8005DFD21 /* Memories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memories.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11B5C96621766DA8005DFD21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		11B5C96821766DA8005DFD21 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		11B5C96B21766DA8005DFD21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		11B5C96D21766DA9005DFD21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11B5C97021766DA9005DFD21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		11B5C97221766DA9005DFD21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		11B5C97821766DD4005DFD21 /* Memory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memory.swift; sourceTree = "<group>"; };
+		11B5C97A21766E14005DFD21 /* MemoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryController.swift; sourceTree = "<group>"; };
+		11B5C97C21767730005DFD21 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		11B5C97E21767A56005DFD21 /* MemoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoriesTableViewController.swift; sourceTree = "<group>"; };
+		11B5C98021767AA8005DFD21 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		11B5C98221767CAE005DFD21 /* LocalNotificationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +65,13 @@
 			isa = PBXGroup;
 			children = (
 				11B5C96621766DA8005DFD21 /* AppDelegate.swift */,
-				11B5C96821766DA8005DFD21 /* ViewController.swift */,
 				11B5C96A21766DA8005DFD21 /* Main.storyboard */,
+				11B5C97C21767730005DFD21 /* OnboardingViewController.swift */,
+				11B5C97E21767A56005DFD21 /* MemoriesTableViewController.swift */,
+				11B5C98021767AA8005DFD21 /* DetailViewController.swift */,
+				11B5C98221767CAE005DFD21 /* LocalNotificationHelper.swift */,
+				11B5C97821766DD4005DFD21 /* Memory.swift */,
+				11B5C97A21766E14005DFD21 /* MemoryController.swift */,
 				11B5C96D21766DA9005DFD21 /* Assets.xcassets */,
 				11B5C96F21766DA9005DFD21 /* LaunchScreen.storyboard */,
 				11B5C97221766DA9005DFD21 /* Info.plist */,
@@ -135,7 +150,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11B5C96921766DA8005DFD21 /* ViewController.swift in Sources */,
+				11B5C97921766DD4005DFD21 /* Memory.swift in Sources */,
+				11B5C97D21767730005DFD21 /* OnboardingViewController.swift in Sources */,
+				11B5C97F21767A56005DFD21 /* MemoriesTableViewController.swift in Sources */,
+				11B5C98321767CAE005DFD21 /* LocalNotificationHelper.swift in Sources */,
+				11B5C98121767AA9005DFD21 /* DetailViewController.swift in Sources */,
+				11B5C97B21766E14005DFD21 /* MemoryController.swift in Sources */,
 				11B5C96721766DA8005DFD21 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
