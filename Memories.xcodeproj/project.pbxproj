@@ -14,6 +14,8 @@
 		77A589D1217670EF00EC2741 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77A589CF217670EF00EC2741 /* LaunchScreen.storyboard */; };
 		77A589D92176720500EC2741 /* Memory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A589D82176720500EC2741 /* Memory.swift */; };
 		77A589DB217673B400EC2741 /* MemoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A589DA217673B400EC2741 /* MemoryController.swift */; };
+		77A589DD21767D6300EC2741 /* LocalNotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A589DC21767D6300EC2741 /* LocalNotificationHelper.swift */; };
+		77A589DF217694A800EC2741 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A589DE217694A800EC2741 /* OnboardingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		77A589D2217670EF00EC2741 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77A589D82176720500EC2741 /* Memory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memory.swift; sourceTree = "<group>"; };
 		77A589DA217673B400EC2741 /* MemoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryController.swift; sourceTree = "<group>"; };
+		77A589DC21767D6300EC2741 /* LocalNotificationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationHelper.swift; sourceTree = "<group>"; };
+		77A589DE217694A800EC2741 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,8 @@
 				77A589C8217670EB00EC2741 /* ViewController.swift */,
 				77A589D82176720500EC2741 /* Memory.swift */,
 				77A589DA217673B400EC2741 /* MemoryController.swift */,
+				77A589DC21767D6300EC2741 /* LocalNotificationHelper.swift */,
+				77A589DE217694A800EC2741 /* OnboardingViewController.swift */,
 				77A589CA217670EB00EC2741 /* Main.storyboard */,
 				77A589CD217670EF00EC2741 /* Assets.xcassets */,
 				77A589CF217670EF00EC2741 /* LaunchScreen.storyboard */,
@@ -142,9 +148,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				77A589D92176720500EC2741 /* Memory.swift in Sources */,
+				77A589DF217694A800EC2741 /* OnboardingViewController.swift in Sources */,
 				77A589C9217670EB00EC2741 /* ViewController.swift in Sources */,
 				77A589DB217673B400EC2741 /* MemoryController.swift in Sources */,
 				77A589C7217670EB00EC2741 /* AppDelegate.swift in Sources */,
+				77A589DD21767D6300EC2741 /* LocalNotificationHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
