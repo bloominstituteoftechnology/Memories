@@ -14,6 +14,9 @@
 		4B0ADFBA21766643009C7DBA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B0ADFB821766643009C7DBA /* LaunchScreen.storyboard */; };
 		4B0ADFC221766654009C7DBA /* Memory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0ADFC121766654009C7DBA /* Memory.swift */; };
 		4B0ADFC4217666B9009C7DBA /* MemoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0ADFC3217666B9009C7DBA /* MemoryController.swift */; };
+		4B0ADFC62176733E009C7DBA /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0ADFC52176733E009C7DBA /* OnboardingViewController.swift */; };
+		4B0ADFC82176753D009C7DBA /* MemoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0ADFC72176753D009C7DBA /* MemoriesTableViewController.swift */; };
+		4BFD1EB72176837100D4CCA9 /* MemoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFD1EB62176837100D4CCA9 /* MemoryDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		4B0ADFBB21766643009C7DBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B0ADFC121766654009C7DBA /* Memory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memory.swift; sourceTree = "<group>"; };
 		4B0ADFC3217666B9009C7DBA /* MemoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryController.swift; sourceTree = "<group>"; };
+		4B0ADFC52176733E009C7DBA /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		4B0ADFC72176753D009C7DBA /* MemoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoriesTableViewController.swift; sourceTree = "<group>"; };
+		4BFD1EB62176837100D4CCA9 /* MemoryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,9 @@
 				4B0ADFAF21766642009C7DBA /* AppDelegate.swift */,
 				4B0ADFB121766642009C7DBA /* ViewController.swift */,
 				4B0ADFB321766642009C7DBA /* Main.storyboard */,
+				4BFD1EB62176837100D4CCA9 /* MemoryDetailViewController.swift */,
+				4B0ADFC72176753D009C7DBA /* MemoriesTableViewController.swift */,
+				4B0ADFC52176733E009C7DBA /* OnboardingViewController.swift */,
 				4B0ADFB621766643009C7DBA /* Assets.xcassets */,
 				4B0ADFB821766643009C7DBA /* LaunchScreen.storyboard */,
 				4B0ADFBB21766643009C7DBA /* Info.plist */,
@@ -141,8 +150,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B0ADFC82176753D009C7DBA /* MemoriesTableViewController.swift in Sources */,
 				4B0ADFC221766654009C7DBA /* Memory.swift in Sources */,
+				4BFD1EB72176837100D4CCA9 /* MemoryDetailViewController.swift in Sources */,
 				4B0ADFB221766642009C7DBA /* ViewController.swift in Sources */,
+				4B0ADFC62176733E009C7DBA /* OnboardingViewController.swift in Sources */,
 				4B0ADFC4217666B9009C7DBA /* MemoryController.swift in Sources */,
 				4B0ADFB021766642009C7DBA /* AppDelegate.swift in Sources */,
 			);
