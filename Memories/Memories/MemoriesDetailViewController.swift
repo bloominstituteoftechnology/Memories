@@ -36,41 +36,15 @@ class MemoryDetailViewController: UIViewController, UIImagePickerControllerDeleg
     
     @IBAction func addPhoto(_ sender: Any) {
         let authorizationStatus = PHPhotoLibrary.authorizationStatus()
-        if authorizationStatus == .authorized {
+        switch authorizationStatus {
+        case .authorized:
             presentImagePickerController()
-        } else if authorizationStatus == .notDetermined {
-            PHPhotoLibrary.requestAuthorization { (authorizationStatus) in
-                if authorizationStatus == .authorized {
+        default:
+            PHPhotoLibrary.requestAuthorization { status in
+                if status == .authorized {
                     self.presentImagePickerController()
-                } else if authorizationStatus == .denied {
-                    let alert = UIAlertController(title: "🚨 Memories can't access your photo library", message: "Please allow photo library access to be able to add photos to each of your memories.", preferredStyle: .alert)
-                    let goToAction = UIAlertAction(title: "Show Settings", style: .default) { (action) in
-                        if let url = URL(string: "app-settings:") {
-                            UIApplication.shared.open(url, options: [:], completionHandler: nil)
-                        }
-                    }
-                    let cancel = UIAlertAction(title: "Cancel", style: .cancel) { (action) in }
-                    
-                    alert.addAction(goToAction)
-                    alert.addAction(cancel)
-                    
-                    self.present(alert, animated: true, completion: nil)
                 }
             }
-        } else if authorizationStatus == .denied {
-            let alert = UIAlertController(title: "🚨 Memories can't access your photo library", message: "Please allow photo library access to be able to add photos to each of your memories.", preferredStyle: .alert)
-            
-            let goToAction = UIAlertAction(title: "Show Settings", style: .default) { (action) in
-                if let url = URL(string: "app-settings:") {
-                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
-                }
-            }
-            let cancel = UIAlertAction(title: "Cancel", style: .cancel) { (action) in }
-            
-            alert.addAction(goToAction)
-            alert.addAction(cancel)
-            
-            present(alert, animated: true, completion: nil)
         }
     }
     
@@ -89,7 +63,7 @@ class MemoryDetailViewController: UIViewController, UIImagePickerControllerDeleg
         memoryController.update(memory: memory, title: titleText, bodyText: bodyText, imageData: imgData)
         navigationController?.popViewController(animated: true)
     }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        
+//    }
 }

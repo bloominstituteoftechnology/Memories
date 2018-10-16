@@ -16,10 +16,8 @@ class MemoriesTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        
         let memory = memoryController.memories[indexPath.row]
         let memoryImage = UIImage(data: memory.imageData)
-        
         cell.textLabel?.text = memory.title
         cell.imageView?.image = memoryImage
         
@@ -35,8 +33,14 @@ class MemoriesTableViewController: UITableViewController {
         }
     }
     
-    // MARK: - Navigation
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //memoryController.memories
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        guard let destingation = segue.destination as? MemoryDetailViewController else { return }
+        destingation.memoryController = memoryController
+        guard let indexPath = tableView.indexPathForSelectedRow else { return }
+        destingation.memory = memoryController.memories[indexPath.row]
     }
 }
