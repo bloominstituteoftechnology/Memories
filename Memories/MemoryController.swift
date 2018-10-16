@@ -10,7 +10,7 @@ class MemoryController {
         return documentDirectory?.appendingPathComponent(fileName)
     }
     
-    func saveToPersistenStore() {
+    func saveToPersistentStore() {
         let plistEncoder = PropertyListEncoder()
         
         do {
@@ -33,5 +33,12 @@ class MemoryController {
         } catch {
             NSLog("Error decoding memories: \(error)")
         }
+    }
+    
+    func createMemory(with title: String, bodyText: String, imageData: Data) {
+        let memory = Memory(title: title, bodyText: bodyText, imageData: imageData)
+        memories.append(memory)
+        
+        saveToPersistentStore()
     }
 }
