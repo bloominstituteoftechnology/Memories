@@ -7,8 +7,8 @@ class LocalNotificationHelper {
         let identifier = "DailyMemoryReminderNotification"
         
         let content = UNMutableNotificationContent()
-        content.title = "🔔 Daily memory reminder"
-        content.body = "The day is almost up! Don't forget to add a new memory for today 🙂"
+        content.title = "Daily memory reminder"
+        content.body = "The day is almost up! Don't forget to add a new memory for today"
         content.badge = 1
         
         let today = Date()

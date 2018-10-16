@@ -39,6 +39,8 @@ class MemoryDetailViewController: UIViewController, UIImagePickerControllerDeleg
         switch authorizationStatus {
         case .authorized:
             presentImagePickerController()
+//        case .denied:
+//            navigationController?.popViewController(animated: T##Bool)
         default:
             PHPhotoLibrary.requestAuthorization { status in
                 if status == .authorized {
