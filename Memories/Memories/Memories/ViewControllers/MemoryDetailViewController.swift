@@ -17,14 +17,10 @@ class MemoryDetailViewController: UIViewController, UINavigationControllerDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         updateViews()
-        
-        
-
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        
     }
     
     func updateViews() {
@@ -39,22 +35,14 @@ class MemoryDetailViewController: UIViewController, UINavigationControllerDelega
         memoryTextField.text = memory.title
         
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-       
-    }
     
     func presentImagePickerController() {
         
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
             
             let imagePicker = UIImagePickerController()
-            
             imagePicker.sourceType = .photoLibrary
-            
             imagePicker.delegate = self
-            
             present(imagePicker,animated: true, completion: nil)
             
         } else {return}
@@ -63,9 +51,7 @@ class MemoryDetailViewController: UIViewController, UINavigationControllerDelega
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         picker.dismiss(animated: true, completion: nil)
-        
         guard let image = info[UIImagePickerControllerOriginalImage] as? UIImage else {return}
-        
         memoryImageView.image = image
     }
     
@@ -89,39 +75,24 @@ class MemoryDetailViewController: UIViewController, UINavigationControllerDelega
         
         let status = PHPhotoLibrary.authorizationStatus()
         switch status {
+        
         case .authorized:
                 self.presentImagePickerController()
+        
         case .notDetermined:
                 PHPhotoLibrary.requestAuthorization({ (changeStatus) in
                     if changeStatus == .authorized {
                         self.presentImagePickerController()
                     } else {return}
-                    })
-                    default : return
+                    
+                })
+        default : return
                 }
         }
-
-
     
     @IBOutlet weak var memoryImageView: UIImageView!
     @IBOutlet weak var addPhotoButton: UIButton!
     @IBOutlet weak var memoryTextField: UITextField!
     @IBOutlet weak var memoryTextView: UITextView!
     
-    
-    
-    
-    
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

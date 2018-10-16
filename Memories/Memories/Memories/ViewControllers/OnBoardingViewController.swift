@@ -42,15 +42,6 @@ class OnBoardingViewController: UIViewController {
     }
 }
     
-    // MARK: - Navigation
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "Onboard" {
-//            guard let destinationVC = segue.destination as? UINavigationController else { return }
-//            destinationVC.show(destinationVC, sender: nil)
-//        }
-//    }
-//}
-
+   
 
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		47D271362176944D002B4812 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D271352176944D002B4812 /* ScheduleViewController.swift */; };
 		C36080E8214AFCE600BFBEBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36080E7214AFCE600BFBEBB /* AppDelegate.swift */; };
 		C36080ED214AFCE600BFBEBB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C36080EB214AFCE600BFBEBB /* Main.storyboard */; };
 		C36080EF214AFCE700BFBEBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C36080EE214AFCE700BFBEBB /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		47D271352176944D002B4812 /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		C36080E4214AFCE600BFBEBB /* Memories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memories.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C36080E7214AFCE600BFBEBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C36080EC214AFCE600BFBEBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 		C3608105214B294F00BFBEBB /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				47D271352176944D002B4812 /* ScheduleViewController.swift */,
 				C3608108214B40A500BFBEBB /* MemoryDetailViewController.swift */,
 				C3608103214B293B00BFBEBB /* OnBoardingViewController.swift */,
 				C3608106214B3C5300BFBEBB /* MemoriesTableViewController.swift */,
@@ -193,6 +196,7 @@
 				C3608107214B3C5300BFBEBB /* MemoriesTableViewController.swift in Sources */,
 				C36080FA214AFE2700BFBEBB /* Memory.swift in Sources */,
 				C3608109214B40A500BFBEBB /* MemoryDetailViewController.swift in Sources */,
+				47D271362176944D002B4812 /* ScheduleViewController.swift in Sources */,
 				C36080FC214B01D400BFBEBB /* MemoryController.swift in Sources */,
 				C3608101214B156600BFBEBB /* LocalNotificationHelper.swift in Sources */,
 				C36080E8214AFCE600BFBEBB /* AppDelegate.swift in Sources */,
