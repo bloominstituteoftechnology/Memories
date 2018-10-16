@@ -5,7 +5,7 @@ class MemoryController {
     
     init() { loadFromPersistentStore() }
     
-    // This creates the memory
+    // This creates the memory.
     func createMemory(with title: String, bodyText: String, imageData: Data) {
         let memory = Memory(title: title, bodyText: bodyText, imageData: imageData)
         memories.append(memory)
