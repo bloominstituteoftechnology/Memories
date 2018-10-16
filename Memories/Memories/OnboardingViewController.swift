@@ -16,7 +16,6 @@ class OnboardingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        super.viewDidLoad()
         localNotificationHelper.getAuthorizationStatus { (authorizationStatus) in
             if authorizationStatus == .authorized {
                 self.performSegue(withIdentifier: "PassOnboarding", sender: nil)

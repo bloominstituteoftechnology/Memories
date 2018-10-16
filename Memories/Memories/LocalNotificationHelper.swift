@@ -28,10 +28,10 @@ class LocalNotificationHelper {
         content.body = "Would you like to record a memory for today?"
         content.sound = UNNotificationSound.default
         
-        let date = Date(timeIntervalSinceNow: 3600)
-        let triggerDate = Calendar.current.dateComponents([.year,.month,.day,.hour,.minute,.second,], from: date)
-        let triggerDaily = Calendar.current.dateComponents([.hour, .minute,.second,], from: date)
-        let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDaily, repeats: true)
+        var date = DateComponents()
+        date.hour = 20
+        date.minute = 00
+        let trigger = UNCalendarNotificationTrigger(dateMatching: date, repeats: true)
         
         
     }

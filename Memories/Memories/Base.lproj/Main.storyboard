@@ -52,10 +52,10 @@
             </objects>
             <point key="canvasLocation" x="79" y="122"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Memories Table View Controller-->
         <scene sceneID="A7N-Pr-bMR">
             <objects>
-                <tableViewController id="FFI-1m-2qk" sceneMemberID="viewController">
+                <tableViewController id="FFI-1m-2qk" customClass="MemoriesTableViewController" customModule="Memories" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="AVK-uk-idM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
