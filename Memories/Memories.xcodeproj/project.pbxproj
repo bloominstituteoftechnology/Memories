@@ -17,6 +17,7 @@
 		4B0ADFC62176733E009C7DBA /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0ADFC52176733E009C7DBA /* OnboardingViewController.swift */; };
 		4B0ADFC82176753D009C7DBA /* MemoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0ADFC72176753D009C7DBA /* MemoriesTableViewController.swift */; };
 		4BFD1EB72176837100D4CCA9 /* MemoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFD1EB62176837100D4CCA9 /* MemoryDetailViewController.swift */; };
+		4BFD1EB92176859E00D4CCA9 /* LocalNotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFD1EB82176859E00D4CCA9 /* LocalNotificationHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		4B0ADFC52176733E009C7DBA /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		4B0ADFC72176753D009C7DBA /* MemoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoriesTableViewController.swift; sourceTree = "<group>"; };
 		4BFD1EB62176837100D4CCA9 /* MemoryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryDetailViewController.swift; sourceTree = "<group>"; };
+		4BFD1EB82176859E00D4CCA9 /* LocalNotificationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				4B0ADFB121766642009C7DBA /* ViewController.swift */,
 				4B0ADFB321766642009C7DBA /* Main.storyboard */,
 				4BFD1EB62176837100D4CCA9 /* MemoryDetailViewController.swift */,
+				4BFD1EB82176859E00D4CCA9 /* LocalNotificationHelper.swift */,
 				4B0ADFC72176753D009C7DBA /* MemoriesTableViewController.swift */,
 				4B0ADFC52176733E009C7DBA /* OnboardingViewController.swift */,
 				4B0ADFB621766643009C7DBA /* Assets.xcassets */,
@@ -152,6 +155,7 @@
 			files = (
 				4B0ADFC82176753D009C7DBA /* MemoriesTableViewController.swift in Sources */,
 				4B0ADFC221766654009C7DBA /* Memory.swift in Sources */,
+				4BFD1EB92176859E00D4CCA9 /* LocalNotificationHelper.swift in Sources */,
 				4BFD1EB72176837100D4CCA9 /* MemoryDetailViewController.swift in Sources */,
 				4B0ADFB221766642009C7DBA /* ViewController.swift in Sources */,
 				4B0ADFC62176733E009C7DBA /* OnboardingViewController.swift in Sources */,
