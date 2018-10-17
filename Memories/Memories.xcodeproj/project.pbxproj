@@ -8,24 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		84CE0A2E217670000022B793 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CE0A2D217670000022B793 /* AppDelegate.swift */; };
-		84CE0A30217670000022B793 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CE0A2F217670000022B793 /* ViewController.swift */; };
+		84CE0A30217670000022B793 /* MemoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CE0A2F217670000022B793 /* MemoryDetailViewController.swift */; };
 		84CE0A33217670000022B793 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84CE0A31217670000022B793 /* Main.storyboard */; };
 		84CE0A35217670020022B793 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84CE0A34217670020022B793 /* Assets.xcassets */; };
 		84CE0A38217670020022B793 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84CE0A36217670020022B793 /* LaunchScreen.storyboard */; };
 		84CE0A40217670A90022B793 /* Memory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CE0A3F217670A90022B793 /* Memory.swift */; };
 		84CE0A42217675150022B793 /* MemoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CE0A41217675150022B793 /* MemoryController.swift */; };
+		84CE0A442176903E0022B793 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CE0A432176903E0022B793 /* OnboardingViewController.swift */; };
+		84CE0A4621769D760022B793 /* LocalNofificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CE0A4521769D760022B793 /* LocalNofificationHelper.swift */; };
+		84CE0A482176A4EC0022B793 /* MemoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CE0A472176A4EC0022B793 /* MemoriesTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		84CE0A2A217670000022B793 /* Memories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memories.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84CE0A2D217670000022B793 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		84CE0A2F217670000022B793 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		84CE0A2F217670000022B793 /* MemoryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryDetailViewController.swift; sourceTree = "<group>"; };
 		84CE0A32217670000022B793 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		84CE0A34217670020022B793 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84CE0A37217670020022B793 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84CE0A39217670020022B793 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84CE0A3F217670A90022B793 /* Memory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memory.swift; sourceTree = "<group>"; };
 		84CE0A41217675150022B793 /* MemoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryController.swift; sourceTree = "<group>"; };
+		84CE0A432176903E0022B793 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		84CE0A4521769D760022B793 /* LocalNofificationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNofificationHelper.swift; sourceTree = "<group>"; };
+		84CE0A472176A4EC0022B793 /* MemoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoriesTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,8 +67,11 @@
 				84CE0A2D217670000022B793 /* AppDelegate.swift */,
 				84CE0A3F217670A90022B793 /* Memory.swift */,
 				84CE0A41217675150022B793 /* MemoryController.swift */,
-				84CE0A2F217670000022B793 /* ViewController.swift */,
+				84CE0A2F217670000022B793 /* MemoryDetailViewController.swift */,
+				84CE0A472176A4EC0022B793 /* MemoriesTableViewController.swift */,
 				84CE0A31217670000022B793 /* Main.storyboard */,
+				84CE0A4521769D760022B793 /* LocalNofificationHelper.swift */,
+				84CE0A432176903E0022B793 /* OnboardingViewController.swift */,
 				84CE0A34217670020022B793 /* Assets.xcassets */,
 				84CE0A36217670020022B793 /* LaunchScreen.storyboard */,
 				84CE0A39217670020022B793 /* Info.plist */,
@@ -142,8 +151,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				84CE0A40217670A90022B793 /* Memory.swift in Sources */,
-				84CE0A30217670000022B793 /* ViewController.swift in Sources */,
+				84CE0A30217670000022B793 /* MemoryDetailViewController.swift in Sources */,
+				84CE0A4621769D760022B793 /* LocalNofificationHelper.swift in Sources */,
+				84CE0A442176903E0022B793 /* OnboardingViewController.swift in Sources */,
 				84CE0A42217675150022B793 /* MemoryController.swift in Sources */,
+				84CE0A482176A4EC0022B793 /* MemoriesTableViewController.swift in Sources */,
 				84CE0A2E217670000022B793 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

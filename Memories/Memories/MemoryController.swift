@@ -24,7 +24,6 @@ class MemoryController {
         guard let index = memories.index(of: memory) else { return }
         
         let tempMemory = Memory(title: title, bodyText: bodyType, imageData: imageData)
-        
         memories.remove(at: index)
         memories.insert(tempMemory, at: index)
         saveToPersistentStore()
@@ -50,15 +49,15 @@ class MemoryController {
         }
     }
     
-    // Loads Persistence
+    // Loads Persistence -
     private func loadFromPersistentStore() {
         do {
             guard let memoriesFileURL = persistentFileURL,
                 FileManager.default.fileExists(atPath: memoriesFileURL.path) else { return }
-                let memoriesData = try Data(contentsOf: memoriesFileURL)
-                let plistDecoder = PropertyListDecoder()
-                self.memories = try plistDecoder.decode([Memory].self, from: memoriesData)
-            } catch {
+            let memoriesData = try Data(contentsOf: memoriesFileURL)
+            let plistDecoder = PropertyListDecoder()
+            self.memories = try plistDecoder.decode([Memory].self, from: memoriesData)
+        } catch {
             NSLog("Error Decoding Memories: \(error)")
         }
     }
