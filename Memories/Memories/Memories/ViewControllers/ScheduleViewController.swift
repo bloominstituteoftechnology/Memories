@@ -11,6 +11,16 @@ import Photos
 
 class ScheduleViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
+    // TODO: incorporate dates
+    // make different times
+    // change color of times
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .orange
+    }
+    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -37,7 +47,7 @@ class ScheduleViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         guard let text = notificationField.text, !text.isEmpty else { return }
         let content = UNMutableNotificationContent()
         content.title = "Make a new Memory!"
-        content.launchImageName = 
+       // content.launchImageName =
         content.body = text
         
         // Set the time for triggering the notification
