@@ -6,10 +6,6 @@ class MemoriesTableViewController: UITableViewController {
     var memory: Memory?
     var memoryController = MemoryController()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadData()
@@ -32,7 +28,6 @@ class MemoriesTableViewController: UITableViewController {
         cell.textLabel?.text = memory.title
         cell.imageView?.image = memoryPhoto
         
-        
         return cell
     }
     
@@ -42,10 +37,7 @@ class MemoriesTableViewController: UITableViewController {
             
             let memory = memoryController.memories[indexPath.row]
             memoryController.deleteMemory(m: memory)
-            
-            // Delete the row from the data source
             tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
         }
     }
     

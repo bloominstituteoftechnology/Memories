@@ -17,23 +17,18 @@ class MemoryController {
     func saveToPersistentStore() {
         do {
             let memoriesEncoded = try JSONEncoder().encode(memories)
-            if let string = String(data: memoriesEncoded, encoding: .utf8) {
-                print(string)
-            }
-            
+            try memoriesEncoded.write(to: url)
         } catch {
             print("Error: \(error)")
         }
     }
     
-    
     //this takes the information from the device and sets it to memories
     func loadFromPersistentStore() {
         do {
-            let data = try Data(contentsOf: url)
-            let memoriesDecoded = try JSONDecoder().decode([Memory].self, from: data)
+            let memoriesData = try Data(contentsOf: url)
+            let memoriesDecoded = try JSONDecoder().decode([Memory].self, from: memoriesData)
             memories = memoriesDecoded
-            print(memories)
         } catch {
             print("Error: \(error)")
         }

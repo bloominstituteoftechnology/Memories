@@ -7,7 +7,7 @@ class OnboardingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         localNotificationHelper.getAuthorizationStatus { isAuthorized in
-            if isAuthorized == isAuthorized {
+            if isAuthorized == .authorized {
                 self.performSegue(withIdentifier: "onboardingSegue", sender: nil)
             }
         }
