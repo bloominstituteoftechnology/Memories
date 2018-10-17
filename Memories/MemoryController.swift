@@ -1,51 +1,60 @@
-import UIKit
+import Foundation
 
-class MemoryController: NSObject {
+
+class MemoryController {
     var memories: [Memory] = []
-
-// add a persistentFileURL
-let url = URL(fileURLWithPath: NSHomeDirectory())
-    .appendingPathComponent("Documents")
-    .appendingPathComponent("memories.plist")
-
-// save
-func saveToPersistentStore(){
-    do{
-        let memoriesEncoded = try JSONEncoder().encode(memories)
-        if let string = String(data: memoriesEncoded, encoding: .utf8){
-            print(string)
+    init() { loadFromPersistentStore() }
+    
+    // add a persistentFileURL
+    let url = URL(fileURLWithPath: NSHomeDirectory())
+        .appendingPathComponent("Documents")
+        .appendingPathComponent("memories.json")
+    
+    // save
+    func saveToPersistentStore(){
+        let encoder = JSONEncoder()
+        do {
+            let encodedMemories = try encoder.encode(memories)
+            try encodedMemories.write(to: url)
+        } catch {
+            print("Error: \(error)")
         }
-    } catch {
-        print ("Error: \(error)")
     }
-}
-
-// create load
-func loadFromPersistentStore() {
-    do {
-        let data = try Data(contentsOf: url)
-        let memoriesDecoded = try JSONDecoder().decode([Memory].self, from: data)
-        memories = memoriesDecoded
-        print(memories)
-    } catch {
-        print("Error: \(error)")
+    
+    // create load
+    func loadFromPersistentStore() {
+        do {
+            let decoder = JSONDecoder()
+            let memoriesData = try Data(contentsOf: url)
+            let decodedMemories = try decoder.decode([Memory].self, from: memoriesData)
+            memories = decodedMemories
+        } catch {
+            print("Error: \(error)")
+        }
     }
-}
-
-// create and init memory object
-// memories.append = memories.saveToPersistentStore()
-func createMemory(with title: String, bodyText: String, imageData: Data){
-    let memory = Memory.init(title: title, bodyText: bodyText, imageData: imageData)
-    memories.append(memory)
-    print("decoded")
-}
-
-
-// func delete Memory object
-func deleteMemory(memory: Memory){
-    guard let index = memories.index(of: memory) else
-    { return }
-    memories.remove(at: index)
-    //saveToPersistentStore()
+    
+    // create and init memory object
+    // memories.append = memories.saveToPersistentStore()
+    func createMemory(with title: String, bodyText: String, imageData: Data){
+        let memory = Memory(title: title, bodyText: bodyText, imageData: imageData)
+        memories.append(memory)
+        saveToPersistentStore()
+    }
+    
+    // Updates the memory
+    func update(memory: Memory, title: String, bodyText: String, imageData: Data) {
+        guard let index = memories.index(of: memory) else { return }
+        let tempMemory = Memory(title: title, bodyText: bodyText, imageData: imageData)
+        memories.remove(at: index)
+        memories.insert(tempMemory, at: index)
+        saveToPersistentStore()
+    }
+    
+    // func delete Memory object
+    func deleteMemory(memory: Memory){
+        guard let index = memories.index(of: memory) else
+        { return }
+        memories.remove(at: index)
+        saveToPersistentStore()
     }
 }
