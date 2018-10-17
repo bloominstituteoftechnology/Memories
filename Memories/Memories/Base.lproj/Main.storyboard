@@ -56,7 +56,7 @@
                         <viewLayoutGuide key="safeArea" id="Pu9-mn-yyf"/>
                     </view>
                     <connections>
-                        <segue destination="vCq-Lu-yW0" kind="presentation" id="v5g-Bu-zUb"/>
+                        <segue destination="vCq-Lu-yW0" kind="presentation" identifier="onboardingSegue" id="v5g-Bu-zUb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dbe-Yv-6yv" userLabel="First Responder" sceneMemberID="firstResponder"/>
