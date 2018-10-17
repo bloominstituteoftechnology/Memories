@@ -77,7 +77,7 @@ class MemoryController {
         saveToPersistentStore()
     }
     
-    func Delete(m:Memory, title:String, bodyText: String, imageData: Data) {
+    func Delete(m:Memory) {
         for index in 0..<memories.count {
             if memories[index].title == m.title {
                 memories.remove(at: index)

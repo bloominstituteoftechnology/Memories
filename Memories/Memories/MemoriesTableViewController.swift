@@ -11,51 +11,71 @@ import UIKit
 class MemoriesTableViewController: UITableViewController {
     
     
-    var memory: Memory?
-    var memoryController: MemoryController
+    let mc = MemoryController()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        
-        
-        
-        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            
-            return memoryController.memories.count
-        }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
     }
     
     
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return mc.memories.count
+    }
+
+
+
+override func numberOfSections(in tableView: UITableView) -> Int {
+    
+    return 1
+    
+}
+
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         guard editingStyle == .delete else { return }
         
+        
+        
+        mc.Delete(m: mc.memories[indexPath.row])
+        
         // Update model then refresh view
         tableView.deleteRows(at: [indexPath], with: .fade)
-      
-       tableView.reloadData()
+        
+        tableView.reloadData()
         
         
-    }
-    
-    let reuseIdentifier = "cell"
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-        
-        let memory = memoryController.memories[indexPath.row]
-        cell.textLabel?.text = memory.title
-        cell.imageView?.image = UIImage(data: memory.imageData)
-        
-    
-        return cell
     }
 
+let reuseIdentifier = "cell"
+override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+    let memory = mc.memories[indexPath.row]
+    cell.textLabel?.text = memory.title
+    cell.imageView?.image = UIImage(data: memory.imageData)
+    
+    
+    return cell
+}
+
+
+override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    
+    guard let MemoryDetailViewController = segue.destination as? MemoryDetailViewController
+        else { fatalError("Segue destination failed") }
+    
+    if let cell = sender as? UITableViewCell {
+        guard let indexPath = tableView.indexPath(for: cell) else {return}
+        MemoryDetailViewController.memory = mc.memories[indexPath.row]
+    } else {
+        MemoryDetailViewController.memory = nil
     }
     
-    
-    
-    
 }
+
+
+
+
+
