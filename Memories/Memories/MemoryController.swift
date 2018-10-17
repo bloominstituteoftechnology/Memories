@@ -12,14 +12,20 @@ class MemoryController {
     static let shared = MemoryController()
     var memories = [Memory]()
     
+    // Technically the correct way to do it...
+//    var url: URL? {
+//        let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
+//        let fileName = "memories.json"
+//        return documentDirectory?.appendingPathComponent(fileName)
+//    }
+    
     var url = URL(fileURLWithPath: NSHomeDirectory())
         .appendingPathComponent("Documents")
-        .appendingPathComponent("memories.plist")
-    
+        .appendingPathComponent("memories.json")
+
     
     func saveToPersistentStore() {
         let encoder = JSONEncoder()
-        
         do {
             let encodedMemories = try encoder.encode(memories)
             try encodedMemories.write(to: url)
@@ -27,6 +33,7 @@ class MemoryController {
             print("Error: \(error)")
         }
     }
+
     
     
     func loadFromPersistentStore() {

@@ -40,9 +40,11 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
         guard let image = imageView.image?.pngData() else {return}
         if memory == nil {
             MemoryController.shared.create(title: title, bodyText: text, imageData: image)
+            
         } else {
             if let memory = memory {
                 MemoryController.shared.update(memory: memory, title: title, bodyText: text, imageData: image)
+                
             }
             
         }

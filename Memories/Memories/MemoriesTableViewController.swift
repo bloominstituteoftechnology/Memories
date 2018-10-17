@@ -12,6 +12,7 @@ class MemoriesTableViewController: UITableViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        MemoryController.shared.loadFromPersistentStore()
         tableView.reloadData()
     }
     // MARK: - Table view data source
