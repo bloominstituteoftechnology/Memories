@@ -197,7 +197,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qse-le-eu2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1110" y="66"/>
+            <point key="canvasLocation" x="1066" y="66"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

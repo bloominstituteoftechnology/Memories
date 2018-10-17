@@ -64,12 +64,12 @@
 		399CE95121766F1A004FDDE6 /* Memories */ = {
 			isa = PBXGroup;
 			children = (
-				399CE96A2176A44D004FDDE6 /* MemoriesTableViewController.swift */,
 				399CE95221766F1A004FDDE6 /* AppDelegate.swift */,
 				399CE96421767FD5004FDDE6 /* MemoryController.swift */,
 				399CE966217680F3004FDDE6 /* Memory.swift */,
 				399CE95621766F1A004FDDE6 /* Main.storyboard */,
 				399CE96C2176B8AB004FDDE6 /* MemoryDetailViewController.swift */,
+				399CE96A2176A44D004FDDE6 /* MemoriesTableViewController.swift */,
 				399CE96E2176BAF3004FDDE6 /* LocalNotificationHelper.swift */,
 				399CE96821769DA2004FDDE6 /* OnboardingViewController.swift */,
 				399CE95921766F1C004FDDE6 /* Assets.xcassets */,
