@@ -65,7 +65,7 @@ class MemoryDetailViewController: UIViewController, UIImagePickerControllerDeleg
             navigationController?.popViewController(animated: true)
             return
         }
-        memoryController.update(memory: memory, title: titleText, bodyText: bodyText, imageData: imgData)
+        memoryController.update(memory: memory, title: titleText, bodyType: bodyText, imageData: imgData)
         navigationController?.popViewController(animated: true)
     }
 }
