@@ -36,25 +36,40 @@ class MemoryDetailViewController: UIViewController, UIImagePickerControllerDeleg
     @IBOutlet weak var memoryText: UITextView!
     
     @IBAction func addPhoto(_ sender: Any) {
-        
+        let authorizationStatus = PHPhotoLibrary.authorizationStatus()
+        if authorizationStatus == .authorized {
+            presentImagePickerController()
+        } else if authorizationStatus == .notDetermined {
+            PHPhotoLibrary.requestAuthorization { (status) in
+                if status == .authorized {
+                    self.presentImagePickerController()
+                }
+            }
+        }
     }
     
     @IBAction func saveMemory(_ sender: Any) {
+        guard let title = memoryTitleField.text,
+            let bodyText = memoryText.text,
+            let imageData = memoryPhoto.image,
+            let data = imageData.pngData() else { return }
         
+        if let memory = memory {
+            memoryController?.updateMemory(memory: memory, title: title, bodyText: bodyText, imageData: data)
+        } else {
+            memoryController?.createMemory(with: title, bodyText: bodyText, imageData: data)
+        }
+        
+        navigationController?.popViewController(animated: true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
     }
     
-    
- 
-    
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateViews()
 
         // Do any additional setup after loading the view.
     }
