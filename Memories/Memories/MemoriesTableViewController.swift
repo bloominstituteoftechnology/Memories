@@ -3,6 +3,8 @@ import UIKit
 class MemoriesTableViewController: UITableViewController {
     
     let memoryController = MemoryController()
+    let addSegue = "newMemory"
+    let viewSegue = "viewMemory"
     
     override func viewWillAppear(_ animated: Bool) {
         tableView.reloadData()
@@ -40,8 +42,20 @@ class MemoriesTableViewController: UITableViewController {
         }
     }
     
-    override func prepare(for: UIStoryboardSegue, sender: Any?) {
-            
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let identifier = segue.identifier else { return }
+        guard let destinationVC = segue.destination as? MemoryDetailViewController else { return }
+        switch identifier {
+        case addSegue:
+            destinationVC.memoryController = memoryController
+        case viewSegue:
+            guard let indexPath = tableView.indexPathForSelectedRow else { return }
+            let memory = memoryController.memories[indexPath.row]
+            destinationVC.memoryController = memoryController
+            destinationVC.memory = memory
+        default: break
+            pre
+        }
     }
     
 }
