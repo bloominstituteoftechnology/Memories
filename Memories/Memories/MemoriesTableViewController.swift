@@ -12,6 +12,7 @@ class MemoriesTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        memoryController.loadFromPersistentStore()
 
     }
 
@@ -54,7 +55,6 @@ class MemoriesTableViewController: UITableViewController {
             destinationVC.memoryController = memoryController
             destinationVC.memory = memory
         default: break
-            pre
         }
     }
     
