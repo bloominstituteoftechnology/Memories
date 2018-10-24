@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		488A9E8C2181099300CB1FA2 /* Memory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488A9E8B2181099300CB1FA2 /* Memory.swift */; };
+		488A9E8E21810B8400CB1FA2 /* MemoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488A9E8D21810B8400CB1FA2 /* MemoryController.swift */; };
 		77A589C7217670EB00EC2741 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A589C6217670EB00EC2741 /* AppDelegate.swift */; };
 		77A589CC217670EB00EC2741 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77A589CA217670EB00EC2741 /* Main.storyboard */; };
 		77A589CE217670EF00EC2741 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77A589CD217670EF00EC2741 /* Assets.xcassets */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		488A9E8B2181099300CB1FA2 /* Memory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memory.swift; sourceTree = "<group>"; };
+		488A9E8D21810B8400CB1FA2 /* MemoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryController.swift; sourceTree = "<group>"; };
 		77A589C3217670EB00EC2741 /* Memories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memories.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77A589C6217670EB00EC2741 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77A589CB217670EB00EC2741 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -55,6 +59,8 @@
 			isa = PBXGroup;
 			children = (
 				77A589C6217670EB00EC2741 /* AppDelegate.swift */,
+				488A9E8B2181099300CB1FA2 /* Memory.swift */,
+				488A9E8D21810B8400CB1FA2 /* MemoryController.swift */,
 				77A589E02176B54B00EC2741 /* MemoriesTableViewController.swift */,
 				77A589CA217670EB00EC2741 /* Main.storyboard */,
 				77A589CD217670EF00EC2741 /* Assets.xcassets */,
@@ -135,7 +141,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				488A9E8C2181099300CB1FA2 /* Memory.swift in Sources */,
 				77A589C7217670EB00EC2741 /* AppDelegate.swift in Sources */,
+				488A9E8E21810B8400CB1FA2 /* MemoryController.swift in Sources */,
 				77A589E12176B54B00EC2741 /* MemoriesTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
