@@ -37,8 +37,7 @@
                                         <rect key="frame" x="125.5" y="291" width="84" height="30"/>
                                         <state key="normal" title="Get Started!"/>
                                         <connections>
-                                            <action selector="getStartedButtonPressed:" destination="FTR-X8-vN7" eventType="touchUpInside" id="AqF-wQ-qPi"/>
-                                            <segue destination="fvg-0e-r3i" kind="presentation" id="Zyj-ad-iiK"/>
+                                            <segue destination="fvg-0e-r3i" kind="show" identifier="onboardingSegue" id="Zhw-z7-Axa"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -69,10 +68,10 @@
                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <items>
-                                <navigationItem title="Title" id="DRe-uV-8VO">
+                                <navigationItem title="Memories" id="DRe-uV-8VO">
                                     <barButtonItem key="rightBarButtonItem" systemItem="add" id="UxI-D1-fNc">
                                         <connections>
-                                            <segue destination="CP6-Cn-DXo" kind="presentation" id="SIZ-Pf-pax"/>
+                                            <segue destination="CP6-Cn-DXo" kind="presentation" identifier="addSegue" id="SIZ-Pf-pax"/>
                                         </connections>
                                     </barButtonItem>
                                 </navigationItem>
@@ -134,7 +133,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IoX-x2-PNS">
-                                <rect key="frame" x="67" y="174" width="240" height="128"/>
+                                <rect key="frame" x="16" y="75" width="343" height="295"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XcA-k2-2dr">
@@ -164,7 +163,7 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <navigationItem title="Title" id="dK8-lV-hBf">
+                                    <navigationItem title="Add Memory" id="dK8-lV-hBf">
                                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="XkN-dP-rZN">
                                             <connections>
                                                 <action selector="saveMemory:" destination="CP6-Cn-DXo" id="m1p-xP-agS"/>
@@ -185,7 +184,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EY6-XY-qnW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="262" y="-549"/>
+            <point key="canvasLocation" x="261.60000000000002" y="-549.17541229385313"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Kj8-9d-whv">
