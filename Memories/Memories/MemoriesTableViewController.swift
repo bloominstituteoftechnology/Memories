@@ -12,7 +12,7 @@ class MemoriesTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return memoryContoller.memories.count
+        return memoryController.memories.count
     }
 
     
@@ -31,9 +31,26 @@ class MemoriesTableViewController: UITableViewController {
             memoryController.deleteMemoryAt(index: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
             }
-        
-        
         }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "createSegue" {
+            guard let
+                memoryDetailVC = segue.destination as?
+                MemoriesDetailViewController else { return }
+            memoryDetailVC.memoryController = memoryController
+        } else if segue.identifier == "updateSegue" {
+            guard let indexPath = tableView.indexPathForSelectedRow,
+                let memoryDetailVC = segue.destination as?
+                MemoriesDetailViewController else { return }
+            let memory = memoryController.memories[indexPath.row]
+            memoryDetailVC.memoryController = memoryController
+            memoryDetailVC.memory = memory
+        }
+    }
+    
+    let memoryController = MemoryController()
+    
     }
 
     
