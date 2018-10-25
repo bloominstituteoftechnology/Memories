@@ -62,7 +62,7 @@
             </objects>
             <point key="canvasLocation" x="-644" y="-298.2008995502249"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Memories-->
         <scene sceneID="jxn-4a-c1B">
             <objects>
                 <tableViewController id="LUA-VQ-Lk4" sceneMemberID="viewController">
@@ -97,7 +97,7 @@
                             <outlet property="delegate" destination="LUA-VQ-Lk4" id="iFR-fF-pN6"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="DBz-Vd-sgT">
+                    <navigationItem key="navigationItem" title="Memories" id="DBz-Vd-sgT">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="xIB-mx-ZM4">
                             <connections>
                                 <segue destination="qBP-Tf-OoM" kind="show" identifier="addSegue" id="v4j-rd-Kq9"/>
@@ -109,16 +109,16 @@
             </objects>
             <point key="canvasLocation" x="903" y="-298"/>
         </scene>
-        <!--Title-->
+        <!--MemoryDetailViewController-->
         <scene sceneID="wce-VS-M3C">
             <objects>
-                <viewController id="qBP-Tf-OoM" customClass="MemoryDetailViewController" customModule="Memories" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="MemoryDetailViewController" id="qBP-Tf-OoM" customClass="MemoryDetailViewController" customModule="Memories" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" ambiguous="YES" id="ZFK-gN-fqT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="OAo-bM-3me">
-                                <rect key="frame" x="16" y="84" width="343" height="547"/>
+                                <rect key="frame" x="16" y="136" width="343" height="495"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="P8G-HO-8Mc">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="239"/>
@@ -127,20 +127,20 @@
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cqd-iV-nwe">
-                                        <rect key="frame" x="0.0" y="251" width="343" height="32"/>
+                                        <rect key="frame" x="0.0" y="251" width="343" height="30"/>
                                         <state key="normal" title="Add Photo"/>
                                         <connections>
                                             <action selector="addButton:" destination="qBP-Tf-OoM" eventType="touchUpInside" id="xzP-MF-hXa"/>
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Photo Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jqu-m2-cvH">
-                                        <rect key="frame" x="0.0" y="295" width="343" height="30"/>
+                                        <rect key="frame" x="0.0" y="293" width="343" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="snq-1p-ELO">
-                                        <rect key="frame" x="0.0" y="337" width="343" height="210"/>
+                                        <rect key="frame" x="0.0" y="335" width="343" height="160"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -165,7 +165,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lqR-hj-iKF"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="xIx-nm-ZUz">
+                    <navigationItem key="navigationItem" title="Add Memory" id="xIx-nm-ZUz">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="EWT-Hi-apo">
                             <connections>
                                 <action selector="saveButton:" destination="qBP-Tf-OoM" id="wAg-Ms-T4y"/>
@@ -187,8 +187,8 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8RH-ge-FMf" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="olu-Ex-Me7">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="olu-Ex-Me7">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
