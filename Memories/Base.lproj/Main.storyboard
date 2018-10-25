@@ -1,10 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DPp-md-oLV">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Onboarding View Controller-->
+        <scene sceneID="gDN-DF-OZ4">
+            <objects>
+                <viewController id="DPp-md-oLV" customClass="OnboardingViewController" customModule="Memories" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jtM-7H-p31">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DnP-Cr-aV1">
+                                <rect key="frame" x="20" y="124" width="335" height="142.5"/>
+                                <string key="text">We're going to help you document every day of your life. In order to do this, we need you to allow the application to send you notifications so you can be reminded to create a memory every day! We'll also ask for your permission to access your photo library to attach photos to your memories.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Memories!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Uu-EA-Oyk">
+                                <rect key="frame" x="8" y="80" width="359" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lII-9s-jY2">
+                                <rect key="frame" x="8" y="274.5" width="359" height="30"/>
+                                <state key="normal" title="Get Started"/>
+                                <connections>
+                                    <action selector="getStarted:" destination="DPp-md-oLV" eventType="touchUpInside" id="Nl7-iy-jJs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="DnP-Cr-aV1" firstAttribute="top" secondItem="7Uu-EA-Oyk" secondAttribute="bottom" constant="8" id="Enf-dO-ALx"/>
+                            <constraint firstItem="7Uu-EA-Oyk" firstAttribute="leading" secondItem="KYy-kh-v9h" secondAttribute="leading" constant="8" id="F3X-eq-7Da"/>
+                            <constraint firstItem="KYy-kh-v9h" firstAttribute="trailing" secondItem="DnP-Cr-aV1" secondAttribute="trailing" constant="20" id="ICY-V4-a1J"/>
+                            <constraint firstItem="lII-9s-jY2" firstAttribute="leading" secondItem="KYy-kh-v9h" secondAttribute="leading" constant="8" id="LKd-ia-r4p"/>
+                            <constraint firstItem="KYy-kh-v9h" firstAttribute="trailing" secondItem="7Uu-EA-Oyk" secondAttribute="trailing" constant="8" id="RrU-xu-kIu"/>
+                            <constraint firstItem="KYy-kh-v9h" firstAttribute="trailing" secondItem="lII-9s-jY2" secondAttribute="trailing" constant="8" id="dvS-by-HXy"/>
+                            <constraint firstItem="DnP-Cr-aV1" firstAttribute="leading" secondItem="KYy-kh-v9h" secondAttribute="leading" constant="20" id="fth-Nh-CvM"/>
+                            <constraint firstItem="7Uu-EA-Oyk" firstAttribute="top" secondItem="KYy-kh-v9h" secondAttribute="top" constant="60" id="hGW-hS-yZe"/>
+                            <constraint firstItem="lII-9s-jY2" firstAttribute="top" secondItem="DnP-Cr-aV1" secondAttribute="bottom" constant="8" id="ibk-Hh-DNh"/>
+                            <constraint firstItem="DnP-Cr-aV1" firstAttribute="top" secondItem="7Uu-EA-Oyk" secondAttribute="bottom" constant="8" id="kef-Ld-GbE"/>
+                            <constraint firstItem="lII-9s-jY2" firstAttribute="top" secondItem="DnP-Cr-aV1" secondAttribute="bottom" constant="8" id="qQ7-4z-u7L"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="KYy-kh-v9h"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Csu-S7-LZH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-644" y="-298.2008995502249"/>
+        </scene>
+    </scenes>
 </document>
