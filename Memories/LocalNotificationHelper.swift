@@ -30,6 +30,7 @@ class LocalNotificationHelper {
         var dateComponents = DateComponents()
         dateComponents.calendar = Calendar.current
         dateComponents.hour = 20
+        dateComponents.minute = 00
         
         let trigger = UNCalendarNotificationTrigger( dateMatching: dateComponents, repeats: true)
         let request = UNNotificationRequest(identifier: "NotificationID", content: content, trigger: trigger)
