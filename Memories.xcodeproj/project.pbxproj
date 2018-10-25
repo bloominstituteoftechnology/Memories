@@ -10,6 +10,8 @@
 		488A9E8C2181099300CB1FA2 /* Memory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488A9E8B2181099300CB1FA2 /* Memory.swift */; };
 		488A9E8E21810B8400CB1FA2 /* MemoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488A9E8D21810B8400CB1FA2 /* MemoryController.swift */; };
 		48A9970D218160A2005725E8 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A9970C218160A2005725E8 /* OnboardingViewController.swift */; };
+		48A9970F2181655B005725E8 /* MemoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A9970E2181655B005725E8 /* MemoryDetailViewController.swift */; };
+		48A99711218168D1005725E8 /* LocalNotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A99710218168D1005725E8 /* LocalNotificationHelper.swift */; };
 		77A589C7217670EB00EC2741 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A589C6217670EB00EC2741 /* AppDelegate.swift */; };
 		77A589CC217670EB00EC2741 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77A589CA217670EB00EC2741 /* Main.storyboard */; };
 		77A589CE217670EF00EC2741 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77A589CD217670EF00EC2741 /* Assets.xcassets */; };
@@ -21,6 +23,8 @@
 		488A9E8B2181099300CB1FA2 /* Memory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memory.swift; sourceTree = "<group>"; };
 		488A9E8D21810B8400CB1FA2 /* MemoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryController.swift; sourceTree = "<group>"; };
 		48A9970C218160A2005725E8 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		48A9970E2181655B005725E8 /* MemoryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryDetailViewController.swift; sourceTree = "<group>"; };
+		48A99710218168D1005725E8 /* LocalNotificationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationHelper.swift; sourceTree = "<group>"; };
 		77A589C3217670EB00EC2741 /* Memories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memories.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77A589C6217670EB00EC2741 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77A589CB217670EB00EC2741 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -65,6 +69,8 @@
 				488A9E8D21810B8400CB1FA2 /* MemoryController.swift */,
 				77A589E02176B54B00EC2741 /* MemoriesTableViewController.swift */,
 				48A9970C218160A2005725E8 /* OnboardingViewController.swift */,
+				48A9970E2181655B005725E8 /* MemoryDetailViewController.swift */,
+				48A99710218168D1005725E8 /* LocalNotificationHelper.swift */,
 				77A589CA217670EB00EC2741 /* Main.storyboard */,
 				77A589CD217670EF00EC2741 /* Assets.xcassets */,
 				77A589CF217670EF00EC2741 /* LaunchScreen.storyboard */,
@@ -144,8 +150,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48A9970F2181655B005725E8 /* MemoryDetailViewController.swift in Sources */,
 				488A9E8C2181099300CB1FA2 /* Memory.swift in Sources */,
 				77A589C7217670EB00EC2741 /* AppDelegate.swift in Sources */,
+				48A99711218168D1005725E8 /* LocalNotificationHelper.swift in Sources */,
 				48A9970D218160A2005725E8 /* OnboardingViewController.swift in Sources */,
 				488A9E8E21810B8400CB1FA2 /* MemoryController.swift in Sources */,
 				77A589E12176B54B00EC2741 /* MemoriesTableViewController.swift in Sources */,
