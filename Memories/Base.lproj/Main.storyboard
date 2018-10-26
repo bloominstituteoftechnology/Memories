@@ -141,6 +141,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KjS-Bk-YRW">
                                 <rect key="frame" x="50" y="332" width="275" height="30"/>
                                 <state key="normal" title="Get Started"/>
+                                <connections>
+                                    <action selector="getStarted:" destination="ACf-Q2-hXn" eventType="touchUpInside" id="mhC-9W-4np"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xDt-8c-t5f">
                                 <rect key="frame" x="50" y="121" width="275" height="203"/>
