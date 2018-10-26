@@ -17,7 +17,7 @@ class MemoriesTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "memoryCell", for: indexPath)
 
         let memory = memoryController.memories[indexPath.row]
         cell.textLabel?.text = memory.title
