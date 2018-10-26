@@ -5,9 +5,9 @@ class OnboardingViewController: UIViewController {
     let localNotificationHelper = LocalNotificationHelper()
     
     @IBAction func getStarted(_ sender: Any) {
-        localNotificationHelper.requestAuthorization { (wasSucessful) in
+        localNotificationHelper.requestAuthorization { (wasSuccessful) in
             if wasSuccessful {
-            self.localNotificationHelper.scheduleDailyReminderNotification()
+                self.localNotificationHelper.scheduleDailyReminderNotification()
                 self.performSegue(withIdentifier: "onboardingSegue", sender: nil)
             }
         }

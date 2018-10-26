@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		48A8FE452182A93200532680 /* LocationNotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A8FE442182A93200532680 /* LocationNotificationHelper.swift */; };
+		48A8FE472182AC5C00532680 /* MemoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A8FE462182AC5C00532680 /* MemoriesTableViewController.swift */; };
 		48DCDB1021827ABA00098864 /* Memory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DCDB0F21827ABA00098864 /* Memory.swift */; };
 		48DCDB1221827ACA00098864 /* MemoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DCDB1121827ACA00098864 /* MemoryController.swift */; };
 		48DCDB142182952000098864 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DCDB132182952000098864 /* OnboardingViewController.swift */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		48A8FE442182A93200532680 /* LocationNotificationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationNotificationHelper.swift; sourceTree = "<group>"; };
+		48A8FE462182AC5C00532680 /* MemoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoriesTableViewController.swift; sourceTree = "<group>"; };
 		48DCDB0F21827ABA00098864 /* Memory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memory.swift; sourceTree = "<group>"; };
 		48DCDB1121827ACA00098864 /* MemoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryController.swift; sourceTree = "<group>"; };
 		48DCDB132182952000098864 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
@@ -61,10 +65,12 @@
 			isa = PBXGroup;
 			children = (
 				77A589C6217670EB00EC2741 /* AppDelegate.swift */,
+				48DCDB132182952000098864 /* OnboardingViewController.swift */,
+				48A8FE442182A93200532680 /* LocationNotificationHelper.swift */,
 				48DCDB0F21827ABA00098864 /* Memory.swift */,
 				48DCDB1121827ACA00098864 /* MemoryController.swift */,
 				48DCDB152182987F00098864 /* MemoryDetailViewController.swift */,
-				48DCDB132182952000098864 /* OnboardingViewController.swift */,
+				48A8FE462182AC5C00532680 /* MemoriesTableViewController.swift */,
 				77A589CA217670EB00EC2741 /* Main.storyboard */,
 				77A589CD217670EF00EC2741 /* Assets.xcassets */,
 				77A589CF217670EF00EC2741 /* LaunchScreen.storyboard */,
@@ -148,6 +154,8 @@
 				48DCDB1021827ABA00098864 /* Memory.swift in Sources */,
 				77A589C7217670EB00EC2741 /* AppDelegate.swift in Sources */,
 				48DCDB1221827ACA00098864 /* MemoryController.swift in Sources */,
+				48A8FE452182A93200532680 /* LocationNotificationHelper.swift in Sources */,
+				48A8FE472182AC5C00532680 /* MemoriesTableViewController.swift in Sources */,
 				48DCDB142182952000098864 /* OnboardingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
