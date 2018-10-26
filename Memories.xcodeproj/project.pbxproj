@@ -10,6 +10,7 @@
 		48DCDB1021827ABA00098864 /* Memory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DCDB0F21827ABA00098864 /* Memory.swift */; };
 		48DCDB1221827ACA00098864 /* MemoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DCDB1121827ACA00098864 /* MemoryController.swift */; };
 		48DCDB142182952000098864 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DCDB132182952000098864 /* OnboardingViewController.swift */; };
+		48DCDB162182987F00098864 /* MemoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DCDB152182987F00098864 /* MemoryDetailViewController.swift */; };
 		77A589C7217670EB00EC2741 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A589C6217670EB00EC2741 /* AppDelegate.swift */; };
 		77A589CC217670EB00EC2741 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77A589CA217670EB00EC2741 /* Main.storyboard */; };
 		77A589CE217670EF00EC2741 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77A589CD217670EF00EC2741 /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 		48DCDB0F21827ABA00098864 /* Memory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memory.swift; sourceTree = "<group>"; };
 		48DCDB1121827ACA00098864 /* MemoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryController.swift; sourceTree = "<group>"; };
 		48DCDB132182952000098864 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		48DCDB152182987F00098864 /* MemoryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryDetailViewController.swift; sourceTree = "<group>"; };
 		77A589C3217670EB00EC2741 /* Memories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memories.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77A589C6217670EB00EC2741 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77A589CB217670EB00EC2741 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				77A589C6217670EB00EC2741 /* AppDelegate.swift */,
 				48DCDB0F21827ABA00098864 /* Memory.swift */,
 				48DCDB1121827ACA00098864 /* MemoryController.swift */,
+				48DCDB152182987F00098864 /* MemoryDetailViewController.swift */,
 				48DCDB132182952000098864 /* OnboardingViewController.swift */,
 				77A589CA217670EB00EC2741 /* Main.storyboard */,
 				77A589CD217670EF00EC2741 /* Assets.xcassets */,
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48DCDB162182987F00098864 /* MemoryDetailViewController.swift in Sources */,
 				48DCDB1021827ABA00098864 /* Memory.swift in Sources */,
 				77A589C7217670EB00EC2741 /* AppDelegate.swift in Sources */,
 				48DCDB1221827ACA00098864 /* MemoryController.swift in Sources */,
