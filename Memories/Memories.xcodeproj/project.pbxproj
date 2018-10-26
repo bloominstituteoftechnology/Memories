@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		844B149621827D5400C6A12B /* MemoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B149521827D5400C6A12B /* MemoriesTableViewController.swift */; };
 		844B14982182860800C6A12B /* MemoriesDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B14972182860800C6A12B /* MemoriesDetailViewController.swift */; };
+		844B149A21828C6E00C6A12B /* memory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B149921828C6E00C6A12B /* memory.swift */; };
+		844B149C21828DA400C6A12B /* MemoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B149B21828DA400C6A12B /* MemoryController.swift */; };
 		84CE0A2E217670000022B793 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CE0A2D217670000022B793 /* AppDelegate.swift */; };
 		84CE0A33217670000022B793 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84CE0A31217670000022B793 /* Main.storyboard */; };
 		84CE0A35217670020022B793 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84CE0A34217670020022B793 /* Assets.xcassets */; };
@@ -18,6 +20,8 @@
 /* Begin PBXFileReference section */
 		844B149521827D5400C6A12B /* MemoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoriesTableViewController.swift; sourceTree = "<group>"; };
 		844B14972182860800C6A12B /* MemoriesDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoriesDetailViewController.swift; sourceTree = "<group>"; };
+		844B149921828C6E00C6A12B /* memory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = memory.swift; sourceTree = "<group>"; };
+		844B149B21828DA400C6A12B /* MemoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryController.swift; sourceTree = "<group>"; };
 		84CE0A2A217670000022B793 /* Memories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memories.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84CE0A2D217670000022B793 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84CE0A32217670000022B793 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -59,6 +63,8 @@
 				84CE0A2D217670000022B793 /* AppDelegate.swift */,
 				844B149521827D5400C6A12B /* MemoriesTableViewController.swift */,
 				844B14972182860800C6A12B /* MemoriesDetailViewController.swift */,
+				844B149921828C6E00C6A12B /* memory.swift */,
+				844B149B21828DA400C6A12B /* MemoryController.swift */,
 				84CE0A31217670000022B793 /* Main.storyboard */,
 				84CE0A34217670020022B793 /* Assets.xcassets */,
 				84CE0A36217670020022B793 /* LaunchScreen.storyboard */,
@@ -138,9 +144,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				844B149A21828C6E00C6A12B /* memory.swift in Sources */,
 				844B149621827D5400C6A12B /* MemoriesTableViewController.swift in Sources */,
 				84CE0A2E217670000022B793 /* AppDelegate.swift in Sources */,
 				844B14982182860800C6A12B /* MemoriesDetailViewController.swift in Sources */,
+				844B149C21828DA400C6A12B /* MemoryController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
