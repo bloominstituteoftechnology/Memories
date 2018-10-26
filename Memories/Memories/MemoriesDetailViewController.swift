@@ -10,28 +10,27 @@ class MemoriesDetailViewController: UIViewController, UINavigationControllerDele
     var memoryController: MemoryController?
     var memory: Memory?
 
-
     @IBOutlet weak var memoryImage: UIImageView!
-    @IBOutlet weak var memoryField: UITextView!
+    @IBOutlet weak var memoryField: UITextField!
     @IBOutlet weak var memoryView: UITextView!
     
-    @IBAction func saveWasTapped(_ sender: Any) {
-        guard let title = memoryField.text,
-            let bodyText = memoryField.text,
+ @IBAction func saveWasTapped(_ sender: Any) {
+    guard let title = memoryField.text,
+            let bodyText = memoryView.text,
             let image = memoryImage.image,
             let imageData = image.pngData() else { return }
        
         if let memory = memory {
             memoryController?.updateMemory(memory: memory, withTitle: title, bodyText: bodyText, imageData: imageData)
         } else {
-            memoryController?.createMemory(memory: memory, withTitle: title, bodyText: bodyText, imageData: imageData)
+            memoryController?.createMemory(title: title, bodyText: bodyText, imageData: imageData)
         }
         
         navigationController?.popViewController(animated: true)
     }
     
     @IBAction func addPhotoWasTapped(_ sender: Any) {
-        let imagePicker = UIImagePickerController()
+    let imagePicker = UIImagePickerController()
         
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
             imagePicker.sourceType = .photoLibrary
