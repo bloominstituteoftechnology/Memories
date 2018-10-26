@@ -2,7 +2,7 @@ import UIKit
 
 class MemoriesTableViewController: UITableViewController {
 
-    override func viewDidLoad() {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidLoad()
 
        tableView.reloadData()
